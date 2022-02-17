@@ -133,7 +133,7 @@ def get_learning_curve_data(lang):
             for val_set_name, val_set_df in val_sets.items():
                 val_docs = val_set_df.copy().pop('doc').values
                 val_targets = val_set_df.copy().pop('target').values
-                report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, 'val_set_name'))
+                report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, val_set_name))
             print(report)
 
             df = df.append(pandas.DataFrame([report]))
