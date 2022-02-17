@@ -26,8 +26,10 @@ class SpecialCharacterToWords(BaseEstimator, TransformerMixin):
 
 
 char_map = [
-    ('    ', ' JJJquadspace '),
-    ('  ', ' JJJdoublespace '),
+    ('    ', 'JJJquadspace'),
+    ('  ', 'JJJdoublespace'),
+    ('JJJquadspace', ' JJJquadspace '),
+    ('JJJdoublespace', ' JJJdoublespace '),
     ('\n', ' JJJendline \n JJJnewline '),
     ('\t', ' JJJtabulator '),
     ('~', ' JJJtilde '),
@@ -79,9 +81,9 @@ unic_char_map = [
     ('–', ' JJJminus '),
     ('—', ' JJJminus '),
     ('«', ' JJJpointybracketopen '),
-    ('›', ' JJJpointybracketopen '),
+    ('›', ' JJJpointybracketclose '),
     ('»', ' JJJpointybracketclose '),
-    ('‹', ' JJJpointybracketclose '),
+    ('‹', ' JJJpointybracketopen '),
     ('👉', ' JJJunicodearrow '),
     ('→', ' JJJunicodearrow '),
     ('↓', ' JJJunicodearrow '),

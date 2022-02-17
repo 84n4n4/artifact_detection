@@ -3,23 +3,6 @@ from sklearn import metrics
 from sklearn.metrics import roc_auc_score, f1_score, ConfusionMatrixDisplay
 
 from artifact_detection_model.constants import TARGET_NAMES
-from artifact_detection_model.dataset_creation import get_nlon_dataset
-from artifact_detection_model.utils.paths import NLON_PATH, NLON_DATASETS
-
-
-def nlon_performance(pipeline, reviewer):
-    report = {}
-    nlon_docs = []
-    nlon_targets = []
-
-    for name, csv_file in NLON_DATASETS:
-        data, target = get_nlon_dataset(NLON_PATH + csv_file, reviewer)
-        report.update(validation_performance_on_dataset(pipeline, data, target, name + '_' + reviewer))
-        nlon_docs.extend(data)
-        nlon_targets.extend(target)
-
-    report.update(validation_performance_on_dataset(pipeline, nlon_docs, nlon_targets, 'nlon_all_' + reviewer))
-    return report
 
 
 def validation_performance_on_dataset(pipeline, data, target, name, output_misclassified=''):

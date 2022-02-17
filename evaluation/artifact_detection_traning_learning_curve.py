@@ -4,19 +4,20 @@ import pandas
 from matplotlib import pyplot as plt
 from sklearn.svm import LinearSVC
 
-from artifact_detection_model.dataset_creation import get_manual_validation_data_set, get_training_and_test_set
 from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
-from artifact_detection_model.utils.paths import PROJECT_ROOT, REVIEWER_1_PATH, REVIEWER_2_PATH
-from evaluation.utils import validation_performance_on_dataset, nlon_performance
+from datasets.dataset_utils import get_trainingset, get_all_validation_sets
+from evaluation.utils import validation_performance_on_dataset
+from file_anchor import root_dir
 
 log = Logger()
 
-OUT_PATH = PROJECT_ROOT + 'evaluation/out/learning_curve/'
+OUT_PATH = root_dir() + 'evaluation/out/learning_curve/'
 
 
 def main():
-    df = get_learning_curve_data()
+    lang = 'java'
+    df = get_learning_curve_data(lang)
     # df = pandas.read_csv(OUT_PATH + 'artifact_detection_summary.csv')
     plot_learning_curve(df)
     scoring_report(df)
@@ -113,32 +114,31 @@ def plot_mean_and_fill_std(axes, gb, metric, color, label):
     axes.plot(gb.mean().index, gb.mean()[metric], 'o-', color=color, label=label)
 
 
-def get_learning_curve_data():
-    r1data, r1target = get_manual_validation_data_set(REVIEWER_1_PATH)
-    r2data, r2target = get_manual_validation_data_set(REVIEWER_2_PATH)
+def get_learning_curve_data(lang):
+    df_train = get_trainingset(lang)
+    val_sets = get_all_validation_sets()
 
     df = pandas.DataFrame()
-    df_train, df_test = get_training_and_test_set()
 
-    for train_frac in [0.2, 0.4, 0.6, 0.8, 1]:
-        for index in range(0, 10):
+    # for train_frac in [0.2, 0.4, 0.6, 0.8, 1]:
+    for train_frac in [0.01, 0.02]:
+        for index in range(0, 2):
             seed = random.randint(100, 1000)
             report, pipeline = run_ml_artifact_training(df_train.copy().sample(frac=train_frac, random_state=seed),
-                                                        df_test.copy(),
                                                         LinearSVC(random_state=seed))
             report.update({'seed': seed})
             report.update({'train_frac': train_frac})
             report.update({'index': index})
-            report.update(validation_performance_on_dataset(pipeline, r1data, r1target, 'reviewer_1'))
-            report.update(validation_performance_on_dataset(pipeline, r2data, r2target, 'reviewer_2'))
-            report.update(nlon_performance(pipeline, 'Fabio'))
-            report.update(nlon_performance(pipeline, 'Mika'))
-            report.update(nlon_performance(pipeline, 'agreement'))
+
+            for val_set_name, val_set_df in val_sets.items():
+                val_docs = val_set_df.copy().pop('doc').values
+                val_targets = val_set_df.copy().pop('target').values
+                report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, 'val_set_name'))
             print(report)
 
             df = df.append(pandas.DataFrame([report]))
 
-    df.to_csv(OUT_PATH + 'artifact_detection_summary.csv')
+    df.to_csv(OUT_PATH + lang + 'artifact_detection_summary.csv')
     return df
 
 

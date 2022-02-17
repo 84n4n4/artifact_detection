@@ -4,21 +4,22 @@ from sklearn.metrics import roc_auc_score, confusion_matrix, cohen_kappa_score, 
     accuracy_score
 
 from artifact_detection_model.utils.Logger import Logger
-from artifact_detection_model.utils.paths import PROJECT_ROOT, REVIEWER_1_PATH, REVIEWER_2_PATH
+
+from datasets.constants import LANGUAGES
+from datasets.dataset_utils import get_all_validation_sets
 from evaluation.krippendorff import krippendorff
 from evaluation.utils import plot_numpy_confusion_matrix
+from file_anchor import root_dir
 
 log = Logger()
 
-out_path = PROJECT_ROOT + 'evaluation/out/interrater_agreement/'
+out_path = root_dir() + 'evaluation/out/interrater_agreement/'
 target_names = {'artifact': 0,
                 'text': 1}
 
 
-def get_data_set():
-    reviewer1_df = pandas.read_csv(REVIEWER_1_PATH, compression='zip')
+def combine_data_sets(reviewer1_df, reviewer2_df):
     reviewer1_df.rename(columns={'doc': 'doc1', 'target': 'target1'}, inplace=True)
-    reviewer2_df = pandas.read_csv(REVIEWER_2_PATH, compression='zip')
     reviewer2_df.rename(columns={'doc': 'doc2', 'target': 'target2'}, inplace=True)
     combined = pandas.concat([reviewer1_df, reviewer2_df], axis=1)
     combined = combined[~combined['target1'].isnull()]
@@ -29,8 +30,16 @@ def get_data_set():
 
 
 def main():
-    all_df = get_data_set()
-    all_df[all_df['target1'] != all_df['target2']].to_csv(out_path + 'reviewer1_vs_reviewer2_mismatched.csv')
+    val_sets = get_all_validation_sets()
+    for lang in LANGUAGES:
+        r_1_df = val_sets[lang + '_researcher_1']
+        r_2_df = val_sets[lang + '_researcher_2']
+        interrater_agreement_per_language(lang, r_1_df, r_2_df)
+
+
+def interrater_agreement_per_language(language, r_1_df, r_2df):
+    all_df = combine_data_sets(r_1_df, r_2df)
+    all_df[all_df['target1'] != all_df['target2']].to_csv(out_path + language + '_reviewer1_vs_reviewer2_mismatched.csv')
     r1_target = all_df['target1'].to_list()
     r2_target = all_df['target2'].to_list()
 
@@ -40,7 +49,7 @@ def main():
     disp.ax_.set_xlabel('Researcher 2')
     plt.gcf().subplots_adjust(left=0.2)
     plt.tight_layout()
-    plt.savefig(out_path + 'confusion_matrix_reviewer1_vs_reviewer2.png')
+    plt.savefig(out_path + language + '_confusion_matrix_reviewer1_vs_reviewer2.png')
 
     ir_metrics = [{'cohens_kappa': cohen_kappa_score(r1_target, r2_target),
                    'weighted_f1': f1_score(r1_target, r2_target, average='weighted'),
@@ -48,7 +57,7 @@ def main():
                    'accuracy': accuracy_score(r1_target, r2_target),
                    'krippendorff_alpha': krippendorff.alpha([r1_target, r2_target]),
                    'roc_auc': roc_auc_score(r1_target, r2_target)}]
-    pandas.DataFrame(ir_metrics).to_csv(out_path + 'reviewer1_vs_reviewer2_manual_agreement.csv')
+    pandas.DataFrame(ir_metrics).to_csv(out_path + language + '_reviewer1_vs_reviewer2_manual_agreement.csv')
 
     print('cohen ' + str(cohen_kappa_score(r1_target, r2_target)))
     print('f1 researcher 1 base ' + str(f1_score(r1_target, r2_target, average='weighted')))
