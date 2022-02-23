@@ -8,7 +8,7 @@ def split_by_md_code_block(documents):
         splits = document.split("```")
         for i, split in enumerate(splits):
             if i % 2:
-                artifacts.append("```")
+                artifacts.append("```") # todo reinclude a possible keyword after the ``` , eg. ```java
                 artifacts.extend(split.splitlines())
                 artifacts.append("```")
             else:

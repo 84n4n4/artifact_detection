@@ -24,11 +24,9 @@ def get_all_validation_sets():
 
 
 def get_data_from_issues(df, regex_clean=True):
-    print(df.shape)
     df = df[df['body'].str.contains("```", na=False)]
     df['body'] = df['body'].fillna('')
     df['title'] = df['title'].fillna('')
-    print(df.shape)
     docs = df['title'] + '\n' + df['body']
     documents = docs.tolist()
 
@@ -42,8 +40,8 @@ def get_data_from_issues(df, regex_clean=True):
 
 
 def get_data_from_documentation(df, regex_clean=True):
-    df = df[~df['doc'].isnull()]
-    df['doc'] = df['doc'].astype(str)
+    df = df[~df['content'].isnull()].copy()
+    df['doc'] = df['content'].astype(str)
     documents = df.pop('doc').values
 
     artifacts, text = split_by_md_code_block(documents)
@@ -57,13 +55,14 @@ def get_data_from_documentation(df, regex_clean=True):
 
 def get_trainingset(lang):
     df = pandas.read_csv(root_dir() + 'datasets/' + lang + '_training_issues.csv.zip', compression='zip')
+    issue_artifacts, issue_nat_lang = get_data_from_issues(df)
 
-    # todo add documentation
-    artifacts, nat_lang = get_data_from_issues(df)
+    df = pandas.read_csv(root_dir() + 'datasets/' + lang + '_all_documentation.csv.zip', compression='zip')
+    documentation_artifacts, documentation_nat_lang = get_data_from_documentation(df)
 
-    df_nat_lang = pandas.DataFrame({'doc': nat_lang})
+    df_nat_lang = pandas.DataFrame({'doc': issue_nat_lang + documentation_nat_lang})
     df_nat_lang['target'] = TARGET_NAMES['text']
-    df_artifacts = pandas.DataFrame({'doc': artifacts})
+    df_artifacts = pandas.DataFrame({'doc': issue_artifacts + documentation_artifacts})
     df_artifacts['target'] = TARGET_NAMES['artifact']
     df_train = df_nat_lang.append(df_artifacts.sample(len(df_nat_lang), random_state=42))
     # df_train = df_nat_lang.append(df_artifacts)

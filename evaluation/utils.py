@@ -1,3 +1,7 @@
+import json
+import time
+import timeit
+
 import numpy as np
 from sklearn import metrics
 from sklearn.metrics import roc_auc_score, f1_score, ConfusionMatrixDisplay
@@ -5,28 +9,20 @@ from sklearn.metrics import roc_auc_score, f1_score, ConfusionMatrixDisplay
 from artifact_detection_model.constants import TARGET_NAMES
 
 
-def validation_performance_on_dataset(pipeline, data, target, name, output_misclassified=''):
+def validation_performance_on_dataset(pipeline, data, target, name):
+    num_runs_timeit = 10
+    timeit_runtime = timeit.timeit(stmt='pipeline.predict(data_validation)', number=num_runs_timeit, globals={'pipeline': pipeline, 'data_validation': data}) / num_runs_timeit
+
+    perf_start = time.perf_counter()
     y_predicted = pipeline.predict(data)
+    perf_predict_runtime = time.perf_counter() - perf_start
+
     performance_report = {'man_validation_samples_' + name: len(data),
-                          'classification_report_' + name: str(metrics.classification_report(target, y_predicted, target_names=TARGET_NAMES)),
+                          'classification_report_' + name: json.dumps(metrics.classification_report(target, y_predicted, target_names=TARGET_NAMES, output_dict=True)),
                           'macro_f1_' + name: f1_score(target, y_predicted, average='macro'),
-                          'roc-auc_' + name: roc_auc_score(target, y_predicted)}
-
-    if output_misclassified:
-        wrongly_identified_as_artifact = []
-        wrongly_identified_as_text = []
-        for index in range(0, len(data)):
-            if target[index] == y_predicted[index]:
-                pass
-            elif target[index] == TARGET_NAMES['artifact'] and y_predicted[index] == TARGET_NAMES['text']:
-                wrongly_identified_as_text.append(data[index])
-            else:
-                wrongly_identified_as_artifact.append(data[index])
-
-        with open(output_misclassified + name + '_wrongly_identified_as_artifact.txt', 'w') as fd:
-            fd.write('\n\n'.join(wrongly_identified_as_artifact))
-        with open(output_misclassified + name + '_wrongly_identified_as_text.txt', 'w') as fd:
-            fd.write('\n\n'.join(wrongly_identified_as_text))
+                          'roc-auc_' + name: roc_auc_score(target, y_predicted),
+                          'perf_predict_runtime_' + name: perf_predict_runtime,
+                          'timeit_runtime_' + name: timeit_runtime}
 
     return performance_report
 

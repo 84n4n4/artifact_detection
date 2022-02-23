@@ -1,3 +1,5 @@
+import pickle
+import sys
 import time
 import timeit
 
@@ -15,7 +17,7 @@ from artifact_detection_model.utils.Logger import Logger
 log = Logger()
 
 
-def run_ml_artifact_training(df_train, clf, model_output_path=''):
+def run_ml_artifact_training(df_train, clf):
     data_train = df_train.copy().pop('doc').values
     target_train = df_train.copy().pop('target').values
 
@@ -53,9 +55,16 @@ def run_ml_artifact_training(df_train, clf, model_output_path=''):
 
     # confusion_matrix(target_validation, y_predicted)
 
+    perf_start = time.perf_counter()
+    pipeline_pickle = pickle.dumps(clf)
+    model_size = sys.getsizeof(pipeline_pickle)/(100.*1024.)
+    perf_model_size_evaluation = time.perf_counter() - perf_start
+    print('model size evaluation: ' + str(perf_model_size_evaluation))
+
     performance_report = {'train_samples': len(data_train),
                           'params': str(parameters),
-                          'perf_train_runtime': perf_train_runtime}
+                          'perf_train_runtime': perf_train_runtime,
+                          'model_size': model_size}
 
 
     # if model_output_path:

@@ -26,6 +26,8 @@ def combine_data_sets(reviewer1_df, reviewer2_df):
     combined = combined[~combined['target2'].isnull()]
     combined = combined[~combined['doc1'].isnull()]
     combined = combined[~combined['doc2'].isnull()]
+    combined['target1'] = combined['target1'].astype('float')
+    combined['target2'] = combined['target2'].astype('float')
     return combined
 
 
@@ -38,8 +40,10 @@ def main():
 
 
 def interrater_agreement_per_language(language, r_1_df, r_2df):
+
     all_df = combine_data_sets(r_1_df, r_2df)
     all_df[all_df['target1'] != all_df['target2']].to_csv(out_path + language + '_reviewer1_vs_reviewer2_mismatched.csv')
+
     r1_target = all_df['target1'].to_list()
     r2_target = all_df['target2'].to_list()
 
