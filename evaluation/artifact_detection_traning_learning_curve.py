@@ -8,6 +8,7 @@ from sklearn.svm import LinearSVC
 
 from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
+from datasets.constants import LANGUAGES
 from datasets.dataset_utils import get_trainingset, get_all_validation_sets
 from evaluation.utils import validation_performance_on_dataset
 from file_anchor import root_dir
@@ -16,17 +17,9 @@ log = Logger()
 
 OUT_PATH = root_dir() + 'evaluation/out/learning_curve/'
 
-languages = [
-    'cpp',
-    'java',
-    'python',
-    'php',
-    'javascript'
-]
-
 
 def main():
-    for lang in languages:
+    for lang in LANGUAGES:
         # lang = 'cpp'
         df = get_learning_curve_data(lang)
         # df = pandas.read_csv(OUT_PATH + 'cpp_artifact_detection_summary.csv')

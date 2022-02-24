@@ -44,6 +44,8 @@ def interrater_agreement_per_language(language, r_1_df, r_2df):
     all_df = combine_data_sets(r_1_df, r_2df)
     all_df[all_df['target1'] != all_df['target2']].to_csv(out_path + language + '_reviewer1_vs_reviewer2_mismatched.csv')
 
+    print(all_df['target1'].value_counts())
+    print(all_df['target2'].value_counts())
     r1_target = all_df['target1'].to_list()
     r2_target = all_df['target2'].to_list()
 

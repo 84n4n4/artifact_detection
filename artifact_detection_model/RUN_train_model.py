@@ -22,7 +22,11 @@ def main():
     val_sets = get_all_validation_sets()
     train_frac = 0.4
 
-    report, pipeline = run_ml_artifact_training(df_train.copy().sample(frac=train_frac, random_state=seed),
+    df_train = df_train.copy().sample(frac=train_frac, random_state=seed)
+    df_train[df_train['target'] == 0]['doc'].to_csv(OUT_PATH + 'train_artifact.csv')
+    df_train[df_train['target'] == 1]['doc'].to_csv(OUT_PATH + 'train_natural_lang.csv')
+
+    report, pipeline = run_ml_artifact_training(df_train,
                                                 LinearSVC(random_state=42))
 
     report.update({'seed': seed})
@@ -42,7 +46,10 @@ def main():
 
     with open(OUT_PATH + 'performance_report.json', 'w') as fd:
         json.dump(report, fd, indent=2)
+
+    investigate_miscalssifications(pipeline, val_sets['cpp_researcher_1'], 'cpp_researcher_1')
     return report, pipeline
+
 
 def investigate_miscalssifications(pipeline, val_set_df, val_set_name):
     data = val_set_df.copy().pop('doc').values
