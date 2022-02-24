@@ -23,7 +23,7 @@ def main():
         # lang = 'cpp'
         df = get_learning_curve_data(lang)
         # df = pandas.read_csv(OUT_PATH + 'cpp_artifact_detection_summary.csv')
-        plot_learning_curve(df, lang)
+        # plot_learning_curve(df, lang)
         # scoring_report(df)
 
 
