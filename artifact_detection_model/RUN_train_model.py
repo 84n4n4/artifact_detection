@@ -1,11 +1,14 @@
 import json
 
 import joblib
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import LinearSVC
 
 from artifact_detection_model.constants import TARGET_NAMES
 from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
+from datasets.constants import LANGUAGES
 from datasets.dataset_utils import get_trainingset, get_all_validation_sets
 from evaluation.utils import validation_performance_on_dataset
 from file_anchor import root_dir
@@ -16,11 +19,11 @@ OUT_PATH = root_dir() + 'artifact_detection_model/out/'
 
 
 def main():
-    lang = 'cpp'
+    lang = LANGUAGES[-1]
     seed = 42
     df_train = get_trainingset(lang)
     val_sets = get_all_validation_sets()
-    train_frac = 0.4
+    train_frac = 0.2
 
     df_train = df_train.copy().sample(frac=train_frac, random_state=seed)
     df_train[df_train['target'] == 0]['doc'].to_csv(OUT_PATH + 'train_artifact.csv')
@@ -28,6 +31,9 @@ def main():
 
     report, pipeline = run_ml_artifact_training(df_train,
                                                 LinearSVC(random_state=42))
+    # MultinomialNB(fit_prior=False)
+    # LogisticRegression(random_state=42)
+    # LinearSVC(random_state=42)
 
     report.update({'seed': seed})
     report.update({'train_frac': train_frac})
@@ -47,7 +53,9 @@ def main():
     with open(OUT_PATH + 'performance_report.json', 'w') as fd:
         json.dump(report, fd, indent=2)
 
-    investigate_miscalssifications(pipeline, val_sets['cpp_researcher_1'], 'cpp_researcher_1')
+    investigate_miscalssifications(pipeline, val_sets[lang + '_researcher_1'], lang + '_researcher_1')
+
+    # store_model(pipeline)
     return report, pipeline
 
 

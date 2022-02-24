@@ -7,19 +7,23 @@ from artifact_detection_model.regex_cleanup import split_by_md_code_block, regex
 from datasets.constants import LANGUAGES
 from file_anchor import root_dir
 
+def get_validation_sets_for_language(lang):
+    r_1_val_set = pandas.read_csv(
+        root_dir() + 'datasets/' + lang + '_reseracher_1_manually_labeled_validation_set.csv.zip', compression='zip')
+    r_1_val_set = r_1_val_set[~r_1_val_set['target'].isnull()]
+    r_1_val_set = r_1_val_set[~r_1_val_set['doc'].isnull()]
+
+    r_2_val_set = pandas.read_csv(
+        root_dir() + 'datasets/' + lang + '_reseracher_2_manually_labeled_validation_set.csv.zip', compression='zip')
+    r_2_val_set = r_2_val_set[~r_2_val_set['target'].isnull()]
+    r_2_val_set = r_2_val_set[~r_2_val_set['doc'].isnull()]
+
+    return {lang + '_researcher_1': r_1_val_set, lang + '_researcher_2': r_2_val_set}
+
 def get_all_validation_sets():
     validation_sets = {}
     for lang in LANGUAGES:
-        r_1_val_set = pandas.read_csv(root_dir() + 'datasets/' + lang + '_reseracher_1_manually_labeled_validation_set.csv.zip', compression='zip')
-        r_1_val_set = r_1_val_set[~r_1_val_set['target'].isnull()]
-        r_1_val_set = r_1_val_set[~r_1_val_set['doc'].isnull()]
-
-        r_2_val_set = pandas.read_csv(root_dir() + 'datasets/' + lang + '_reseracher_2_manually_labeled_validation_set.csv.zip', compression='zip')
-        r_2_val_set = r_2_val_set[~r_2_val_set['target'].isnull()]
-        r_2_val_set = r_2_val_set[~r_2_val_set['doc'].isnull()]
-
-        validation_sets.update({lang + '_researcher_1': r_1_val_set,
-                                lang + '_researcher_2': r_2_val_set})
+        validation_sets.update(get_validation_sets_for_language(lang))
     return validation_sets
 
 

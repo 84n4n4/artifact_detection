@@ -1,7 +1,7 @@
 LANGUAGES = [
     'cpp',
-    # 'java',
-    # 'python',
-    # 'php',
-    # 'javascript'
+    'java',
+    'javascript',
+    'php',
+    'python',
 ]

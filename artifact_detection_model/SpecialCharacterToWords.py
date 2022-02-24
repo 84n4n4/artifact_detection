@@ -28,8 +28,10 @@ class SpecialCharacterToWords(BaseEstimator, TransformerMixin):
 char_map = [
     ('    ', 'JJJquadspace'),
     ('  ', 'JJJdoublespace'),
+    # (' ', 'JJJspace'),
     ('JJJquadspace', ' JJJquadspace '),
     ('JJJdoublespace', ' JJJdoublespace '),
+    # ('JJJspace', ' JJJspace '),
     ('\n', ' JJJendline \n JJJnewline '),
     ('\t', ' JJJtabulator '),
     ('~', ' JJJtilde '),

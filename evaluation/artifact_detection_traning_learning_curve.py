@@ -9,7 +9,7 @@ from sklearn.svm import LinearSVC
 from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
-from datasets.dataset_utils import get_trainingset, get_all_validation_sets
+from datasets.dataset_utils import get_trainingset, get_all_validation_sets, get_validation_sets_for_language
 from evaluation.utils import validation_performance_on_dataset
 from file_anchor import root_dir
 
@@ -47,6 +47,7 @@ def plot_learning_curve(df, language):
     plt.legend()
     plt.tight_layout()
     plt.savefig(OUT_PATH + language + '_macro_f1_validation_set_learning_curve.png')
+    plt.close()
 
     fig, axes = plt.subplots(1, 1, figsize=(5, 4))
     plot_mean_and_fill_std(axes, gb, 'roc-auc_' + language + '_researcher_1', 'g', 'Validation set 1')
@@ -57,6 +58,7 @@ def plot_learning_curve(df, language):
     plt.legend(loc='lower right')
     plt.tight_layout()
     plt.savefig(OUT_PATH + language + '_roc-auc_validation_set_learning_curve.png')
+    plt.close()
 
     # # nlon
     # fig, axes = plt.subplots(1, 1, figsize=(5, 5))
@@ -89,6 +91,7 @@ def plot_learning_curve(df, language):
     plt.legend()
     plt.tight_layout()
     plt.savefig(OUT_PATH + language + '_model_size_learning_curve.png')
+    plt.close()
 
     # runtime performance
     fig, axes = plt.subplots(1, 1, figsize=(5, 5))
@@ -98,6 +101,7 @@ def plot_learning_curve(df, language):
     plt.legend()
     plt.tight_layout()
     plt.savefig(OUT_PATH + language + '_perf_train_runtime_learning_curve.png')
+    plt.close()
 
     fig, axes = plt.subplots(1, 1, figsize=(5, 5))
     plot_mean_and_fill_std(axes, gb, 'perf_predict_runtime_' + language + '_researcher_1', 'r', 'Validation set 1 classification time (perf_counter)')
@@ -107,6 +111,7 @@ def plot_learning_curve(df, language):
     plt.legend()
     plt.tight_layout()
     plt.savefig(OUT_PATH + language + '_perf_predict_runtime_learning_curve.png')
+    plt.close()
 
     fig, axes = plt.subplots(1, 1, figsize=(5, 5))
     plot_mean_and_fill_std(axes, gb, 'timeit_runtime_' + language + '_researcher_1', 'r', 'Validation set 1 classification time (timeit)')
@@ -116,6 +121,7 @@ def plot_learning_curve(df, language):
     plt.legend()
     plt.tight_layout()
     plt.savefig(OUT_PATH + language + '_perf_timeit_predict_runtime_learning_curve.png')
+    plt.close()
 
 
 def plot_mean_and_fill_std(axes, gb, metric, color, label):
@@ -127,19 +133,21 @@ def plot_mean_and_fill_std(axes, gb, metric, color, label):
 
 def get_learning_curve_data(lang):
     df_train = get_trainingset(lang)
-    val_sets = get_all_validation_sets()
+    val_sets = get_validation_sets_for_language(lang)
 
     df = pandas.DataFrame()
 
-    # for train_frac in [0.2, 0.4, 0.6, 0.8, 1]:
-    for train_frac in [0.01, 0.02, 0.04, 0.1, 0.2, 0.4, 0.6, 0.8, 1]:
-    # for train_frac in [0.01, 0.02]:
+    for train_frac in [6250, 12500, 25000, 50000, 100000, 200000, 400000, 800000, 1600000, 3200000]:
+        if train_frac > len(df_train):
+            act_train_frac = len(df_train)
+        else:
+            act_train_frac = train_frac
         for index in range(0, 10):
             seed = random.randint(100, 1000)
-            report, pipeline = run_ml_artifact_training(df_train.copy().sample(frac=train_frac, random_state=seed),
+            report, pipeline = run_ml_artifact_training(df_train.copy().sample(act_train_frac, random_state=seed),
                                                         LinearSVC(random_state=42))
             report.update({'seed': seed})
-            report.update({'train_frac': train_frac})
+            report.update({'train_frac': act_train_frac})
             report.update({'index': index})
 
             for val_set_name, val_set_df in val_sets.items():
@@ -149,9 +157,8 @@ def get_learning_curve_data(lang):
             print(report)
 
             df = df.append(pandas.DataFrame([report]))
-            if train_frac == 1:
-                df = df.append(pandas.DataFrame([report]*9))
-                break
+        if train_frac > len(df_train):
+            break
 
     df.to_csv(OUT_PATH + lang + '_artifact_detection_summary.csv')
     return df
