@@ -21,10 +21,10 @@ OUT_PATH = root_dir() + 'evaluation/out/learning_curve/'
 def main():
     for lang in LANGUAGES:
         # lang = 'cpp'
-        df = get_learning_curve_data(lang)
-        df = get_learning_curve_data_fractional(lang)
-        # df = pandas.read_csv(OUT_PATH + 'cpp_artifact_detection_summary.csv')
-        # plot_learning_curve(df, lang)
+        # df = get_learning_curve_data(lang)
+        # df = get_learning_curve_data_fractional(lang)
+        df = pandas.read_csv(OUT_PATH + lang + '_artifact_detection_summary.csv')
+        plot_learning_curve(df, lang)
         # scoring_report(df)
 
 
