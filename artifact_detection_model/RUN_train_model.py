@@ -1,4 +1,5 @@
 import json
+import pickle
 
 import joblib
 from sklearn.linear_model import LogisticRegression
@@ -55,7 +56,7 @@ def main():
 
     investigate_miscalssifications(pipeline, val_sets[lang + '_researcher_1'], lang + '_researcher_1')
 
-    # store_model(pipeline)
+    store_model(pipeline)
     return report, pipeline
 
 
@@ -84,6 +85,8 @@ def investigate_miscalssifications(pipeline, val_set_df, val_set_name):
 
 def store_model(pipeline):
     joblib.dump(pipeline, OUT_PATH + 'artifact_detection.joblib')
+    with open(OUT_PATH + 'artifact_detection.pickle', 'wb') as fd:
+        pickle.dump(pipeline, fd)
 
 
 if __name__ == "__main__":

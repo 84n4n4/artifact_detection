@@ -27,10 +27,10 @@ def run_ml_artifact_training(df_train, clf):
         ('clf', clf)])
 
     parameters = {
-        'charrep__repl_all_caps': False,
+        'charrep__repl_all_caps': True,
         'vect__ngram_range': (1, 3),
         'vect__stop_words': None,
-        'vect__lowercase': False,
+        'vect__lowercase': True,
     }
 
     log.s("train_samples: %d" % len(data_train))
@@ -56,7 +56,7 @@ def run_ml_artifact_training(df_train, clf):
     # confusion_matrix(target_validation, y_predicted)
 
     # perf_start = time.perf_counter()
-    pipeline_pickle = pickle.dumps(clf)
+    pipeline_pickle = pickle.dumps(pipeline)
     model_size = sys.getsizeof(pipeline_pickle)/(1000.*1024.)
     # perf_model_size_evaluation = time.perf_counter() - perf_start
     # print('model size evaluation: ' + str(perf_model_size_evaluation))
