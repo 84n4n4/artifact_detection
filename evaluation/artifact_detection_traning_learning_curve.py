@@ -22,8 +22,9 @@ def main():
     for lang in LANGUAGES:
         # lang = 'cpp'
         df = get_learning_curve_data(lang)
+        df = get_learning_curve_data_fractional(lang)
         # df = pandas.read_csv(OUT_PATH + 'cpp_artifact_detection_summary.csv')
-        plot_learning_curve(df, lang)
+        # plot_learning_curve(df, lang)
         # scoring_report(df)
 
 
@@ -161,6 +162,36 @@ def get_learning_curve_data(lang):
             break
 
     df.to_csv(OUT_PATH + lang + '_artifact_detection_summary.csv')
+    return df
+
+
+def get_learning_curve_data_fractional(lang):
+    df_train = get_trainingset(lang)
+    val_sets = get_all_validation_sets()
+
+    df = pandas.DataFrame()
+
+    for train_frac in [0.0125, 0.025, 0.05, 0.1, 0.2, 0.4, 0.8, 1]:
+        for index in range(0, 10):
+            seed = random.randint(100, 1000)
+            report, pipeline = run_ml_artifact_training(df_train.copy().sample(frac=train_frac, random_state=seed),
+                                                        LinearSVC(random_state=42))
+            report.update({'seed': seed})
+            report.update({'train_frac': train_frac})
+            report.update({'index': index})
+
+            for val_set_name, val_set_df in val_sets.items():
+                val_docs = val_set_df.copy().pop('doc').values
+                val_targets = val_set_df.copy().pop('target').values
+                report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, val_set_name))
+            print(report)
+
+            df = df.append(pandas.DataFrame([report]))
+            if train_frac == 1:
+                df = df.append(pandas.DataFrame([report]*9))
+                break
+
+    df.to_csv(OUT_PATH + lang + '_artifact_detection_summary_fractional.csv')
     return df
 
 
