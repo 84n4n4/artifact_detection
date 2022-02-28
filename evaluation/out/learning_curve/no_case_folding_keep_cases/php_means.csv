@@ -1,0 +1,18 @@
+,0
+Unnamed: 0,0.0
+train_samples,25000.0
+perf_train_runtime,7.225142744608457
+model_size,15.485708203124997
+seed,528.6
+train_frac,25000.0
+index,4.5
+man_validation_samples_php_researcher_1,6190.0
+macro_f1_php_researcher_1,0.8859278107384672
+roc-auc_php_researcher_1,0.914105074492787
+perf_predict_runtime_php_researcher_1,0.4416554427065421
+timeit_runtime_php_researcher_1,0.4402246856596321
+man_validation_samples_php_researcher_2,6189.0
+macro_f1_php_researcher_2,0.8785040925338929
+roc-auc_php_researcher_2,0.9043077842669334
+perf_predict_runtime_php_researcher_2,0.4422391042986419
+timeit_runtime_php_researcher_2,0.4405460102297366

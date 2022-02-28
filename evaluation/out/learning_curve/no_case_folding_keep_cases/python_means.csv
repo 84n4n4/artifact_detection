@@ -1,0 +1,18 @@
+,0
+Unnamed: 0,0.0
+train_samples,25000.0
+perf_train_runtime,7.6569474326039195
+model_size,13.88872548828125
+seed,505.3
+train_frac,25000.0
+index,4.5
+man_validation_samples_python_researcher_1,10901.0
+macro_f1_python_researcher_1,0.8616053254897098
+roc-auc_python_researcher_1,0.9134757296725592
+perf_predict_runtime_python_researcher_1,0.8083622112055309
+timeit_runtime_python_researcher_1,0.8059954754501815
+man_validation_samples_python_researcher_2,10983.0
+macro_f1_python_researcher_2,0.8557167514051063
+roc-auc_python_researcher_2,0.9072452325996642
+perf_predict_runtime_python_researcher_2,0.8111281315912493
+timeit_runtime_python_researcher_2,0.8091126449609873

@@ -1,0 +1,18 @@
+,0
+Unnamed: 0,0.0
+train_samples,25000.0
+perf_train_runtime,7.473726990213618
+model_size,8.554880761718751
+seed,430.7
+train_frac,25000.0
+index,4.5
+man_validation_samples_java_researcher_1,6575.0
+macro_f1_java_researcher_1,0.9205990053479175
+roc-auc_java_researcher_1,0.9431197842341439
+perf_predict_runtime_java_researcher_1,0.8326051600743085
+timeit_runtime_java_researcher_1,0.8256112302164548
+man_validation_samples_java_researcher_2,6578.0
+macro_f1_java_researcher_2,0.9221589392060903
+roc-auc_java_researcher_2,0.9430864276833073
+perf_predict_runtime_java_researcher_2,0.8267905828543007
+timeit_runtime_java_researcher_2,0.8237855556258001
