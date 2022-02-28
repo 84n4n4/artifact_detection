@@ -57,7 +57,7 @@ def get_data_from_documentation(df, regex_clean=True):
     return artifacts, text
 
 
-def get_trainingset(lang):
+def get_trainingset(lang, balance=True):
     df = pandas.read_csv(root_dir() + 'datasets/' + lang + '_training_issues.csv.zip', compression='zip')
     issue_artifacts, issue_nat_lang = get_data_from_issues(df)
 
@@ -68,6 +68,9 @@ def get_trainingset(lang):
     df_nat_lang['target'] = TARGET_NAMES['text']
     df_artifacts = pandas.DataFrame({'doc': issue_artifacts + documentation_artifacts})
     df_artifacts['target'] = TARGET_NAMES['artifact']
-    df_train = df_nat_lang.append(df_artifacts.sample(len(df_nat_lang), random_state=42))
-    # df_train = df_nat_lang.append(df_artifacts)
+
+    if balance:
+        df_train = df_nat_lang.append(df_artifacts.sample(len(df_nat_lang), random_state=42))
+    else:
+        df_train = df_nat_lang.append(df_artifacts)
     return df_train
