@@ -27,10 +27,10 @@ def run_ml_artifact_training(df_train, clf):
         ('clf', clf)])
 
     parameters = {
-        'charrep__repl_all_caps': True,
+        'charrep__repl_all_caps': False,
         'vect__ngram_range': (1, 3),
         'vect__stop_words': None,
-        'vect__lowercase': True,
+        'vect__lowercase': False,
     }
 
     log.s("train_samples: %d" % len(data_train))

@@ -51,7 +51,8 @@ def is_markdown_artifact(line):
 
     rex = [md_enumerate + r"`[^`]*`$", # single line quote
            md_enumerate + r"http(s)?://[A-Za-z0-9\-\._~]+(:\d+)?(?:/[A-Za-z0-9\-\._~\?&%$#!=]+)*/?$", # urls
-           r"^\|(.*\|){2,}$", # tables "| factory123      | null | user123 |"
+           # r"^\|(.*\|){2,}$", # tables "| factory123      | null | user123 |"
+           r"^(\|.*){2,}$", # tables "| factory123      | null | user123 |"
            r"^\s*!{0,1}[\*\-#]*\s*(?:`.+`)?\[.*\]\(.+\)\s*$", # md links "[logcat.txt](https://github.com/google/ExoPlayer/files/3783649/logcat.txt)"
            r"^[0-9\.\s\{\}\(\);\.,:\-\+#@!\$%\^\\&=\[\]\|<>\?_\*`]*$"] # line contains only special chars and numbers
     return match_any(rex, line)

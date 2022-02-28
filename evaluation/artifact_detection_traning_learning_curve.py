@@ -1,4 +1,5 @@
 import random
+import traceback
 
 import pandas
 from matplotlib import pyplot as plt
@@ -21,10 +22,10 @@ OUT_PATH = root_dir() + 'evaluation/out/learning_curve/'
 def main():
     for lang in LANGUAGES:
         # lang = 'cpp'
-        df = get_learning_curve_data(lang)
-        df = get_learning_curve_data_fractional(lang)
-        # df = pandas.read_csv(OUT_PATH + 'cpp_artifact_detection_summary.csv')
-        # plot_learning_curve(df, lang)
+        # df = get_learning_curve_data(lang)
+        # df = get_learning_curve_data_fractional(lang)
+        df = pandas.read_csv(OUT_PATH + lang + '_artifact_detection_summary.csv')
+        plot_learning_curve(df, lang)
         # scoring_report(df)
 
 
@@ -138,28 +139,32 @@ def get_learning_curve_data(lang):
 
     df = pandas.DataFrame()
 
-    for train_frac in [6250, 12500, 25000, 50000, 100000, 200000, 400000, 800000, 1600000, 3200000]:
-        if train_frac > len(df_train):
-            act_train_frac = len(df_train)
-        else:
-            act_train_frac = train_frac
-        for index in range(0, 10):
-            seed = random.randint(100, 1000)
-            report, pipeline = run_ml_artifact_training(df_train.copy().sample(act_train_frac, random_state=seed),
-                                                        LinearSVC(random_state=42))
-            report.update({'seed': seed})
-            report.update({'train_frac': act_train_frac})
-            report.update({'index': index})
+    try:
+        for train_frac in [6250, 12500, 25000, 50000, 100000, 200000, 400000, 800000, 1600000, 3200000]:
+            if train_frac > len(df_train):
+                act_train_frac = len(df_train)
+            else:
+                act_train_frac = train_frac
+            for index in range(0, 10):
+                seed = random.randint(100, 1000)
+                report, pipeline = run_ml_artifact_training(df_train.copy().sample(act_train_frac, random_state=seed),
+                                                            LinearSVC(random_state=42))
+                report.update({'seed': seed})
+                report.update({'train_frac': act_train_frac})
+                report.update({'index': index})
 
-            for val_set_name, val_set_df in val_sets.items():
-                val_docs = val_set_df.copy().pop('doc').values
-                val_targets = val_set_df.copy().pop('target').values
-                report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, val_set_name))
-            print(report)
+                for val_set_name, val_set_df in val_sets.items():
+                    val_docs = val_set_df.copy().pop('doc').values
+                    val_targets = val_set_df.copy().pop('target').values
+                    report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, val_set_name))
+                print(report)
 
-            df = df.append(pandas.DataFrame([report]))
-        if train_frac > len(df_train):
-            break
+                df = df.append(pandas.DataFrame([report]))
+            if train_frac > len(df_train):
+                break
+    except Exception as e:
+        log.e(str(e))
+        log.e(str(traceback.format_tb(e.__traceback__)))
 
     df.to_csv(OUT_PATH + lang + '_artifact_detection_summary.csv')
     return df
@@ -171,23 +176,26 @@ def get_learning_curve_data_fractional(lang):
 
     df = pandas.DataFrame()
 
-    for train_frac in [0.0125, 0.025, 0.05, 0.1, 0.2, 0.4, 0.8, 1]:
-        for index in range(0, 10):
-            seed = random.randint(100, 1000)
-            report, pipeline = run_ml_artifact_training(df_train.copy().sample(frac=train_frac, random_state=seed),
-                                                        LinearSVC(random_state=42))
-            report.update({'seed': seed})
-            report.update({'train_frac': train_frac})
-            report.update({'index': index})
+    try:
+        for train_frac in [0.0125, 0.025, 0.05, 0.1, 0.2, 0.4, 0.8, 1]:
+            for index in range(0, 10):
+                seed = random.randint(100, 1000)
+                report, pipeline = run_ml_artifact_training(df_train.copy().sample(frac=train_frac, random_state=seed),
+                                                            LinearSVC(random_state=42))
+                report.update({'seed': seed})
+                report.update({'train_frac': train_frac})
+                report.update({'index': index})
 
-            for val_set_name, val_set_df in val_sets.items():
-                val_docs = val_set_df.copy().pop('doc').values
-                val_targets = val_set_df.copy().pop('target').values
-                report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, val_set_name))
-            print(report)
+                for val_set_name, val_set_df in val_sets.items():
+                    val_docs = val_set_df.copy().pop('doc').values
+                    val_targets = val_set_df.copy().pop('target').values
+                    report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, val_set_name))
+                print(report)
 
-            df = df.append(pandas.DataFrame([report]))
-
+                df = df.append(pandas.DataFrame([report]))
+    except Exception as e:
+        log.e(str(e))
+        log.e(str(traceback.format_tb(e.__traceback__)))
     df.to_csv(OUT_PATH + lang + '_artifact_detection_summary_fractional.csv')
     return df
 
