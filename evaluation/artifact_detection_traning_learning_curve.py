@@ -134,7 +134,7 @@ def plot_mean_and_fill_std(axes, gb, metric, color, label):
 
 
 def get_learning_curve_data(lang):
-    df_train = get_trainingset(lang)
+    df_train = get_trainingset(lang, balance=False)
     val_sets = get_validation_sets_for_language(lang)
 
     df = pandas.DataFrame()
@@ -147,8 +147,11 @@ def get_learning_curve_data(lang):
                 act_train_frac = train_frac
             for index in range(0, 10):
                 seed = random.randint(100, 1000)
-                report, pipeline = run_ml_artifact_training(df_train.copy().sample(act_train_frac, random_state=seed),
-                                                            LinearSVC(random_state=42))
+
+                df_sel = df_train[df_train['target'] == 1].sample(int(act_train_frac / 2), random_state=seed, replace=True)
+                df_sel = df_sel.append( df_train[df_train['target'] == 0].sample(int(act_train_frac / 2), random_state=seed, replace=True))
+
+                report, pipeline = run_ml_artifact_training(df_sel, LinearSVC(random_state=42))
                 report.update({'seed': seed})
                 report.update({'train_frac': act_train_frac})
                 report.update({'index': index})
