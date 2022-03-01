@@ -21,7 +21,9 @@ OUT_PATH = root_dir() + 'evaluation/out/dataset_stats/'
 def main():
     reports = []
     for lang in LANGUAGES:
-        df_train = get_trainingset(lang)
+        df_train = get_trainingset(lang, balance=False)
+        df_train[df_train['target']==1][['target', 'doc']].sample(n=500, random_state=42, ignore_index=True).to_csv(OUT_PATH + lang + '_training_set_text_sample.csv')
+        df_train[df_train['target']==0][['target', 'doc']].sample(n=500, random_state=42, ignore_index=True).to_csv(OUT_PATH + lang + '_training_set_artifact_sample.csv')
         val_sets = get_validation_sets_for_language(lang)
         report = {'len_df_train': len(df_train)}
 
