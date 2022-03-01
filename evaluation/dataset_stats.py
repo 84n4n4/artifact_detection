@@ -81,11 +81,13 @@ def get_dataset_stats(lang):
     report.update({'Number of issues in validation set': 250})
     val_sets = get_validation_sets_for_language(lang)
     val1_df = val_sets[ lang + '_researcher_1']
-    report.update({'Artifact lines in validation set 1': len(val1_df['target'] == 0)})
-    report.update({'Natural language lines in validation set 1': len(val1_df['target'] == 1)})
-    val1_df = val_sets[ lang + '_researcher_2']
-    report.update({'Artifact lines in validation set 2': len(val1_df['target'] == 0)})
-    report.update({'Natural language lines in validation set 2': len(val1_df['target'] == 1)})
+    report.update({'Artifact lines in validation set 1': len(val1_df[val1_df['target'] == 0])})
+    report.update({'Natural language lines in validation set 1': len(val1_df[val1_df['target'] == 1])})
+
+    val2_df = val_sets[ lang + '_researcher_2']
+    report.update({'Artifact lines in validation set 2': len(val2_df[val2_df['target'] == 0])})
+    report.update({'Natural language lines in validation set 2': len(val2_df[val2_df['target'] == 1])})
+
     df = pandas.read_csv(root_dir() + 'evaluation/out/interrater_agreement/' + lang + '_reviewer1_vs_reviewer2_manual_agreement.csv')
     report.update({'Cohens Kappa': df['cohens_kappa'].values[0]})
     report.update({'ROC-AUC': df['roc_auc'].values[0]})
