@@ -16,7 +16,7 @@ from file_anchor import root_dir
 
 log = Logger()
 
-OUT_PATH = root_dir() + 'evaluation/out/learning_curve/no_case_folding_keep_cases/'
+OUT_PATH = root_dir() + 'evaluation/out/learning_curve/'
 
 language_labels = {
     'cpp': 'C++',
@@ -39,7 +39,7 @@ def main():
     for i, lang in enumerate(LANGUAGES):
         print(lang)
         df = pandas.read_csv(OUT_PATH + lang + '_artifact_detection_summary.csv')
-        df = df[df['train_samples'] < 800000]
+        df = df[df['train_samples'] <= 800000]
         df['train_samples'] = df['train_samples']/ 10**3
         # ax = axes[int(i/2)][i % 2]
         ax = axes[i]
