@@ -1,11 +1,7 @@
 import random
-import matplotlib.pyplot as plt
-import numpy as np
 import pandas
 from sklearn.svm import LinearSVC
-from sklearn.utils import resample
 
-from artifact_detection_model.constants import TARGET_NAMES
 from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
@@ -25,7 +21,7 @@ def main():
         df = evaluate_language_model(lang, val_sets)
 
 
-def evaluate_language_model(lang, val_sets, train_size=250000):
+def evaluate_language_model(lang, val_sets, train_size=200000):
     df_train = get_trainingset(lang, balance=False)
 
     n_iterations = 100

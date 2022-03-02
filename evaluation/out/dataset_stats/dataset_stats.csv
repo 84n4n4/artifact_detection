@@ -1,6 +1,19 @@
-,len_df_train,text_cpp_researcher_1,artifact_cpp_researcher_1,total_cpp_researcher_1,text_cpp_researcher_2,artifact_cpp_researcher_2,total_cpp_researcher_2,text_java_researcher_1,artifact_java_researcher_1,total_java_researcher_1,text_java_researcher_2,artifact_java_researcher_2,total_java_researcher_2,text_javascript_researcher_1,artifact_javascript_researcher_1,total_javascript_researcher_1,text_javascript_researcher_2,artifact_javascript_researcher_2,total_javascript_researcher_2,text_php_researcher_1,artifact_php_researcher_1,total_php_researcher_1,text_php_researcher_2,artifact_php_researcher_2,total_php_researcher_2,text_python_researcher_1,artifact_python_researcher_1,total_python_researcher_1,text_python_researcher_2,artifact_python_researcher_2,total_python_researcher_2
-0,220478,1708.0,3708.0,5416.0,1699.0,3719.0,5418.0,,,,,,,,,,,,,,,,,,,,,,,,
-1,919170,,,,,,,1887.0,4688.0,6575.0,1906.0,4672.0,6578.0,,,,,,,,,,,,,,,,,,
-2,1572804,,,,,,,,,,,,,1930.0,3240.0,5170.0,1942.0,3225.0,5167.0,,,,,,,,,,,,
-3,1129628,,,,,,,,,,,,,,,,,,,1964.0,4226.0,6190.0,1991.0,4198.0,6189.0,,,,,,
-4,3505344,,,,,,,,,,,,,,,,,,,,,,,,,2559.0,8342.0,10901.0,2556.0,8427.0,10983.0
+,C++,Java,JavaScript,PHP,Python
+Number of issues,41542.0,131329.0,187340.0,108568.0,159760.0
+Issues containing MD codeblocks,9400.0,46079.0,66319.0,46523.0,95676.0
+Issues in training set,8458.0,45038.0,64835.0,45307.0,94124.0
+Artifact lines from issues,298882.0,1938028.0,2002214.0,1742087.0,4029321.0
+Natural language lines from issues,75127.0,423041.0,669877.0,520262.0,1700949.0
+Number of documentation files,618.0,683.0,2373.0,511.0,825.0
+Artifact lines from documentation,20719.0,27372.0,139937.0,16335.0,37447.0
+Natural language lines from documentation,34782.0,36482.0,109988.0,30864.0,51596.0
+Lines in full training set,429510.0,2424923.0,2922016.0,2309548.0,5819313.0
+Artifact lines in full training set,319601.0,1965400.0,2142151.0,1758422.0,4066768.0
+Natural language lines in full training set,109909.0,459523.0,779865.0,551126.0,1752545.0
+Number of issues in validation set,250.0,250.0,250.0,250.0,250.0
+Artifact lines in validation set 1,3708.0,4688.0,3240.0,4226.0,8342.0
+Natural language lines in validation set 1,1708.0,1887.0,1930.0,1964.0,2559.0
+Artifact lines in validation set 2,3719.0,4672.0,3225.0,4198.0,8427.0
+Natural language lines in validation set 2,1699.0,1906.0,1942.0,1991.0,2556.0
+Cohens Kappa,0.963538030633101,0.972923986304099,0.9599289134885408,0.9200292126553998,0.948391729195762
+ROC-AUC,0.9810832611618798,0.987926814693476,0.9805164695107502,0.9615809638782032,0.9740673450293712
