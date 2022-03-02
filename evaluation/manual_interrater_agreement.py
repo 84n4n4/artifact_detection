@@ -17,6 +17,13 @@ out_path = root_dir() + 'evaluation/out/interrater_agreement/'
 target_names = {'artifact': 0,
                 'text': 1}
 
+language_labels = {
+    'cpp': 'C++',
+    'java': 'Java',
+    'javascript': 'JavaScript',
+    'php': 'PHP',
+    'python': 'Python',
+}
 
 def combine_data_sets(reviewer1_df, reviewer2_df):
     reviewer1_df.rename(columns={'doc': 'doc1', 'target': 'target1'}, inplace=True)
@@ -33,10 +40,32 @@ def combine_data_sets(reviewer1_df, reviewer2_df):
 
 def main():
     val_sets = get_all_validation_sets()
+    latex_table_interrrater_agreement(val_sets)
+    # for lang in LANGUAGES:
+    #     r_1_df = val_sets[lang + '_researcher_1']
+    #     r_2_df = val_sets[lang + '_researcher_2']
+    #     interrater_agreement_per_language(lang, r_1_df, r_2_df)
+
+def latex_table_interrrater_agreement(val_sets):
+    aa = {'Researcher 1': 'artifact', 'Researcher 2': 'artifact'}
+    an = {'Researcher 1': 'artifact', 'Researcher 2': 'natural language'}
+    na = {'Researcher 1': 'natural language', 'Researcher 2': 'artifact'}
+    nn = {'Researcher 1': 'natural language', 'Researcher 2': 'natural language'}
+
+
     for lang in LANGUAGES:
         r_1_df = val_sets[lang + '_researcher_1']
         r_2_df = val_sets[lang + '_researcher_2']
-        interrater_agreement_per_language(lang, r_1_df, r_2_df)
+        df = combine_data_sets(r_1_df, r_2_df)
+
+        aa.update({'Researcher 1': 'artifact', 'Researcher 2': 'artifact', language_labels[lang]: len(df[(df['target1'] == 0) & (df['target2'] == 0)])/len(df)*100})
+        an.update({'Researcher 1': 'artifact', 'Researcher 2': 'natural language', language_labels[lang]: len(df[(df['target1'] == 0) & (df['target2'] == 1)])/len(df)*100})
+        na.update({'Researcher 1': 'natural language', 'Researcher 2': 'artifact', language_labels[lang]: len(df[(df['target1'] == 1) & (df['target2'] == 0)])/len(df)*100})
+        nn.update({'Researcher 1': 'natural language', 'Researcher 2': 'natural language', language_labels[lang]: len(df[(df['target1'] == 1) & (df['target2'] == 1)])/len(df)*100})
+
+    df = pandas.DataFrame([aa, an, na, nn])
+    df.to_csv(out_path + 'interrater_stats.csv')
+    df.to_latex(out_path + 'interrater_stats.tex', float_format="%.2f")
 
 
 def interrater_agreement_per_language(language, r_1_df, r_2df):
@@ -65,6 +94,7 @@ def interrater_agreement_per_language(language, r_1_df, r_2df):
                    'roc_auc': roc_auc_score(r1_target, r2_target)}]
     pandas.DataFrame(ir_metrics).to_csv(out_path + language + '_reviewer1_vs_reviewer2_manual_agreement.csv')
 
+
     # print('cohen ' + str(cohen_kappa_score(r1_target, r2_target)))
     # print('f1 researcher 1 base ' + str(f1_score(r1_target, r2_target, average='weighted')))
     # print('f1 researcher 2 base ' + str(f1_score(r2_target, r1_target, average='weighted')))
@@ -72,7 +102,6 @@ def interrater_agreement_per_language(language, r_1_df, r_2df):
     # print('krippendorff alpha ' + str(krippendorff.alpha([r1_target, r2_target])))
     # print('roc auc Reviewer1 base ' + str(roc_auc_score(r1_target, r2_target)))
     # print('roc auc Reviewer2 base ' + str(roc_auc_score(r2_target, r1_target)))
-
 
 if __name__ == "__main__":
     main()
