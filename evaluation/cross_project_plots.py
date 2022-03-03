@@ -17,6 +17,8 @@ from evaluation.stats_utils import evaluate_bootstrap, t_test_x_greater_y
 from evaluation.utils import validation_performance_on_dataset
 from file_anchor import root_dir
 
+import seaborn as sns
+
 log = Logger()
 
 OUT_PATH = root_dir() + 'evaluation/out/cross_language/'
@@ -29,23 +31,23 @@ language_labels = {
     'python': 'Python',
 }
 
-# man_validation_samples_cpp_researcher_1
-# classification_report_cpp_researcher_1
-# macro_f1_cpp_researcher_1
-# roc-auc_cpp_researcher_1
-# perf_predict_runtime_cpp_researcher_1
-# timeit_runtime_cpp_researcher_1
-
-
-RESEARCHER = '1'
-
 
 def main():
-    cross_project_roc_auc_matrix()
-    p_test_model_trained_performs_better_on_its_own_language_than_other_languages()
+    bare_stats()
+    # cross_project_roc_auc_matrix('1')
+    for validation_set_no in ['1', '2']:
+        cross_project_roc_auc_matrix(validation_set_no)
+        p_test_model_trained_performs_better_on_its_own_language_than_other_languages(validation_set_no)
 
 
-def p_test_model_trained_performs_better_on_its_own_language_than_other_languages():
+def bare_stats():
+    for lang in LANGUAGES:
+        df = pandas.read_csv(OUT_PATH + lang + '_artifact_detection_cross_language_resample_summary.csv')
+        columns = ['roc-auc_' + lang + '_researcher_' + x for x in ['1', '2']]
+        df[columns].describe().to_csv(OUT_PATH + lang + '_performance.csv')
+
+
+def p_test_model_trained_performs_better_on_its_own_language_than_other_languages(validation_set_no):
     rep_df = pandas.DataFrame()
     for lang in LANGUAGES:
         df = pandas.read_csv(OUT_PATH + lang + '_artifact_detection_cross_language_resample_summary.csv')
@@ -53,26 +55,43 @@ def p_test_model_trained_performs_better_on_its_own_language_than_other_language
         for l in LANGUAGES:
             if lang == l:
                 continue
-            rep = t_test_x_greater_y(df['roc-auc_' + lang + '_researcher_' + RESEARCHER],
-                                     df['roc-auc_' + l + '_researcher_' + RESEARCHER],
+            rep = t_test_x_greater_y(df['roc-auc_' + lang + '_researcher_' + validation_set_no],
+                                     df['roc-auc_' + l + '_researcher_' + validation_set_no],
                                      lang, l)  # one sided, x greater y
             rep['model'] = lang
             rep_df = rep_df.append(rep)
 
-    rep_df.to_csv(OUT_PATH + 'cross_project_model_better_on_its_own_language_than_other_languages.csv')
+    rep_df.to_csv(OUT_PATH + 'cross_project_model_better_on_its_own_language_than_other_languages_VS' + validation_set_no + '.csv')
 
 
-def cross_project_roc_auc_matrix():
-    columns = ['roc-auc_' + x + '_researcher_' + RESEARCHER for x in LANGUAGES]
+def cross_project_roc_auc_matrix(validation_set_no):
+    columns = ['roc-auc_' + x + '_researcher_' + validation_set_no for x in LANGUAGES]
     cm = []
     for lang in LANGUAGES:
         df = pandas.read_csv(OUT_PATH + lang + '_artifact_detection_cross_language_resample_summary.csv')
         df = df[columns].mean()
         cm.append(df.to_list())
-    disp = plot_numpy_confusion_matrix(cm, [language_labels[x] for x in LANGUAGES])
-    disp.ax_.set(ylabel="Model language", xlabel="Validation set language", title='ROC-AUC')
-    plt.savefig(OUT_PATH + 'cross_project_roc_auc_matrix.png')
-    # plt.show()
+    # disp = plot_numpy_confusion_matrix(cm, [language_labels[x] for x in LANGUAGES])
+    # disp.ax_.set(ylabel="Model language", xlabel="Validation set 1 language", title='ROC-AUC')
+    # plt.savefig(OUT_PATH + 'cross_project_roc_auc_matrix_VS' + validation_set_no + '.png')
+
+    fig, ax = plt.subplots() #figsize=(3, 3)
+    sns.heatmap(cm,
+                ax=ax,
+                # linewidths=0.01,
+                # linecolor='k',
+                cmap="viridis",
+                annot=True,
+                annot_kws={'fontsize':'large'},
+                xticklabels=[language_labels[x] for x in LANGUAGES],
+                yticklabels=[language_labels[x] for x in LANGUAGES])
+    plt.yticks(rotation=0)
+    ax.set(ylabel="Model language", xlabel='Validation set ' + validation_set_no + ' language', title='ROC-AUC')
+
+    plt.tight_layout()
+    plt.savefig(OUT_PATH + 'cross_project_roc_auc_matrix_VS' + validation_set_no + '.png')
+
+
 
 
 def plot_numpy_confusion_matrix(cm, target_names):

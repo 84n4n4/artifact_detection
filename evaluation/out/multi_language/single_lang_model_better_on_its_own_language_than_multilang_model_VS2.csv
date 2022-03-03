@@ -1,0 +1,26 @@
+,test,stat,p,h0,model
+0,shapiro_stat,0.9853115677833557,0.33437079191207886,cpp - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,2.6147996702600835,0.27052254591502173,cpp - that the data was drawn from normal distribution,multilang
+0,shapiro_stat,0.9807948470115662,0.15323315560817719,multilang - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,3.753501876524773,0.15308668670527417,multilang - that the data was drawn from normal distribution,multilang
+0,t_test_one_sided,34.511443311282314,2.508134631761845e-74,cpp is not greater than multilang,multilang
+0,shapiro_stat,0.9855953454971313,0.3502684533596039,java - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,3.8128806267440636,0.1486084456723055,java - that the data was drawn from normal distribution,multilang
+0,shapiro_stat,0.9893426895141602,0.611723005771637,multilang - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,0.5127639770653658,0.7738463119098656,multilang - that the data was drawn from normal distribution,multilang
+0,t_test_one_sided,9.81896570620751,4.887407048467031e-19,java is not greater than multilang,multilang
+0,shapiro_stat,0.9784497022628784,0.1005811095237732,javascript - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,2.8730704184200673,0.23775008757442118,javascript - that the data was drawn from normal distribution,multilang
+0,shapiro_stat,0.9858116507530212,0.3627791106700897,multilang - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,1.1239736609563937,0.5700752949476042,multilang - that the data was drawn from normal distribution,multilang
+0,t_test_one_sided,13.372955472611373,1.4492744493300074e-29,javascript is not greater than multilang,multilang
+0,shapiro_stat,0.9902240633964539,0.6827149987220764,php - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,0.5520909642562739,0.75877841911913,php - that the data was drawn from normal distribution,multilang
+0,shapiro_stat,0.9714994430541992,0.028824634850025177,multilang - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,3.9684702594238233,0.13748573266275305,multilang - that the data was drawn from normal distribution,multilang
+0,t_test_one_sided,10.56364639803082,7.886375420729198e-21,php is not greater than multilang,multilang
+0,shapiro_stat,0.9741578698158264,0.046367961913347244,python - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,4.824909851621011,0.08959507510924491,python - that the data was drawn from normal distribution,multilang
+0,shapiro_stat,0.9926518797874451,0.8662002682685852,multilang - that the data was drawn from normal distribution,multilang
+1,dagostino_stat,0.3171909407623043,0.8533414910644748,multilang - that the data was drawn from normal distribution,multilang
+0,t_test_one_sided,13.944712777129265,2.4953326011185916e-31,python is not greater than multilang,multilang
