@@ -27,7 +27,7 @@
 25,1,Here is the jsx i'm using
 26,1,- `_.hasOwn` -- new `hasOwnProperty` functionality
 27,1,unless the intention is to schedule additional work.
-28,1,"���C�^h����]z��k���ODz�u��""��2z⾟s�\�<�N�L��!���"
+28,0,"���C�^h����]z��k���ODz�u��""��2z⾟s�\�<�N�L��!���"
 29,1,## <bountysource-plugin>
 30,1,In C++ the script successfully open a hundred fifos.
 31,1,"Currently, this is not possible due to React's reconciliation algorithm. If two components have a different `type`, React will not attempt to reconcile their sub-trees (relevant code [here](https://github.com/facebook/react/blob/master/src/renderers/shared/reconciler/shouldUpdateReactComponent.js#L39)). This causes the existing `input` node to be thrown away, along with anything the user may have typed. There is no way for me to tell React that I want my two components to be reconciled because I have the foreknowledge that they will generate an identical DOM structure."
@@ -74,7 +74,7 @@
 72,1,cc: @mnajdova I think you are leading custom variants. So cc'ing you in. Thank you!
 73,1,This issue tracker is for bugs and issues found within Node.js core.
 74,1,**What is the current behavior?** 
-75,1,"[ { type: 'A', address: '127.0.0.1', ttl: 299 },"
+75,0,"[ { type: 'A', address: '127.0.0.1', ttl: 299 },"
 76,1,Although this can happen to any 3rd party package that has error occurring.
 77,1,When visiting the HTML file in the browser(I already put it on the server):
 78,1,## Table of Contents
@@ -199,7 +199,7 @@
 197,1,<!-- Please ask questions on StackOverflow or the webpack Gitter. -->
 198,1,## Conclusion
 199,1,### Stack Trace
-200,1,Uncaught Error: Cannot call function 'isFocused' on missing remote object 1006Error: Cannot call...
+200,0,Uncaught Error: Cannot call function 'isFocused' on missing remote object 1006Error: Cannot call...
 201,1,"It seems like the cache gets ""corrupted"" somehow every couple days or so."
 202,1,**What is motivation or use case for adding/changing the behavior?**
 203,1,Here is fragment of Select.
@@ -225,7 +225,7 @@
 223,1,Im using parcel's node api to be used in a gulp task. It's supposed to load the `process.env` by default with no config. Here's my parcel function:
 224,1,Error deploying application: Error creating application.
 225,1,The application resets the theme of currently rendered component (e.g. background-colour becomes transparent)
-226,1,[language-yaml]: https://github.com/atom/language-yaml
+226,0,[language-yaml]: https://github.com/atom/language-yaml
 227,1,Relevant excerpt from navbar.less
 228,1,I was having problems with some <img> tags that wasn't correctly written.
 229,1,#### Additional context/Screenshots
@@ -260,7 +260,7 @@
 258,1,"* Class components now show ""legacy context"" header (rather than ""context"") for legacy API. ([hristo-kanchev](https://github.com/hristo-kanchev) in [#16617](https://github.com/facebook/react/pull/16617))"
 259,1,"I've try to send a form data with axios but i can't, in chrome dev tools no content appears in the request. Making a same request via postman the API response normally."
 260,1,two images next to each other
-261,1,[#4418]: https://github.com/prettier/prettier/pull/4418
+261,0,[#4418]: https://github.com/prettier/prettier/pull/4418
 262,1,"The documentation for the ajax call reads, ""Results object. See ""options.callback"" in the ""query"" function for format."" The format for the query function specifically states that a ""text"" key is required."
 263,1,Suggested API:
 264,1,assignment to __webpack_public_path__ not replaced
@@ -333,7 +333,7 @@
 331,1,Altering instance defaults after creation seem to affect other instances as well
 332,1,- Rename readme.md to README.md [`232e23b`](https://github.com/Modernizr/Modernizr/commit/232e23b52757c243ad36967ecba7b51b79ae85ec)
 333,1,"I want to save exact versions of the packages by default. I tried few other stuff, but it didn't work:"
-334,1,this.hello = 'helloworld'
+334,0,this.hello = 'helloworld'
 335,1,[Select] Component throws warning about not using 'selected' on <option>
 336,1,Allow seeing what specific props have changed when watching a deep object
 337,1,<!-- https://stackoverflow.com/questions/ask?tags=webpack -->
@@ -350,7 +350,7 @@
 348,1,"Is it possible to exclude certain files from running through sourcemaps? I.E. I have `vendor/some-lib.js` and while I want that file included in the build, I don't want it included in the sourcemap."
 349,1,After successfully compiling with normal
 350,1,**Thrown From**: Atom Core
-351,1,[whitespace]: https://github.com/atom/whitespace
+351,0,[whitespace]: https://github.com/atom/whitespace
 352,1,To make matters even more confusing there is no failure when attempting to load a module as self-referential.
 353,1,## Expected Behavior 🤔
 354,1,"## 🎛 Configuration (.babelrc, .parcelrc, cli command)"
@@ -358,12 +358,12 @@
 356,1,Resolutions for packages that use namespacing aren't respected.
 357,1,"Dear All,"
 358,1,"And since typescript 3.4 you can cast the object with `as const` to ""fix"" it (see below) but I don't think that should be necessary if it works inside `createTheme` as expected"
-359,1,Uncaught (in promise) TypeError: Cannot read property 'workbench' of undefined
+359,0,Uncaught (in promise) TypeError: Cannot read property 'workbench' of undefined
 360,1,**Electron**: 1.3.13
 361,1,1. Make sure that scrollbars are enabled (macOS only?)
-362,1,Uncaught TypeError: e.charCodeAt is not a function
+362,0,Uncaught TypeError: e.charCodeAt is not a function
 363,1,Why Do Parcel invokes first import automatically?
-364,1,Vue.$mount @ vue.js:8822
+364,0,Vue.$mount @ vue.js:8822
 365,1,<!-- https://stackoverflow.com/questions/ask?tags=webpack -->
 366,1,Ubuntu 18 CPU 100%
 367,1,#48 0x0000238526a9e201 in ?? ()
@@ -408,11 +408,11 @@
 406,1,"<!--- If describing a bug, tell us what your babel configuration looks like -->"
 407,1,├── hexo-renderer-marked@0.3.0
 408,1,**Do you want to request a *feature* or report a *bug*?**
-409,1,\\?\C:\Users\Admin\AppData\Local\atom\app-1.27.2\resources\app.asar.unpacked\node_modules\keyboard-layout\build\Release\keyboard-layout-manager.node
+409,0,\\?\C:\Users\Admin\AppData\Local\atom\app-1.27.2\resources\app.asar.unpacked\node_modules\keyboard-layout\build\Release\keyboard-layout-manager.node
 410,1,"I'd suggest adding a config variable `contentWritable`, that can be set to `false` if the deploy is using external services to write all content. The content directory writable test will run in `core/server/utils/startup-test.js` _unless_ `contentWritable` is set to `false`. I will add a PR for this behaviour."
 411,1,   and server certificate. As a result the attack can only be performed
 412,1,just `npm install --save-dev parcel@next` 
-413,1,"Uncaught Error: EMFILE: too many open files, scandir '$ATOM_HOME/.learn-ide/home/garrettgurnett-5..."
+413,0,"Uncaught Error: EMFILE: too many open files, scandir '$ATOM_HOME/.learn-ide/home/garrettgurnett-5..."
 414,1,## `stopOpacity` (on `<stop>` inside `<svg>`)
 415,1,Do you want to ask a question? Are you looking for support? The Atom message board is the best place for getting support: https://discuss.atom.io
 416,1,"However, the view of the map does not update. Is there a method to redraw the map with the removed layer? Thanks!"
@@ -474,7 +474,7 @@
 472,1,Or even:
 473,1,### Error call stack (automated)
 474,1,"http, stream, buffer"
-475,1,[`util.types.isSharedArrayBuffer()`][].
+475,0,[`util.types.isSharedArrayBuffer()`][].
 476,1,"warning ""eslint-config-bliss@1.0.13"" has unmet peer dependency ""eslint@^3.0.0""."
 477,1,* **Version**: 6.11.2
 478,1,Use parse-json for more helpful error messages

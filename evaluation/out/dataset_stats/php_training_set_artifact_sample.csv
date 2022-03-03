@@ -266,14 +266,14 @@
 264,0,"at call_user_func_array(array(object(ShareErrorsFromSession), 'handle'), array(object(Request), object(Closure))) in Pipeline.php line 124"
 265,0,	new OAuth(
 266,0,- https://github.com/composer/composer/issues/8429
-267,0,"Insert your browser log here, this could for example include:"
+267,1,"Insert your browser log here, this could for example include:"
 268,0,	            return ($result->email != null) ? $result->email : '-';
 269,0,```
 270,0,"		!!  PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\ClassNotFoundException: Attempted to load class ""CmfMenuBundle"" from namespace ""Symfony\Cmf\Bundle\MenuBundle""."
 271,0,```
 272,0,                    [core/l10n/fi.json] => Array
 273,0,```
-274,0,"    - You can also filter by appending e. g. ""state:open"" to the search string."
+274,1,"    - You can also filter by appending e. g. ""state:open"" to the search string."
 275,0,        sleep($timeInSeconds);
 276,0,"        ""ORM"","
 277,0,```

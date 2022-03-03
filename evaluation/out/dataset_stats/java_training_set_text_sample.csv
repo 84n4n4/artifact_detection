@@ -49,7 +49,7 @@
 47,1,"a feature request, please include one and only one of the below blocks"
 48,1,when I try to play a DASH stream with PlayReady-DRM I get the following error:
 49,1,**Redis version**
-50,1,16-May-2018 15:03:37.561 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [server] appears to have started a thread named [HikariPool-819 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+50,0,16-May-2018 15:03:37.561 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [server] appears to have started a thread named [HikariPool-819 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
 51,1,"In step 3, in fact appium will call selenium ruby binding W3C::Capabilities.from_oss to generate w3c capabilities and to do a handshake(https://github.com/SeleniumHQ/selenium/blob/master/rb/lib/selenium/webdriver/remote/bridge.rb#L183)"
 52,1,Yes
 53,1,#### Please select the affected platforms
@@ -98,7 +98,7 @@
 96,1,experimentation and curious end-users to try on their gems and smaller
 97,1,Next run of this query will give us:
 98,1,"We're hitting this issue with PhantomJS 1.9.8, but the latest GhostDriver w/ PhantomJS2 may have the same issue connecting since it uses the `wd` role as well:"
-99,1,1473301845373   addons.manager  DEBUG   Registering shutdown blocker for XPIProvider
+99,0,1473301845373   addons.manager  DEBUG   Registering shutdown blocker for XPIProvider
 100,1,"The [Documentation](https://github.com/libgdx/libgdx/wiki/File-handling#file-storage-types) does not clearly answer the question ""I want to store files that will disappear when the user taps the 'Clear cache' button in App Info - Storage. How do I apply the Gdx Api to achieve this?"" - the answer might be ""prepend '../cache/' to your desired path and use Gdx.files.local"", which is not really complicated. But this is platform-specific internal knowledge."
 101,1,Browser Driver version: GeckoDriver 0.24.0
 102,1, 3. Select 8GB of Java memory
@@ -114,7 +114,7 @@
 112,1,ScalingThreadPoolTests.testScalingThreadPoolThreadsAreTerminatedAfterKeepAlive CI Failure
 113,1,contained in this repository.
 114,1,**Expected Result:** 1 result
-115,1,-batch 512 -model ALEXNET -labels 1000 (as above)
+115,0,-batch 512 -model ALEXNET -labels 1000 (as above)
 116,1,### Output of `uname -a` or `ver`
 117,1,In MySQL
 118,1,### Build tool (ie. output of `mvnw --version` or `gradlew --version`)
@@ -123,7 +123,7 @@
 121,1,- Describe the issue briefly
 122,1,"This works for 0.20.4, but not for 0.90RC1."
 123,1,"Going one step further, lets then parse the text "
-124,1,"Expires: Thu, 01 Jan 1970 00:00:00 GMT"
+124,0,"Expires: Thu, 01 Jan 1970 00:00:00 GMT"
 125,1,<!-- Windows 10? OSX? -->
 126,1,#### Query:
 127,1,Unit test failure: ConvolutionLayerSetupTest.testDenseToOutputLayer
@@ -135,9 +135,9 @@
 133,1,"But in the AddContext, we find an override with a different return type:"
 134,1,### ExoPlayer Version
 135,1,"You will see a similar error log there. However, this log does not come out every time.  "
-136,1,j  com.oracle.truffle.nfi.impl.FunctionExecuteNodeGen.executeAndSpecialize(JLcom/oracle/truffle/nfi/impl/LibFFISignature;[Ljava/lang/Object;)Ljava/lang/Object;+190
+136,0,j  com.oracle.truffle.nfi.impl.FunctionExecuteNodeGen.executeAndSpecialize(JLcom/oracle/truffle/nfi/impl/LibFFISignature;[Ljava/lang/Object;)Ljava/lang/Object;+190
 137,1,Memory leak on windows with isolate
-138,1,Linux vanias-G5-5500 5.8.0-48-generic #54~20.04.1-Ubuntu SMP Sat Mar 20 13:40:25 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+138,0,Linux vanias-G5-5500 5.8.0-48-generic #54~20.04.1-Ubuntu SMP Sat Mar 20 13:40:25 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
 139,1, * The minimum idle connections is 5.
 140,1,(Describe the problem clearly and concisely.)
 141,1,## Expected behavior
@@ -163,7 +163,7 @@
 161,1,"Hi,"
 162,1,"The code shown will run fine on Spring Boot 1.4.3, but will fail to start on 1.5.1."
 163,1,**JVM version** (`java -version`):
-164,1,https://elasticsearch-ci.elastic.co/job/elastic+elasticsearch+6.1+zing/22/console
+164,0,https://elasticsearch-ci.elastic.co/job/elastic+elasticsearch+6.1+zing/22/console
 165,1,<!-- Windows 10? OSX? -->
 166,1, - Quarkus: master
 167,1,"`JOINING_FOREGROUND`, `BUFFERING` and `SEEKING` states, but not the time when"
@@ -225,14 +225,14 @@
 223,1,Proposed change:
 224,1,**Application code snippet for locking**
 225,1,UNNEST of collections of row types should produce multiple columns
-226,1,  | at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage$RetryExecutor.handleThrownException(RetryableStage.java:137)
+226,0,  | at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage$RetryExecutor.handleThrownException(RetryableStage.java:137)
 227,1,"This issue happens in r2.1.1, but not in r2.0.4, and on all devices we tested (including Android TV devices)."
 228,1,"Hello, I recently encountered some concurrent call problems and wanted to solve it through redisson's lock, so I wrote the following method to encapsulate the logic of locking execution."
 229,1,Instead of
 230,1,Full curl recreation is: https://gist.github.com/dadoonet/5031671
 231,1,Deprecation warnings being logged by Hibernate
 232,1,**To Reproduce**
-233,1,MODEL=PAR-AL00
+233,0,MODEL=PAR-AL00
 234,1,"An issue will be closed as a duplicate of the immediate pull request, so you don't have to raise an issue if you plan to create a pull request immediately."
 235,1,"(a*,bb) -> returns nothing (not expected)"
 236,1,"- If you have a patch with unit tests, send a pull request. Please see the wiki page : https://github.com/mybatis/mybatis-3/wiki/Contribute"
@@ -261,7 +261,7 @@
 259,1,BarChart with only one entry
 260,1,Browser: Firefox
 261,1,Kotlin code (Inside Fragment):
-262,1,1470300101286   DeferredSave.addons.json    DEBUG   Write succeeded
+262,0,1470300101286   DeferredSave.addons.json    DEBUG   Write succeeded
 263,1,for it to work I may require something like :
 264,1,"I find the annotation to be more useful (in the text format) than the condition that is an implementation detail. For instance `OnBeanCondition` is used by many annotations that have a higher-level semantic so you don't know if that condition is about a missing bean, a unique bean or a the presence of a bean until you parse the message yourself. That's probably why we add the annotation types at the beginning of the message."
 265,1,"It should be applied only once (first epoch only, and result stored) OR should be applied to a copy."
@@ -330,10 +330,10 @@
 328,1,FILTER should not be allowed for non-aggregates
 329,1,3. Set up an S3 snapshot repository
 330,1,"signal 11 (SIGSEGV), code 2 (SEGV_ACCERR) when opening a Realm on external USB drive"
-331,1,java.vm.version | 25.144-b01
-332,1,Darwin MacBook-Pro.local 17.2.0 Darwin Kernel Version 17.2.0: Fri Sep 29 18:27:05 PDT 2017; root:xnu-4570.20.62~3/RELEASE_X86_64 x86_64
+331,0,java.vm.version | 25.144-b01
+332,0,Darwin MacBook-Pro.local 17.2.0 Darwin Kernel Version 17.2.0: Fri Sep 29 18:27:05 PDT 2017; root:xnu-4570.20.62~3/RELEASE_X86_64 x86_64
 333,1,* Added `@Nullable` annotation to input parameter in `RealmObject.isValid(item)` to avoid mismatch warnings from Kotlin code (Issue [#7216](https://github.com/realm/realm-java/issues/7216)).
-334,1,[OS that we support](https://www.elastic.co/support/matrix#show_os).
+334,0,[OS that we support](https://www.elastic.co/support/matrix#show_os).
 335,1,"a feature request, please include one and only one of the below blocks"
 336,1,Order by sum aggregation throws error in elastic search
 337,1,**Describe the bug**
@@ -350,7 +350,7 @@
 348,1,"working as you expect it to, on Stack Overflow using the spring-boot tag."
 349,1,"The `document-ref` inner hits just always returns an empty array.  Should this work (and, if so, any ideas why it isn't?), or is it beyond the means of what inner hits can currently do?"
 350,1,**Description of the problem including expected versus actual behavior**:
-351,1,https://elasticsearch-ci.elastic.co/job/elastic+elasticsearch+master+intake/1411/console
+351,0,https://elasticsearch-ci.elastic.co/job/elastic+elasticsearch+master+intake/1411/console
 352,1,"No patch, as no idea why you are looking for the .exe extension, if everyone has that extension, how you'd work around this, etc."
 353,1,Is there preferred way to fix this issue or `SurfaceView` is not good option for view animation on all Android versions (N+ too)?
 354,1,Run `./native_build.sh`
@@ -368,14 +368,14 @@
 366,1,"During a rolling restart if I restart 10+ nodes at once all will rejoin, but unassigned shards won't attempt to re-assign. When running the explain api I receive:"
 367,1,Automatic formatting should be performed with `./gradlew goJF` or `./mvnw fmt:format`. Formatting all projects can be done with `./build.sh format`.
 368,1,"I've added my custom analyzer `ik_term` to my index `com_info`'s `settings`, but I found I had no idea how to delete `analysis` in `settings`. Documents have mentioned how to [reset](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/indices-update-settings.html) index settings, but somehow it won't work in my case."
-369,1,Ouput:0
+369,0,Ouput:0
 370,1,"Also - feel free to completely reject this and no hard feelings. We think there's a compelling case for this core behavior to be part of RxJava's public API, but totally understand if there's hesitation to add to the API surface or if it's deemed too niche. I do think it would be at least as valuable as `takeUntil()` though :)."
 371,1,The bug seems to appear due to podman configuration and short image name.
 372,1,200 Empty body fails (retrofit:2.0.0)
 373,1,"FIPS mode tests fails across master, 7.x and 7.9"
 374,1,also the project is [here](https://github.com/CanerGures/ExoPlayer-Application) for who wants to check whole project.
 375,1,Why the constructor won't accept a handler that has been just created 
-376,1,1465905122357   addons.manager  DEBUG   Registering shutdown blocker for PluginProvider
+376,0,1465905122357   addons.manager  DEBUG   Registering shutdown blocker for PluginProvider
 377,1,Also remove steps 1 and 2 from TransportOpenJobAction::masterOperation which update the version 5.4 mappings of the results and state indices
 378,1,Build Logs: https://gist.github.com/Jotschi/3d3d96dcb376a2f6afad6a3f9c277d6b
 379,1,1. Run `./mvnw clean package` to build your container
@@ -414,7 +414,7 @@
 412,1,## Expected behavior
 413,1,Java(TM) SE Runtime Environment (build 1.8.0_151-b12)
 414,1,The node JVM crashes with the below stacktrace.
-415,1,REPRO: `./gradlew :x-pack-elasticsearch:qa:vagrant:vagrantOpensuse42#batsPackagingTest -Dtests.seed=C8F1669B97FD73E6`
+415,0,REPRO: `./gradlew :x-pack-elasticsearch:qa:vagrant:vagrantOpensuse42#batsPackagingTest -Dtests.seed=C8F1669B97FD73E6`
 416,1,A `ReamList` with unique/correct objects
 417,1,"It would be helpful if the cited portion of the documentation above could clarify that ""compatibility"" is simply referring to Elasticsearch being able to read the older version's Lucene index version - and ""compatibility"" does not mean that a snapshot / restore between versions will automatically resolve all required migration steps and breaking changes.  The proper [migration documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) should still be followed for that. "
 418,1,## Justification
@@ -476,7 +476,7 @@
 474,1,Checked the log file for details and get this: 
 475,1,"""The package is of bad quality"""
 476,1,3. Create debug running configuration on maven goal `quarkus:dev`
-477,1,Error: cannot open display: :99
+477,0,Error: cannot open display: :99
 478,1,**Plugins installed**: n/a
 479,1,If I compare this to the following when I enable predicate pushdown for the Parquet reader I very different numbers for the amount of data read.
 480,1,#### Please select the affected platforms

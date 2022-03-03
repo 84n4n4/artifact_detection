@@ -61,7 +61,7 @@
 59,0,session.destroy( );
 60,0,}
 61,0,        </select>
-62,0,    * [x] Followed all applicable steps in the debugging guide: http://flight-manual.atom.io/hacking-atom/sections/debugging/
+62,1,    * [x] Followed all applicable steps in the debugging guide: http://flight-manual.atom.io/hacking-atom/sections/debugging/
 63,0,  };
 64,0,   headers: {
 65,0,    const totalPage = 3000;
@@ -75,7 +75,7 @@
 73,0,                // Disable the on-canvas tooltip
 74,0,  - ExternalModuleFactoryPlugin.js:37 handleExternals
 75,0,98857531
-76,0,  blabla
+76,1,  blabla
 77,0,06:26:13     Done: 154/550
 78,0,/******/ 	// This function allow to reference async chunks
 79,0,      - Sub-Nested List item 2
@@ -310,7 +310,7 @@
 308,0,for(i=0; i< 100000; i++) { 
 309,0,}
 310,0,✗ 32-bit libraries not found                  
-311,0,           * If the chunk contains the module 0 the runtime executes it.
+311,1,           * If the chunk contains the module 0 the runtime executes it.
 312,0,INFO (1961 on MacBook.local): Server started in /Users/user/Projects/strapi-example/foo-project
 313,0,d.run(() => {
 314,0,time_format: HH:mm:ss
