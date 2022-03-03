@@ -8,7 +8,7 @@
 6,1,## Type of Issue
 7,1,Catch2 does not report the text of unexpected exceptions (`ex.what()`) on the console.
 8,1,--> log file:
-9,1,"  Device: usb 0x0002 ""2.0 root hub"""
+9,0,"  Device: usb 0x0002 ""2.0 root hub"""
 10,1,station.
 11,1,members of the reflected types.
 12,1,* Added missing source files extensions setting to the Edit Project dialog [#132](https://github.com/CoatiSoftware/Sourcetrail/issues/132)
@@ -16,7 +16,7 @@
 14,1,- Compiler version: `0.5.5+commit.47a71e8f.Linux.clang`
 15,1,This is my `CMakeLists.txt`:
 16,1,Correct compilation because of the different signatures the getter of the balance variable and the balance function have.
-17,1,#### __init__()
+17,0,#### __init__()
 18,1,* Added a new `DisparityMapConverter` class for converting disparity maps into
 19,1,GS: MLB Power Pros crash
 20,1,**Additional information**
@@ -27,7 +27,7 @@
 25,1,"OpenRCT2, v0.3.4.1 (also very likely v0.3.5.1)"
 26,1,when compiled with solc
 27,1,*  MAC via `TINKMacFactory`
-28,1,* [[pcl]]
+28,0,* [[pcl]]
 29,1,2. Runtime speed up while keeping most of the accuracy:
 30,1,- The bar `|` separates label related data (what we want to predict) from features (what we always know).
 31,1,Consider enhancing documentation on groups when assigning in loop
@@ -54,7 +54,7 @@
 52,1,"But this slow down performance heavily, I tried other ways ( such as use the lambda style or create a second view for the other iterations ) but still no fortune."
 53,1,"Sometimes you may want to run a test with a particular seed value,"
 54,1,"Hi,"
-55,1,x ** 2
+55,0,x ** 2
 56,1,## Description
 57,1, detection trait
 58,1,The `getResults` method is specific to my case and won't work for other cases.
@@ -236,13 +236,13 @@
 234,1,"**7883MB** GPU memory,"
 235,1,**Release or Debug mode**? (by defualt: release): release
 236,1,## Steps to Reproduce
-237,1,CMake targeting - fatal error during compilation
-238,1,uint8 float32
+237,0,CMake targeting - fatal error during compilation
+238,0,uint8 float32
 239,1,Fill in any extra information that might be important for your issue.
 240,1,## Error in file
 241,1,Related #2155 
 242,1,#### Environment
-243,1,✅  [your Tink deployment](https://docs.google.com/forms/d/1mhHvyNJQgTXFDnqOermB7-BD8GQSyvtFPUAhILRbYcA/edit).
+243,0,✅  [your Tink deployment](https://docs.google.com/forms/d/1mhHvyNJQgTXFDnqOermB7-BD8GQSyvtFPUAhILRbYcA/edit).
 244,1,   - surface/include/pcl/surface/3rdparty/poisson4/ppolynomial.h
 245,1,-   `any`   -   overwrite ansi byte
 246,1,* Java: Show import not found as error
@@ -284,7 +284,7 @@
 282,1,Notice how the progress output stops the moment holdout kicks in (they should be independent).  Also notice the side-effect of partially fixing the problem (in 1st pass) when switching from one pass to 2 pass. Lastly notice the off-by-one example in starting holdout.
 283,1,"On the other hand, there are cases in which users can be interested in adding"
 284,1,"**Caffe version**: Default from OpenPose, custom version, ...? 1.0.0 (default ubuntu install), also OpenPose version does not build either"
-285,1,/cpp-ethereum/build$ cmake ..
+285,0,/cpp-ethereum/build$ cmake ..
 286,1,we can see from the log:
 287,1,- EVM execution environment / backend / blockchain client: N/A
 288,1,"1. press `Ctrl` + `E` and enter ""Sourcetrail Extension"" into the search bar"
@@ -306,7 +306,7 @@
 304,1,Getting error compiling for gpu: running under docker tag: 9.0-cudnn7-devel-ubunut16.04. Have not idea what this ERROR means...can anyone help.
 305,1,Steps to reproduce the behavior:
 306,1,**Requested Assignment**
-307,1,1. git clone --recursive https://github.com/intel-isl/Open3D
+307,0,1. git clone --recursive https://github.com/intel-isl/Open3D
 308,1,"GSdx-AVX2, Defaults"
 309,1,SACSegmentation Failed in PCL 1.9 running on Ubuntu 16.04
 310,1,"When I used [the tutorial here](http://www.open3d.org/docs/release/compilation.html#windows) to compile Open3D on Windows 10, a lot of similar errors appeared."
@@ -330,7 +330,7 @@
 328,1,when compiled with solc.
 329,1,"## OpenPose 1.0.0rc3 (Jun 8, 2017)"
 330,1,PowerSpectrum really seems to need an openmp impl: 
-331,1,"`schedIn` | [`Svc::Sched`](../../../Svc/Sched/docs/sdd.html) | sync input (callee) | writes telemetry values (optional, if the user doesn't need BufferManager telemetry)"
+331,0,"`schedIn` | [`Svc::Sched`](../../../Svc/Sched/docs/sdd.html) | sync input (callee) | writes telemetry values (optional, if the user doesn't need BufferManager telemetry)"
 332,1,and we have the helper function...
 333,1,Operating System: Windows 10.
 334,1,Windows 10 Nightly build
@@ -348,13 +348,13 @@
 346,1,"In python, a point cloud object does not support default built-in python functions such as __len__, __iter__, "
 347,1,"The time when the error started occurring correlates storngly with an [update of the C++ ABI in Arch Linux](https://www.archlinux.org/news/c-abi-change/) and, most likely due to that, an upgrade of the pcsx2 package:"
 348,1,BUILD_CAFFE ignored by cmake
-349,1,qt_themes/colorful/icons/16x16/connected.png | CC BY-ND 3.0 | https://icons8.com
+349,0,qt_themes/colorful/icons/16x16/connected.png | CC BY-ND 3.0 | https://icons8.com
 350,1,"So, I see that `open3d.open3d_pybind.geometry.PointCloud` != `open3d::geometry::PointCloud`. I do not have anything from open3d in my python bindings."
 351,1,of the command type. The dispatcher is handling commands as a generic
 352,1,  to retrieve indices of points that form the computed hull
-353,1,"Python 3.8.7 (tags/v3.8.7:6503f05, Dec 21 2020, 17:59:51) [MSC v.1928 64 bit (AMD64)]"
+353,0,"Python 3.8.7 (tags/v3.8.7:6503f05, Dec 21 2020, 17:59:51) [MSC v.1928 64 bit (AMD64)]"
 354,1,`create_from_point_cloud_ball_pivoting()` runs x20 slower on `0.14.1` compared to `0.13.0`
-355,1,"run: 11, in size: 81, out size :3 "
+355,0,"run: 11, in size: 81, out size :3 "
 356,1,"On master, using AFL fuzzing.  Another discovery using https://github.com/agroce/afl-compiler-fuzzer"
 357,1,Completed.
 358,1,"But in pyopenpose, we can only get the output: "
@@ -428,7 +428,7 @@
 426,1,cpprestsdk (2.10.9)
 427,1,"Trying to build it on an Azure Standard DS2 v2 instance (2 cores, 7 GB of RAM) gave me this error a few times:"
 428,1,Help please
-429,1,qt_themes/qdarkstyle/icons/48x48/chip.png | CC BY-ND 3.0 | https://icons8.com
+429,0,qt_themes/qdarkstyle/icons/48x48/chip.png | CC BY-ND 3.0 | https://icons8.com
 430,1,- Tools for designing systems and automatically generating code from systems design
 431,1,"Just as an aside, I want to **thank all the devs** who put in this work to support Apple Silicon on MacOS 👏  🎊 . Playing around with it, it really does seem like it's showing a ~60% performance improvement compared with running the app in x86 Rosetta mode. Good job!"
 432,1,**CPU:** i5 3317U
@@ -437,10 +437,10 @@
 435,1,"  Revision: ""5.02"""
 436,1,"But in the dataset if you remove the short ids (ABC-1234_87821_1, ABC-1234_28782_1, etc), it works fine again, you can query the long ones. "
 437,1,while running
-438,1,ubuntu@XXX.XXX.XX.XX:~/test/build$ ./Example 
+438,0,ubuntu@XXX.XXX.XX.XX:~/test/build$ ./Example
 439,1,* Fixed undefined behavior in `OURCVFHEstimation::computeFeature()`
 440,1,Warnings for x86 build
-441,1,trace(rotation matrix) = 2 * cos (rotation angle) + 1
+441,0,trace(rotation matrix) = 2 * cos (rotation angle) + 1
 442,1,* disallowing pathological control flow and uses of the stack
 443,1,Static directory configuration
 444,1,"## If you have a `.mscx` score or ""Uncompressed musescore file"":"
@@ -454,7 +454,7 @@
 452,1,* Warn user about unorganized PCDs in `pcl_train_linemod_template` [[#3644](https://github.com/PointCloudLibrary/pcl/pull/3644)]
 453,1,"  Serial ID: ""10400000000000008B57"""
 454,1,Solidity allows to compile the following line:
-455,1,"run: 13, in size: 81, out size :3 "
+455,0,"run: 13, in size: 81, out size :3 "
 456,1,It seems like it's even noted in the merged source code:
 457,1,"and the incoming stream is either polled using the ""poll"" port or return asynchronously via the ""readCallback"" port."
 458,1,<!--- Provide a general summary of the issue in the Title above -->
@@ -462,7 +462,7 @@
 460,1,* As long as a thread iterates the entities that have the component `X` or
 461,1,### Describe the problem the feature is intended to solve
 462,1,#### Source Group Setup for Python
-463,1,nan nan 0
+463,0,nan nan 0
 464,1,2. RecvStatus.RECV_ERROR: receive failed and the buffer does not have valid data
 465,1,#### `libpcl_features:`
 466,1,Not yet implemented - FixedPointType.
@@ -476,9 +476,9 @@
 474,1,"First off: You can't normally compile this, since it wants openimageio 2.x and opencolorio 2.x, though openimageio wants opencolorio1 1.x as dependency (so both packages conflict). On top of that, olive wants openimageio-git, which is a 1.x build of openimageio."
 475,1,- Error C2039 'OutputDebugStringA': is not a member of '`global namespace''
 476,1,Ubuntu - Unit-test failure - Mining_3_mineBlockWithUncles
-477,1,/usr/local/bin/g++ -std=c++0x -MM cb_algs.cc > cb_algs.d
+477,0,/usr/local/bin/g++ -std=c++0x -MM cb_algs.cc > cb_algs.d
 478,1,Bringing window to front doesn't work via `focus_item(window_id)`
-479,1,[DeframingProtocolInterface](../api/c++/html/class_deframing_protocol_interface.html).
+479,0,[DeframingProtocolInterface](../api/c++/html/class_deframing_protocol_interface.html).
 480,1,* valgrind: `valgrind-3.13.0`
 481,1,Check that the value is a valid value from the parameter
 482,1,2. Create keyframes
@@ -495,7 +495,7 @@
 493,1,"The first three should be fairly self-explanatory, they succeed if"
 494,1,"to try to also modify these definitions, since there is no guarantee that they"
 495,1,**Expected behavior**
-496,1,nan nan 0
+496,0,nan nan 0
 497,1,But It can't be sure that the coordinates are correct. Hence I added the spheres to visualize the clicked points.
 498,1,**To Reproduce**
 499,1,"  Device: pci 0x8c20 ""8 Series/C220 Series Chipset High Definition Audio Controller"""

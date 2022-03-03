@@ -17,7 +17,7 @@
 15,1,I don't suspect a problem with network connectivity or slowness:
 16,1,How to add one template in multiple sheets phpspreadsheet
 17,1,Stack trace:
-18,1,"  'dbtableprefix' => 'oc_',"
+18,0,"  'dbtableprefix' => 'oc_',"
 19,1,2globals.js:60 jQuery is deprecated: The global jQuery is deprecated. It will be updated to v3.x in Nextcloud 21. In later versions of Nextcloud it might be removed completely. Please ship your own.
 20,1,  - gallery: 18.1.0
 21,1,First thing I noticed is that the actual SQL query (in Symfony\Component\Security\Acl\Dbal\AclProvider::getLookupSql()) does not take the SecurityIdentities into account. Not sure if that has anything to do with my problem.
@@ -100,7 +100,7 @@
 98,1,**PHP version:** 7.2.20
 99,1,This would help for repos that have hundreds of branches and used as a VCS option in composer.
 100,1,### Logs
-101,1,"	$mail->SMTPSecure = 'tls';                          // Enable encryption, 'ssl' also accepted"
+101,0,"	$mail->SMTPSecure = 'tls';                          // Enable encryption, 'ssl' also accepted"
 102,1,So I have some tests that should not run against HHVM runtime and others that should run only with HHVM. This can be easily achieved with:
 103,1,Cannot use object of type Symfony\Component\VarDumper\Cloner\Stub as array
 104,1,"I have installed laravel 4 and successfully updated it. However, when I try to update it gets stuck at:"
@@ -121,7 +121,7 @@
 119,1,  - settings: 1.1.0
 120,1,Code line: https://github.com/octobercms/october/blob/a66310bd5682d08582c1d72ac429e6f5329bbefe/modules/system/assets/ui/js/filter.js#L49
 121,1,Output of `bin/composer.phar self-update`:
-122,1,... | 307 | 45 | 1 - initiates meeting
+122,0,... | 307 | 45 | 1 - initiates meeting
 123,1,**Operating system:** CentOS 8
 124,1,**Nextcloud version:** 12.0.6.1 AND 13.0.1
 125,1,"Also, according to #2731, non-http links are no longer tracked.  This is an undocumented compat buster since there's no obvious mention in the 1.6 changelog."
@@ -190,7 +190,7 @@
 188,1,It appears PHP7 can't handle assigning variables whilst assigning a variable. [Problematic code](https://github.com/laravel/framework/blob/5.2/src/Illuminate/Database/Eloquent/Builder.php#L489-L492):
 189,1,  * Add a custom domain in mailgun.
 190,1,"After upgrading from 3.14.1 to 4.0.1, I run into this error in the web app's 'Visits Over Time' and 'Channel Types' tabs."
-191,1,account = null
+191,0,account = null
 192,1,Right now I'm using this work around to solve this issue
 193,1,9.0.52 (daily) Build:2016-07-05T09:09:27+00:00 6d9809ef452d73b53d3d70493d9a92ee64bd528f
 194,1,"In this scenario, `$this->getLoginUrl($request)` returns `/my/path/login`, while `$request->getPathInfo()` returns just `/login` when the url being requested is `/my/path/info`."
@@ -217,13 +217,13 @@
 215,1,[Solver] Error updating deps after adding AsseticBundle
 216,1,Using services.yaml AND services.xml -> problem autowiring
 217,1,I'm sorry if I haven't understood all this properly!
-218,1,https://gitlab.****.fr/ulysse/file-iterator [200 OK]
+218,0,https://gitlab.****.fr/ulysse/file-iterator [200 OK]
 219,1,"The user can install them both separately using `composer require Module A` and `composer require Module B`. Also, Module B is dependent on `scandiweb/module-core` (Module C), which also does not get installed for some reason, even though Module C is installable from the global packagist repo."
 220,1,something like that:
 221,1,**Additional context**  
 222,1,debian
 223,1,Expected result: upgrade success
-224,1,"  | src=""/core/img/loading-dark.gif"">"
+224,0,"  | src=""/core/img/loading-dark.gif"">"
 225,1,  - encryption: 1.6.0
 226,1,### Actual behaviour
 227,1,"### Package version, Laravel version"
@@ -262,7 +262,7 @@
 260,1,Add a web app manifest so you can add Piwik icon to the launcher in Mobile devices
 261,1,_No response_
 262,1,  - files: 1.11.0
-263,1,"	/var/www/html/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php - line 128: Doctrine\DBAL\Driver\AbstractPostgreSQLDriver->convertException('An exception oc...', Object(Doctrine\DBAL\Driver\PDOException))"
+263,0,"	/var/www/html/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php - line 128: Doctrine\DBAL\Driver\AbstractPostgreSQLDriver->convertException('An exception oc...', Object(Doctrine\DBAL\Driver\PDOException))"
 264,1,"Truying to isolate the problem, I finally made a new project by taking EXACTLY your example:"
 265,1,* SECURITY: Report any potential security bug to us via our HackerOne page (https://hackerone.com/nextcloud) following our security policy (https://nextcloud.com/security/) instead of filing an issue in our bug tracker.  
 266,1,**Are you using encryption:** no
@@ -323,7 +323,7 @@
 321,1,Arch Linux
 322,1,**Possible Solution**
 323,1,**Nextcloud version:** (see Nextcloud admin page)
-324,1,"  | <link rel=""stylesheet"" href=""/apps/dicomviewer/css/external/font-awesome/font-awesome.min.css?v=62abc69f-6"">"
+324,0,"  | <link rel=""stylesheet"" href=""/apps/dicomviewer/css/external/font-awesome/font-awesome.min.css?v=62abc69f-6"">"
 325,1,- Password policy                                                                                                                                                                                                                                                                
 326,1,Unbalanced parentheses in DocBlock cause error
 327,1,**Possible Solution**  
@@ -425,7 +425,7 @@
 423,1,**Symfony version(s) affected**:  5.1
 424,1,Case in username is not used for device and session passwords which results in Webdav issues.
 425,1,  - lookup_server_connector: 1.3.0
-426,1,#2 /var/www/html/cloud/lib/private/Files/Storage/Wrapper/Wrapper.php(594): OC\Files\Storage\Wrapper\Wrapper->acquireLock()
+426,0,#2 /var/www/html/cloud/lib/private/Files/Storage/Wrapper/Wrapper.php(594): OC\Files\Storage\Wrapper\Wrapper->acquireLock()
 427,1,## Steps to Reproduce (for Bugs)
 428,1,defined in your dependencies will not be loaded. Read the
 429,1,#### Expected output
@@ -459,7 +459,7 @@
 457,1,In Laravel 5.0 using this code:
 458,1,Returns
 459,1,"[https://github.com/laravel/framework/issues/161], but it does not help at all. I have no idea how to fix it. "
-460,1,ISLOGICAL                | CATEGORY_INFORMATION           | \PhpOffice\PhpSpreadsheet\Calculation\Functions::isLogical
+460,0,ISLOGICAL                | CATEGORY_INFORMATION           | \PhpOffice\PhpSpreadsheet\Calculation\Functions::isLogical
 461,1,- PHP Version: 7.1.13
 462,1,If I just put an empty array at the end of the method call:
 463,1,JS tracker: visitor cookie is set before configuration
@@ -491,7 +491,7 @@
 489,1,Update all views (or at least ones containing the function specified in Blade::directive()) when saving AppServiceProvider (or any ServiceProvider containing Blade::directive()).
 490,1,**PHP version:** 7.2.10
 491,1,Mac OS - Firefox
-492,1,BINOM.INV                | \PhpOffice\PhpSpreadsheet\Calculation\Statistical\Distributions\Binomial::inverse
+492,0,BINOM.INV                | \PhpOffice\PhpSpreadsheet\Calculation\Statistical\Distributions\Binomial::inverse
 493,1,### Expected behaviour
 494,1,Enter the column label as a string (enclosed between double quotation
 495,1,This bug was already mentioned in https://github.com/symfony/symfony/pull/41766#issuecomment-876248038 

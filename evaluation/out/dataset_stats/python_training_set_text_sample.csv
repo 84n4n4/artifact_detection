@@ -1,5 +1,5 @@
 ,target,doc
-0,1,"import numpy; print(""NumPy"", numpy.__version__)"
+0,0,"import numpy; print(""NumPy"", numpy.__version__)"
 1,1,<!--- Paste verbatim command output between quotes -->
 2,1,`PrimaryKeyRelatedField.from_native` method blows up with a `ValueError` when passed an empty value or a string as `data`. This is due to django db machinery assuming an integer has been passed and tries to cast to an int in `get_prep_value` without a try and catch. I have isolated it to the following:
 3,1,<!--- You can also paste gist.github.com links for larger files -->
@@ -244,7 +244,7 @@
 242,1,- iOS issues should be submitted to the home-assistant-iOS repository: https://github.com/home-assistant/home-assistant-iOS/issues
 243,1,##### FIX
 244,1,ANSIBLE_HOSTS=/home/chris/ansible/hosts
-245,1, -var Hello=World -var Sun=Set
+245,0, -var Hello=World -var Sun=Set
 246,1,Ambient sensor fails to close old websocket on reconnect
 247,1,"managing, or say ""N/A"" for anything that is not platform-specific."
 248,1,Jump to the [Add new model like section](#add-new-model-like-command) to learn how to use it.
@@ -384,7 +384,7 @@
 382,1,Mac OS X 10.10.1
 383,1,##### STEPS TO REPRODUCE
 384,1,From 0.9.0 and onwards there is no such entry postprocessed_batch['infos']. Please advise if this has been moved and if so how to update this callback. I am currently using  2.0.0 nightly. 
-385,1,[gh2278]: https://github.com/encode/django-rest-framework/issues/2278
+385,0,[gh2278]: https://github.com/encode/django-rest-framework/issues/2278
 386,1,Pipenv–specific environment variables:
 387,1,  Describe the issue you are experiencing here to communicate to the
 388,1,##### ACTUAL RESULTS
@@ -489,7 +489,7 @@
 487,1,  An example configuration that caused the problem for you. Fill this out even
 488,1,debian 9
 489,1,**Additional context**
-490,1, (0.090484619140625+0.0j)
+490,0, (0.090484619140625+0.0j)
 491,1,##### SUMMARY
 492,1,##### ISSUE TYPE
 493,1,"When using UpdateAPIView to create an object, the view will return:"
