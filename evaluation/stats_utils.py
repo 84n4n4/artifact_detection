@@ -79,7 +79,6 @@ def is_normal(series, add_label, output_path=None):
 #     repl = [np.mean(np.random.choice(series.dropna(), size=len(series))) for x in range(0, 1000)]
 #     return evaluate_bootstrap(np.array(repl), label)
 
-
 def evaluate_bootstrap(series, label):
     mean = series.mean()
     alpha = 0.95
@@ -88,39 +87,9 @@ def evaluate_bootstrap(series, label):
     p = (alpha + ((1.0 - alpha) / 2.0)) * 100
     upper = min(1.0, np.percentile(series, p))
 
-    return pandas.DataFrame([{'alpha': alpha * 100,
+    return {'alpha': alpha * 100,
                            'lower': lower * 100,
                            'upper': upper * 100,
                            'mean': mean,
-                           'label': label}])
+                           'label': label}
 
-
-#
-# def plot_bootstrap_boxdiagram(fig, ax, title, metric, bootstrap_results_df, widths=None):
-#     boxes = []
-#     colors = []
-#     for index, row in bootstrap_results_df.sort_values('label').iterrows():
-#         box = {
-#             'label': row['label'],
-#             'whislo': row['lower']/100,
-#             'q1': row['lower']/100,
-#             'med': row['mean'],
-#             'q3': row['upper']/100,
-#             'whishi': row['upper']/100,
-#             'fliers': []
-#         }
-#         if row['label'].lower().startswith('ens') or row['label'].lower().startswith(' weighted'):
-#             colors.append('lightblue')
-#         else:
-#             colors.append('white')
-#         boxes.append(box)
-#
-#     boxplot = ax.bxp(boxes, showfliers=False, patch_artist=True, medianprops=dict(color="black", linewidth=1.5), widths=widths)
-#
-#     for patch, color in zip(boxplot['boxes'], colors):
-#         patch.set_facecolor(color)
-#
-#     ax.set_ylabel(metric)
-#     ax.set_title(title)
-#     plt.sca(ax)
-#     # plt.xticks(rotation=45)

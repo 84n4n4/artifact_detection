@@ -50,8 +50,8 @@ def main():
         # plt.axvline(x=288038, color='gray', label='40% Training set')
         ax.title.set_text(language_labels[lang])
 
-        colors = ['r', 'g', 'b', 'k', 'c']
-        styles = ['o-', 's-', 'v-', 'D-', 'X-']
+        colors = ['red', 'purple', 'violet', 'k', 'c']
+        styles = ['p-', '*-', 'v-', 'D-', 'X-']
         plot_mean_and_fill_std(axes[5], gb, 'model_size', colors[i], language_labels[lang], style=styles[i])
 
 
