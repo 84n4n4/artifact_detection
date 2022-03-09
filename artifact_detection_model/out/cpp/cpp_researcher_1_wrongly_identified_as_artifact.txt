@@ -1,0 +1,113 @@
+Target: x86_64-linux-gnu
+
+1. Launch the application;
+
+Functions are at `src\openrct2\peep\Staff.cpp`
+
+  3) Windows, tested 7,8,10
+
+C++ try catch in plugin
+
+>Open the park and close OpenRCT2.
+
+Feature: New easter egg name: Rambo
+
+Invalid use of Incomplete Type 'pcl::PointXYZ'
+
+Starting pose estimation demo.
+
+Have already been set
+
+k8s version installation reports: No such file or directory
+
+Last 1.5 dev
+
+DX 11 : All default (OpenGL an DX 9 have the same issue)
+
+{fmt} version is not 5.0
+
+"Fish eye" video effect blur even generated text content
+
+mvPlotCol_LegendBg and mvPlotCol_PlotBg apparently ignored
+
+mvPlotCol_LegendBg and mvPlotCol_PlotBg apparently ignored.
+
+# THIS IS NOT A SUPPORT FORUM! For support, first read the wiki:
+
+# If your question wasn't answered there or you need help, proceed here:
+
+# Xenia Discord (#help) - https://discord.gg/Q9mxZf9
+
+# DO NOT CREATE ISSUES ABOUT SPECIFIC GAMES IN THIS REPOSITORY!
+
+# A Xenia issue would be e.g. "Kernel export NtDoSomething does nothing"
+
+After past changes, a one file error was made (...\xenia\src\xenia\base\system_win.cc)
+
+Dropping old transaction (nonce too low)
+
+e.g by scope or definition
+
+# Bug Report
+
+Script to export saved_models from estimators that use feature_columns:
+
+Errors/Warnings Exceptions
+
+Building Serpent/LLL tools
+
+>A process-directed signal may be delivered to any one of the threads that does not currently have the signal blocked.
+
+OpenGL=>Full Screen=>Esc=>the window is not closed
+
+%@ includes relative path to build directory
+
+Use QCommandLineParser in main.cpp
+
+MacOS / clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+    - **Installation mode**: manual Makefile installation (MacOS);
+
+    - **Operating system** : macOS
+
+    - **Operating system version**: macOS Mojave  10.14.3
+
+    - **Release or Debug mode**? (by default: release):
+
+    - Compiler (`gcc --version` in Ubuntu or VS version in Windows): 5.4.0, ... (Ubuntu); VS2015 Enterprise Update 3, VS2017 community, ... (Windows); ...?
+
+-->
+
+    - **Installation mode**: CMake
+
+    - **Release or Debug mode**? (by defualt: release): Release
+
+    - Compiler (`gcc --version` in Ubuntu or VS version in Windows):  VS 2015 Enterprise with Update 3 build
+
+    - **3-D Reconstruction module added**? (by default: no): No
+
+    - Any other custom CMake configuration with respect to the default version? (by default: no): No
+
+    - **Caffe version**: Default from openPose
+
+    - **CMake version** (`cmake --version` in Ubuntu):3.12.0
+
+    - **OpenCV version**: OpenPose Default
+
+    - **CUDA version** (`cat /usr/local/cuda/version.txt` in most cases):8.0
+
+    - **cuDNN version**:5.1
+
+    - **GPU model** (`nvidia-smi` in Ubuntu): Nvidia Titan X
+
+Installer/updater [request]
+
+For example, if I give min = 0, 10000, 10000, max = 1, 10000, 10000, res = 1...
+
+It will generate a unit depth tree... @@
+
+ ResultBuilder& operator << should use toString
+
+Looking for a ASM_NASM compiler failed with the following output:
+
+i7-6700k @ 4GHZ

@@ -1,0 +1,933 @@
+imagecolorallocatealpha(): Alpha component is out of range
+
+PHP Fatal error:  Uncaught TypeError: Argument 2 passed to PhpOffice\PhpSpreadsheet\Reader\Ods\Properties::setCoreProperties() must be an instance of SimpleXMLElement, array given, called in /my/path/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Ods/Properties.php on line 27 and defined in /my/path/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Ods/Properties.php:39
+
+Invalid date 1980-04-20 when use 'date' form type and set widget options 'simple_text'
+
+Invalid date 1980-04-20 when use 'date' form type and set widget options 'simple_text'.
+
+Preparing update
+
+Set log level to debug
+
+Repair step: Repair MySQL collation
+
+Repair info: Change row format for oc_addressbooks ...
+
+Repair info: Change collation for oc_addressbooks ...
+
+Repair info: Change row format for oc_appconfig ...
+
+Repair info: Change collation for oc_appconfig ...
+
+Repair info: Change row format for oc_authtoken ...
+
+Repair info: Change collation for oc_authtoken ...
+
+Repair info: Change row format for oc_bookmarks ...
+
+Repair info: Change collation for oc_bookmarks ...
+
+Repair info: Change row format for oc_bookmarks_folders ...
+
+Repair info: Change collation for oc_bookmarks_folders ...
+
+Repair info: Change row format for oc_bookmarks_tags ...
+
+Repair info: Change collation for oc_bookmarks_tags ...
+
+Repair info: Change row format for oc_bruteforce_attempts ...
+
+Repair info: Change collation for oc_bruteforce_attempts ...
+
+Repair info: Change row format for oc_calendar_invitations ...
+
+Repair info: Change collation for oc_calendar_invitations ...
+
+Repair info: Change row format for oc_calendar_resources ...
+
+Repair info: Change collation for oc_calendar_resources ...
+
+Repair info: Change row format for oc_calendar_rooms ...
+
+Repair info: Change collation for oc_calendar_rooms ...
+
+Repair info: Change row format for oc_calendarchanges ...
+
+Repair info: Change collation for oc_calendarchanges ...
+
+Repair info: Change row format for oc_calendarobjects ...
+
+Repair info: Change collation for oc_calendarobjects ...
+
+Repair info: Change row format for oc_calendarobjects_props ..
+
+Repair info: Change collation for oc_calendarobjects_props ...
+
+Repair info: Change row format for oc_calendars ...
+
+Repair info: Change collation for oc_calendars ...
+
+Repair info: Change row format for oc_calendarsubscriptions ...
+
+Repair info: Change collation for oc_calendarsubscriptions ...
+
+Repair info: Change row format for oc_cards ...
+
+Repair info: Change collation for oc_cards ...
+
+Repair info: Change row format for oc_cards_properties ...
+
+Repair info: Change collation for oc_cards_properties ...
+
+Repair info: Change row format for oc_comments ...
+
+Repair info: Change collation for oc_comments ...
+
+Repair info: Change row format for oc_comments_read_markers ...
+
+Repair info: Change collation for oc_comments_read_markers ...
+
+Repair info: Change row format for oc_credentials ...
+
+Repair info: Change collation for oc_credentials ...
+
+Repair info: Change row format for oc_dav_shares ...
+
+Repair info: Change collation for oc_dav_shares ...
+
+Repair info: Change row format for oc_directlink ...
+
+Repair info: Change collation for oc_directlink ...
+
+Repair info: Change row format for oc_external_applicable ...
+
+Repair info: Change collation for oc_external_applicable ...
+
+Repair info: Change row format for oc_external_config ...
+
+Repair info: Change collation for oc_external_config ...
+
+Repair info: Change row format for oc_external_mounts ...
+
+Repair info: Change collation for oc_external_mounts ...
+
+Repair info: Change row format for oc_external_options ...
+
+Repair info: Change collation for oc_external_options ...
+
+Repair info: Change row format for oc_file_locks ...
+
+Repair info: Change collation for oc_file_locks ...
+
+Repair info: Change row format for oc_filecache ...
+
+Repair info: Change collation for oc_filecache ...
+
+Repair info: Change row format for oc_files_trash ...
+
+Repair info: Change collation for oc_files_trash ...
+
+Repair info: Change row format for oc_flow_checks ...
+
+Repair info: Change collation for oc_flow_checks ...
+
+Repair info: Change row format for oc_flow_operations ...
+
+Repair info: Change collation for oc_flow_operations ...
+
+Repair info: Change row format for oc_gpxpod_options_values ...
+
+Repair info: Change collation for oc_gpxpod_options_values ...
+
+Repair info: Change row format for oc_gpxpod_tile_servers ...
+
+Repair info: Change collation for oc_gpxpod_tile_servers ...
+
+Repair info: Change row format for oc_gpxpod_tracks ...
+
+Repair info: Change collation for oc_gpxpod_tracks ...
+
+Repair info: Change row format for oc_group_admin ...
+
+Repair info: Change collation for oc_group_admin ...
+
+Repair info: Change row format for oc_group_folders ...
+
+Repair info: Change collation for oc_group_folders ...
+
+Repair info: Change row format for oc_group_folders_groups ...
+
+Repair info: Change collation for oc_group_folders_groups ...
+
+Repair info: Change row format for oc_group_folders_trash ...
+
+Repair info: Change collation for oc_group_folders_trash ...
+
+Repair info: Change row format for oc_group_user ...
+
+Repair info: Change collation for oc_group_user ...
+
+Repair info: Change row format for oc_groups ...
+
+Repair info: Change collation for oc_groups ...
+
+Repair info: Change row format for oc_jobs ...
+
+Repair info: Change collation for oc_jobs ...
+
+Repair info: Change row format for oc_migrations ...
+
+Repair info: Change collation for oc_migrations ...
+
+Repair info: Change row format for oc_mimetypes ...
+
+Repair info: Change collation for oc_mimetypes ...
+
+Repair info: Change row format for oc_mounts ...
+
+Repair info: Change collation for oc_mounts ...
+
+Repair info: Change row format for oc_notes_meta ...
+
+Repair info: Change collation for oc_notes_meta ...
+
+Repair info: Change row format for oc_notifications ...
+
+Repair info: Change collation for oc_notifications ...
+
+Repair info: Change row format for oc_notifications_pushtokens ...
+
+Repair info: Change collation for oc_notifications_pushtokens ...
+
+Repair info: Change row format for oc_oauth2_access_tokens ...
+
+Repair info: Change collation for oc_oauth2_access_tokens ...
+
+Repair info: Change row format for oc_oauth2_clients ...
+
+Repair info: Change collation for oc_oauth2_clients ...
+
+Repair info: Change row format for oc_preferences ...
+
+Repair info: Change collation for oc_preferences ...
+
+Repair info: Change row format for oc_properties ...
+
+Repair info: Change collation for oc_properties ...
+
+Repair info: Change row format for oc_schedulingobjects ...
+
+Repair info: Change collation for oc_schedulingobjects ...
+
+Repair info: Change row format for oc_share ...
+
+Repair info: Change collation for oc_share ...
+
+Repair info: Change row format for oc_share_external ...
+
+Repair info: Change collation for oc_share_external ...
+
+Repair info: Change row format for oc_storages ...
+
+Repair info: Change collation for oc_storages ...
+
+Repair info: Change row format for oc_systemtag ...
+
+Repair info: Change collation for oc_systemtag ...
+
+Repair info: Change row format for oc_systemtag_group ...
+
+Repair info: Change collation for oc_systemtag_group ...
+
+Repair info: Change row format for oc_systemtag_object_mapping ...
+
+Repair info: Change collation for oc_systemtag_object_mapping ...
+
+Repair info: Change row format for oc_talk_guests ...
+
+Repair info: Change collation for oc_talk_guests ...
+
+Repair info: Change row format for oc_talk_participants ...
+
+Repair info: Change collation for oc_talk_participants ...
+
+Repair info: Change row format for oc_talk_rooms ...
+
+Repair info: Change collation for oc_talk_rooms ...
+
+Repair info: Change row format for oc_talk_signaling ...
+
+Repair info: Change collation for oc_talk_signaling ...
+
+Repair info: Change row format for oc_trusted_servers ...
+
+Repair info: Change collation for oc_trusted_servers ...
+
+Repair info: Change row format for oc_twofactor_backupcodes ...
+
+Repair info: Change collation for oc_twofactor_backupcodes ...
+
+Repair info: Change row format for oc_twofactor_providers ...
+
+Repair info: Change collation for oc_twofactor_providers ...
+
+Repair info: Change row format for oc_users ...
+
+Repair info: Change collation for oc_users ...
+
+Repair info: Change row format for oc_vcategory ...
+
+Repair info: Change collation for oc_vcategory ...
+
+Repair info: Change row format for oc_vcategory_to_object ...
+
+Repair info: Change collation for oc_vcategory_to_object ...
+
+Repair info: Change row format for oc_whats_new ...
+
+Repair info: Change collation for oc_whats_new ...
+
+Repair info: Change row format for oc_bookmarks_folders_bookmarks ...
+
+Repair info: Change collation for oc_bookmarks_folders_bookmarks ...
+
+Repair info: Change row format for oc_federated_reshares ...
+
+Repair info: Change collation for oc_federated_reshares ...
+
+Repair step: Repair SQLite autoincrement
+
+Repair step: Copy data from accounts table when migrating from ownCloud
+
+Repair step: Drop account terms table when migrating from ownCloud
+
+Updating database schema
+
+Repair step: Fix component of birthday calendars
+
+Repair info: 1 birthday calendars updated.
+
+Repair step: Fix broken values of calendar objects
+
+[0 / 0]: Fix broken values of calendar objects
+
+Repair step: Registering building of calendar search index as background job
+
+Repair info: Repair step already executed
+
+Repair step: Registering background jobs to update cache for webcal calendars
+
+Repair info: Added 0 background jobs to update webcal calendars
+
+Repair step: Clean up orphan event and contact data
+
+Repair info: 0 events without a calendar have been cleaned up
+
+Repair info: 0 properties without an events have been cleaned up
+
+Repair info: 0 changes without a calendar have been cleaned up
+
+Repair info: 0 contacts without an addressbook have been cleaned up
+
+Repair info: 0 changes without an addressbook have been cleaned up
+
+Repair step: Remove activity entries of private events
+
+Repair info: Removed 0 activity entries
+
+Checking for update of app "accessibility" in appstore
+
+Checking for update of app "activity" in appstore
+
+Checked for update of app "activity" in appstore
+
+Update app "bookmarks" from appstore
+
+Checking for update of app "bookmarks_fulltextsearch" in appstore
+
+Checking for update of app "bruteforcesettings" in appstore
+
+Update app "bruteforcesettings" from appstore
+
+Update app "calendar" from appstore
+
+Checking for update of app "cloud_federation_api" in appstore
+
+Checking for update of app "comments" in appstore
+
+Checking for update of app "dav" in appstore
+
+Checking for update of app "federatedfilesharing" in appstore
+
+Checking for update of app "federation" in appstore
+
+Checked for update of app "federation" in appstore
+
+Checking for update of app "files" in appstore
+
+Checking for update of app "files_external" in appstore
+
+Checking for update of app "files_pdfviewer" in appstore
+
+Checking for update of app "files_sharing" in appstore
+
+Checking for update of app "files_texteditor" in appstore
+
+Checking for update of app "files_trashbin" in appstore
+
+Checking for update of app "files_versions" in appstore
+
+Checking for update of app "files_videoplayer" in appstore
+
+Checking for update of app "firstrunwizard" in appstore
+
+Checking for update of app "gallery" in appstore
+
+Checked for update of app "gallery" in appstore
+
+Checking for update of app "groupfolders" in appstore
+
+Checking for update of app "lookup_server_connector" in appstore
+
+Checking for update of app "nextcloud_announcements" in appstore
+
+Checking for update of app "notes" in appstore
+
+Update app "notes" from appstore
+
+Checking for update of app "notifications" in appstore
+
+Checking for update of app "oauth2" in appstore
+
+Checking for update of app "password_policy" in appstore
+
+Checking for update of app "provisioning_api" in appstore
+
+Checking for update of app "qownnotesapi" in appstore
+
+Checking for update of app "support" in appstore
+
+Checking for update of app "survey_client" in appstore
+
+Checking for update of app "systemtags" in appstore
+
+Checked for update of app "systemtags" in appstore
+
+Checking for update of app "twofactor_backupcodes" in appstore
+
+Checking for update of app "updatenotification" in appstore
+
+Checked for update of app "updatenotification" in appstore
+
+Checking for update of app "workflowengine" in appstore
+
+Repair step: Repair MySQL collation
+
+Repair info: Change row format for oc_addressbooks ...
+
+Repair info: Change collation for oc_addressbooks ...
+
+Debian9 Stretch
+
+Apache2 2.4.25-3+deb9u7
+
+Mariadb 10.1.38-0+deb9u1
+
+php7.0 7.0.33-0+deb9u3
+
+????
+
+  - comments: 1.5.0
+
+  - files: 1.10.0
+
+  - firstrunwizard: 2.4.0
+
+  - oauth2: 1.3.0
+
+  - theming: 1.6.0
+
+  - updatenotification: 1.5.0
+
+  - rainloop
+
+  - spreed
+
+ate key www.tenchiki.net:443:0 configured from /etc/letsencrypt/live/www.tenchiki.net
+
+ resuming normal operations
+
+8F10B:SSL routines:SSL3_GET_RECORD:wrong version number
+
+] AH01998: Connection closed to child 4 with abortive shutdown (server www.tenchiki.n
+
+8F10B:SSL routines:SSL3_GET_RECORD:wrong version number
+
+] AH01998: Connection closed to child 1 with abortive shutdown (server www.tenchiki.n
+
+admin
+
+no root server, sorry
+
+no root server, sorry
+
+fopen(https://s3-gm-storage.powerhrg.com/nextcloud-default/urn%3Aoid%3A2971593): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+
+PHP 7.0.17-2+deb.sury.org~trusty+1 (cli) (built: Mar 15 2017 09:38:47) ( NTS )
+
+Copyright (c) 1997-2017 The PHP Group
+
+Zend Engine v3.0.0, Copyright (c) 1998-2017 Zend Technologies
+
+  - files: 1.7.2
+
+  - firstrunwizard: 2.1
+
+  - nextcloud_announcements: 1.1
+
+  - oauth2: 1.0.5
+
+  - theming: 1.3.0
+
+  - updatenotification: 1.2.0
+
+  - user_external: 0.4
+
+  - sharebymail
+
+php composer.phar self-update
+
+The http:/getcomposer.org/version" file could not be downloaded. Failed to open stream. HTTP request failed!
+
+http://developer.piwik.org/api-reference/Piwik/Auth
+
+pear config-set auto_discover 1
+
+pear install pear.phpunit.de/PHPUnit
+
+PHP 5.6.15 (cli) (built: Dec  4 2015 22:27:28)
+
+Copyright (c) 1997-2015 The PHP Group
+
+Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies
+
+SSL Version => OpenSSL/1.0.1q
+
+OpenSSL support => enabled
+
+OpenSSL Header Version => OpenSSL 1.0.1q 3 Dec 2015
+
+Openssl default config => /opt/lampp/share/openssl/openssl.cnf
+
+OpenSSL support => enabled
+
+The xdebug extension is loaded, this can slow down Composer a little.
+
+Checking HTTP proxy: FAIL
+
+Checking HTTP proxy support for request_fulluri: FAIL
+
+Checking github.com rate limit: FAIL
+
+  The 'http://packagist.org/p/symfony/console%24656d251db4cca62263804955ea1c05cfe80a31f8bd71750cdf6b6958130477c9.json' URL could not be
+
+zend_mm_heap corrupted
+
+<!-- AcmeBundle:Option:theme_option_text.html.twig -->
+
+OptionText Choice Theme
+
+<!-- AcmeBundle:Option:theme_option_number.html.twig -->
+
+OptionNumber Choice Theme
+
+<!-- AcmeBundle:Option:option_text.html.twig -->
+
+<!-- AcmeBundle:Option:option_number.html.twig -->
+
+OptionText Choice Theme
+
+OptionText Choice Theme
+
+PHP version: 7.1.12-3+ubuntu16.04.1+deb.sury.org+1
+
+swiftmailer/swiftmailer is not required in your composer.json and has not been removed
+
+  13  App\Jobs\ScanLibrary::scanDir("1.8.7. Deathstep/Cleansed")
+
+  14  App\Jobs\ScanLibrary::scanDir("1.8.7. Deathstep/Cleansed")
+
+  15  App\Jobs\ScanLibrary::scanDir("1.8.7. Deathstep")
+
+  23  Illuminate\Pipeline\Pipeline::Illuminate\Pipeline\{closure}(Object(App\Jobs\ScanLibrary))
+
+  28  Illuminate\Queue\SyncQueue::push(Object(App\Jobs\ScanLibrary))
+
+  29  Illuminate\Bus\Dispatcher::pushCommandToQueue(Object(Illuminate\Queue\SyncQueue), Object(App\Jobs\ScanLibrary))
+
+  46  Illuminate\Console\Application::run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+Will throw a `SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed` exception, because the second `firstOrCreate` somehow can't find the model and tries to create another one.
+
+> Some columns in the database are missing a conversion to big int. Due to the fact that changing column types on big tables could take some time they were not changed automatically. By running 'occ db:convert-filecache-bigint' those pending changes could be applied manually. This operation needs to be made while the instance is offline. For further details read the documentation page about this.
+
+distribution | Raspbian GNU/Linux 10 \n \l
+
+automount | no
+
+USB devices | none
+
+datadir | /var/www/nextcloud/data
+
+data in SD | yes
+
+data disk usage | 8.3G/15G
+
+rootfs usage | 8.3G/15G
+
+swapfile | /var/swap
+
+dbdir | /var/lib/mysql
+
+Nextcloud check | ok
+
+Nextcloud version | 20.0.4.0
+
+HTTPD service | up
+
+PHP service | up
+
+MariaDB service | up
+
+Redis service | up
+
+Postfix service | up
+
+internet check | ok
+
+NAT loopback | no
+
+Failes by files:scan
+
+#4 /var/www/nextcloud/lib/private/Files/Utils/Scanner.php(260): OC\Files\Cache\Scanner->scan('', true, 3)
+
+#9 /var/www/nextcloud/3rdparty/symfony/console/Application.php(1000): OC\Core\Command\Base->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+#12 /var/www/nextcloud/lib/private/Console/Application.php(215): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+[https://github.com/owncloud/core/blob/master/core/Command/System/Cron.php](https://github.com/owncloud/core/blob/master/core/Command/System/Cron.php)
+
+name = "form[DocsPerm][0][Users]"
+
+name = "form[DocsPerm][1][Users]"
+
+## Code
+
+routes.yml
+
+ - gmp
+
+ - iconv
+
+ - session
+
+ - SimpleXML
+
+ - xml
+
+ - cgi-fcgi
+
+ - imagick
+
+ - tidy
+
+ - soap
+
+ - xmlreader
+
+ - xmlwriter
+
+ - mcrypt
+
+ - memcached
+
+Empty log file
+
+note[20200407 list ideas].md
+
+- src/Symfony/Component/HttpKernel/README.md
+
+- src/Symfony/Component/HttpFoundation/Session/Storage/MockFileSessionStorage.php
+
+key;german;english;french
+
+Error: Call to undefined method OC\DB\QueryBuilder\QueryBuilder::executeQuery() in
+
+Nextcloud or one of the apps require upgrade - only a limited number of commands are available
+
+Nextcloud or one of the apps require upgrade - only a limited number of commands are available
+
+  - checksum: 1.1.3
+
+  - comments: 1.11.0
+
+  - files: 1.16.0
+
+  - firstrunwizard: 2.10.0
+
+  - oauth2: 1.9.0
+
+  - photos: 1.3.0
+
+  - theming: 1.12.0
+
+  - updatenotification: 1.11.0
+
+  - viewer: 1.5.0
+
+Update of code successful.
+
+Should the "occ upgrade" command be executed? [Y/n] Y
+
+Nextcloud or one of the apps require upgrade - only a limited number of commands are available
+
+#1 /var/www/nextcloud/lib/private/DB/MigrationService.php(528): OCA\User_LDAP\Migration\Version1130Date20220110154717->preSchemaChange()
+
+#2 /var/www/nextcloud/lib/private/DB/MigrationService.php(426): OC\DB\MigrationService->executeStep()
+
+#3 /var/www/nextcloud/lib/private/legacy/OC_App.php(1012): OC\DB\MigrationService->migrate()
+
+#12 /var/www/nextcloud/lib/private/Console/Application.php(215): Symfony\Component\Console\Application->run()
+
+#14 /var/www/nextcloud/occ(11): require_once('/var/www/nextcl...')
+
+> Uncaught Whoops\Exception\ErrorException: Undefined index: _SERVER in /var/.../vendor/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php:666 Stack trace: #0 /var/.../vendor/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php(666): Whoops\Run->handleError(8, 'Undefined index...', '/var/www/enstar...', 666, Array) #1 /var/.../vendor/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php(242): Whoops\Handler\PrettyPageHandler->masked('_SERVER') #2 
+
+`https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/api/2.1/yii-bootstrap-activefield`
+
+`https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/api/2.0/yii-bootstrap-activefield`
+
+Array
+
+Array
+
+Message: Illegal offset type in isset or empty
+
+cpuid:
+
+Extended brand string: "       Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz"
+
+gcc --version:
+
+gcc (Ubuntu/Linaro 4.7.2-2ubuntu1) 4.7.2
+
+uname -a:
+
+Linux p 3.5.0-17-generic #28-Ubuntu SMP Tue Oct 9 19:31:23 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+
+7.0.33-0+deb9u1
+
+PHPExcel_Reader_Exception in Excel5.php line 443:
+
+Could not open http://o7vsd12rl.bkt.clouddn.com/example2016.xls for reading! File does not exist.
+
+http://o7vsd12rl.bkt.clouddn.com/example2016.xls
+
+'twig.controller.preview_error' => 'getTwig_Controller_PreviewErrorService',
+
+Version => 4.0.0-rc.1
+
+Powered by Zephir => Version 0.12.4-b386980
+
+Directive => Local Value => Master Value
+
+phalcon.orm.case_insensitive_column_map => Off => Off
+
+phalcon.orm.cast_last_insert_id_to_int => Off => Off
+
+phalcon.orm.cast_on_hydrate => Off => Off
+
+phalcon.orm.column_renaming => On => On
+
+phalcon.orm.disable_assign_setters => Off => Off
+
+phalcon.orm.enable_implicit_joins => On => On
+
+phalcon.orm.enable_literals => On => On
+
+phalcon.orm.events => On => On
+
+phalcon.orm.exception_on_failed_save => Off => Off
+
+phalcon.orm.exception_on_failed_metadata_save => On => On
+
+phalcon.orm.ignore_unknown_columns => Off => Off
+
+phalcon.orm.late_state_binding => Off => Off
+
+phalcon.orm.not_null_validations => On => On
+
+phalcon.orm.update_snapshot_on_save => On => On
+
+phalcon.orm.virtual_foreign_keys => On => On
+
+http://stackoverflow.com/questions/5802309/code-igniter-form-validation-with-all-fields-posted-as-an-array
+
+[37;41m      - remove zendframework/zend-code 2.2.x-dev|keep zendframework/zend-code  [0m
+
+cd /path/to/rootdir/mod/forum && phpunit
+
+cphalcon-3.1.0-alpha2/build/php7/64bits/phalcon.zep.c:24810:13: error: static declaration of ‘zephir_init_static_properties_Phalcon_Tag’ follows non-static declaration
+
+In file included from cphalcon-3.1.0-alpha2/build/php7/64bits/phalcon.zep.c:175:0:
+
+Symfony/Component/Process/Exception/InvalidArgumentException with message 'Command line is missing a value for key "$SOMECOUNT": SOMECOUNT=0
+
+Copyright (c) 1997-2016 The PHP Group
+
+Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+
+## <bountysource-plugin>
+
+Version => 2.1.0r
+
+Build Date => Jun  3 2016 14:01:39
+
+Powered by Zephir => Version 0.9.2a-dev
+
+Attempted to call an undefined method named "__set_state" of class "Sensio\Bundle\FrameworkExtraBundle\Configuration\Route"
+
+"Congratulations!
+
+You're now flying with Phalcon."
+
+## <bountysource-plugin>
+
+ How to test?
+
+  * Write test cases in the tests/ folder
+
+  * Use MakerBundle's make:test command as a shortcut!
+
+> After the library is installed, try running PHPUnit: 
+
+<!-- laravel new bug-report --github="--public" -->
+
+Mar 20 14:09:23 [info] SSL Library Error: 336105671 error:140890C7:SSL routines:SSL3_GET_CLIENT_CERTIFICATE:peer did not return a certificate No CAs known to server for verification?
+
+Saving to: ‘myrepo-panopoly_core-1.0.5.7-831467.zip’
+
+Composer version 70a20ebcc19f1ea8ab0954a4fbdce208b30085e7 2014-03-12 16:07:58
+
+#3 [internal function]: Illuminate\Database\Eloquent\Builder->__call('notScheduled', Array)
+
+#4 /home/forge/eyecons.works/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(3505): call_user_func_array(Array, Array)
+
+#6 /home/forge/eyecons.works/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(3519): call_user_func_array(Array, Array)
+
+#12 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+
+#18 /home/forge/eyecons.works/vendor/laravel/framework/src/Illuminate/Routing/Route.php(174): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'CachetHQ\\Cachet...', 'showIndex')
+
+`getExtensions` method in `SomeFormTypeTest` you need to rewrite to:
+
+[Messenger | ErrorHandler] FlattenException::setStatusText() must be of the type string, null given
+
+ * Properties, which are attributes from source table:
+
+The SQL being executed was: SELECT * FROM "schemaname"."tablename" WHERE NOT (ABS(quantity) < :eps)
+
+Reported on Windows 7 x64, Nginx 1.7.3, Phalcon 1.3.2 x64 NTS
+
+2.0.35 result
+
+app/config/bootstrap.php
+
+app/config/routes.php
+
+app/controllers/BaseController.php
+
+app/controllers/test/TestMeNowController.php
+
+$table
+
+Message could not be sent. Mailer Error: SMTP Error: Could not authenticate.
+
+File : https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Validator/Constraints/EmailValidator.php
+
+  DateTime::__construct(): It is not safe to rely on the system's timezone settings. You are _required_ to
+
+  methods and you are still getting this warning, you most likely misspelled the timezone identifier. We se  
+
+  lected 'Europe/Helsinki' for 'EEST/3.0/DST' instead
+
+mcrypt support => enabled
+
+mcrypt_filter support => enabled
+
+Version => 2.5.8
+
+Supported modes => cbc cfb ctr ecb ncfb nofb ofb stream
+
+Directive => Local Value => Master Value
+
+mcrypt.algorithms_dir => no value => no value
+
+mcrypt.modes_dir => no value => no value
+
+Phalcon: 1.3.1 (master)
+
+Phalcon: 1.3.1 (1.3.1 branch)
+
+## <bountysource-plugin>
+
+Class created_at does not exist`
+
+`Invalid Configuration – yii\base\InvalidConfigException
+
+`return $files`.
+
+config/zumba.php
+
+config/zumba/classes.php
+
+config/zumba/instructors.php
+
+## $files array in getConfigurationFiles()
+
+## problematic invocation of Config\Repository::set
+
+Internal Server Error 500 #2615
+
+Copied Directory [\vendor\roumen\feed\src\views] To [\resources\views\vendor\fee
+
+Clearing cache...
+
+ You must be using the interactive console to authenticate
+
+The problem is related to the way OCI8 retrieves LOBs data types.
+
+http://wezfurlong.org/blog/2005/oct/lob-support-added-to-pdo-oci-in-php-5-1-cvs-finally/
+
+182             // we anyway expect either no rows, or one row with one column. fetchColumn, seems to be buggy #4777
+
+- Authentication：**Log-in credentials, save in session**
+
+index.php?module=Widgetize&action=iframe&moduleToWidgetize=VisitsSummary&actionToWidgetize=getLastVisitsGraph
+
+Keywords: SSL,IE,widget
+
+The server dont shows any error
+
+The server dont shows any error, the loglevel was debug
+
+TypeError: "this.languages[0].languages is undefined"
+
+on `LINE:598:  asyncTracker[f].apply(asyncTracker, parameterArray);`
+
+Uncaught TypeError: Illuminate\Exception\WhoopsDisplayer when hosted on Heroku
+
+Usage:
+
+15 RC1

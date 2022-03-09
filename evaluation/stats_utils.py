@@ -93,3 +93,14 @@ def evaluate_bootstrap(series, label):
                            'mean': mean,
                            'label': label}
 
+
+def get_box(bootstrap_dict):
+    return {
+        'label': bootstrap_dict['label'],
+        'whislo': bootstrap_dict['lower'] / 100,
+        'q1': bootstrap_dict['lower'] / 100,
+        'med': bootstrap_dict['mean'],
+        'q3': bootstrap_dict['upper'] / 100,
+        'whishi': bootstrap_dict['upper'] / 100,
+        'fliers': []
+    }

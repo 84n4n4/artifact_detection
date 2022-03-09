@@ -1,0 +1,99 @@
+Also, see this line: <b>long unused11 = AgentCreateListing.d2 = this.date2.getTime();
+
+</b> Why there is long unused11?
+
+# Authorization Support
+
+	- Constructor signature:
+
+	- Constructor signature:
+
+https://dbeaver.com/features/enterprise/ - Gives 404 on https://dbeaver.com/
+
+performance problem caused by Sets.newSetFromMap()
+
+(e.g., in ForwardingSet.standardRemoveAll(Collection<?> collection)), 
+
+highlight_query return 500 error and array_index_out_of_bounds_exception
+
+ [ik-6.3.2,ik-7.11.1]
+
+1.8.0_211
+
+POST test/_doc/C86A73509CA91D71C447DCE426AAF703
+
+     something, or to understand why something isn't working the way you expect it to, use Stack
+
+     Overflow. https://stackoverflow.com/questions/tagged/retrofit
+
+     get fixed. Here’s an example: https://gist.github.com/swankjesse/6608b4713ad80988cdc9
+
+     already exists! Don’t send pull requests to implement new features without first getting our
+
+     support. Sometimes we leave features out on purpose to keep the project small.
+
+- [✓] I am not submitting a question on how to use ANTLR; instead, go to [antlr4-discussion google group](https://groups.google.com/forum/#!forum/antlr-discussion) or ask at [stackoverflow](http://stackoverflow.com/questions/tagged/antlr4)
+
+e.g.
+
+spring-cloud-gateway 2.3.0 Caused by: java.lang.ClassNotFoundException: javax.validation.ValidationException
+
+    ask a general question is at the Elastic [forums](https://discuss.elastic.co).
+
+    GitHub is not the place for general questions.
+
+    is likely to be closed.  See https://www.elastic.co/support/matrix#show_os
+
+    below, and delete the other block.
+
+- [x] I am not submitting a question on how to use ANTLR; instead, go to [antlr4-discussion google group](https://groups.google.com/forum/#!forum/antlr-discussion) or ask at [stackoverflow](http://stackoverflow.com/questions/tagged/antlr4)
+
+Generating configuration for jar with agentlib  ```-agentlib:native-image-agent=config-output-dir=./config/```
+
+ProtocolException: Unexpected end of stream
+
+A `java.lang.IllegalArgumentException: Cannot find method` error is raised (see details above).
+
+1. cursor  jump to result viewer like alt+2, jump to sql editor alt+1;
+
+4. quick switch schema or database using hotkeys;
+
+ Unauthorized for registry-1.docker.io/library/java-hello-world: 401 Unauthorized
+
+  3.
+
+each time ACodec::handleSetSurface called, it will attach all buffers to the new surface.
+
+# Environment
+
+# Situation
+
+# Current behaviour
+
+# Expected behaviour
+
+fun getRefinements(@QueryMap refinements: Map<String, String>): LiveData<ApiResponse<SearchRefinementResponse>>`
+
+  - node: all physical server (NOT VM)
+
+HINCRBYFLOAT  java.lang.NumberFormatException: For input string: "PONG"
+
+parent.relativePath'  points at com.google.guava:guava-parent instead of org.sonatype.oss:oss-parent
+
+- `transform`
+
+> Could't find any solution to it.
+
+    ask a general question is at the Elastic [forums](https://discuss.elastic.co).
+
+    GitHub is not the place for general questions.
+
+    is likely to be closed.  See https://www.elastic.co/support/matrix#show_os
+
+    below, and delete the other block.
+
+[SHARE]Do not use 3.3.0
+
+e.g.
+
+Tests with failures:

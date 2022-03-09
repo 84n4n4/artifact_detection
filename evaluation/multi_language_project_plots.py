@@ -14,7 +14,7 @@ from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
 from datasets.dataset_utils import get_trainingset, get_all_validation_sets, get_validation_sets_for_language
-from evaluation.stats_utils import evaluate_bootstrap, t_test_x_greater_y, t_test_x_differnt_y
+from evaluation.stats_utils import evaluate_bootstrap, t_test_x_greater_y, t_test_x_differnt_y, get_box
 from evaluation.utils import validation_performance_on_dataset
 from file_anchor import root_dir
 
@@ -166,45 +166,6 @@ def roc_auc_boxplots(validation_set_no):
     plt.savefig(OUT_PATH + 'multi_language_roc_auc_boxplots_VS' + validation_set_no + '.png')
 
 
-def get_box(bootstrap_dict):
-    return {
-        'label': bootstrap_dict['label'],
-        'whislo': bootstrap_dict['lower'] / 100,
-        'q1': bootstrap_dict['lower'] / 100,
-        'med': bootstrap_dict['mean'],
-        'q3': bootstrap_dict['upper'] / 100,
-        'whishi': bootstrap_dict['upper'] / 100,
-        'fliers': []
-    }
-
-def plot_bootstrap_boxdiagram(fig, ax, title, metric, bootstrap_results_df, widths=None):
-    boxes = []
-    colors = []
-    for index, row in bootstrap_results_df.sort_values('label').iterrows():
-        box = {
-            'label': row['label'],
-            'whislo': row['lower']/100,
-            'q1': row['lower']/100,
-            'med': row['mean'],
-            'q3': row['upper']/100,
-            'whishi': row['upper']/100,
-            'fliers': []
-        }
-        if row['label'].lower().startswith('ens') or row['label'].lower().startswith(' weighted'):
-            colors.append('lightblue')
-        else:
-            colors.append('white')
-        boxes.append(box)
-
-    boxplot = ax.bxp(boxes, showfliers=False, patch_artist=True, medianprops=dict(color="black", linewidth=1.5), widths=widths)
-
-    for patch, color in zip(boxplot['boxes'], colors):
-        patch.set_facecolor(color)
-
-    ax.set_ylabel(metric)
-    ax.set_title(title)
-    plt.sca(ax)
-    plt.xticks(rotation=45)
 
 
 # def plot_numpy_confusion_matrix(cm, target_names):

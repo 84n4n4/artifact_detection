@@ -31,3 +31,5 @@ def plot_numpy_confusion_matrix(cm, target_names):
     disp = ConfusionMatrixDisplay(confusion_matrix=np.array(cm), display_labels=target_names)
     disp.plot(include_values=True, cmap='viridis', ax=None, xticks_rotation='horizontal', values_format=None)
     return disp
+
+

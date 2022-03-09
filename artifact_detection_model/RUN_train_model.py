@@ -20,47 +20,44 @@ OUT_PATH = root_dir() + 'artifact_detection_model/out/'
 
 
 def main():
-    lang = LANGUAGES[-1]
+    # 'cpp',
+    # 'java',
+    # 'javascript',
+    # 'php',
+    # 'python',
+
+    lang = 'python'
     seed = 42
     df_train = get_trainingset(lang)
     val_sets = get_all_validation_sets()
-    train_frac = 0.2
+    train_size = 200000
 
-    df_train = df_train.copy().sample(frac=train_frac, random_state=seed)
-    df_train[df_train['target'] == 0]['doc'].to_csv(OUT_PATH + 'train_artifact.csv')
-    df_train[df_train['target'] == 1]['doc'].to_csv(OUT_PATH + 'train_natural_lang.csv')
+    df_sel = df_train[df_train['target'] == 1].sample(int(train_size / 2), random_state=seed, replace=True)
+    df_sel = df_sel.append(df_train[df_train['target'] == 0].sample(int(train_size / 2), random_state=seed, replace=True))
 
-    report, pipeline = run_ml_artifact_training(df_train,
-                                                LinearSVC(random_state=42))
-    # MultinomialNB(fit_prior=False)
-    # LogisticRegression(random_state=42)
-    # LinearSVC(random_state=42)
+    # df_sel[df_sel['target'] == 0]['doc'].to_csv(OUT_PATH + lang + '/' + 'train_artifact.csv')
+    # df_sel[df_sel['target'] == 1]['doc'].to_csv(OUT_PATH + lang + '/' +  'train_natural_lang.csv')
+
+    report, pipeline = run_ml_artifact_training(df_sel, LinearSVC(random_state=42))
 
     report.update({'seed': seed})
-    report.update({'train_frac': train_frac})
-
-    # df_train, df_test = get_training_and_test_set()
-    # df_train = df_train.sample(frac=train_frac, random_state=42)
-    # report, pipeline = run_ml_artifact_training(df_train, df_test, LinearSVC(random_state=42), model_output_path=OUT_PATH)
-
-    report.update({'name': 'LSVCdef'})
-    report.update({'train_frac': train_frac})
+    report.update({'train_frac': train_size})
 
     for val_set_name, val_set_df in val_sets.items():
         val_docs = val_set_df.copy().pop('doc').values
         val_targets = val_set_df.copy().pop('target').values
         report.update(validation_performance_on_dataset(pipeline, val_docs, val_targets, val_set_name))
 
-    with open(OUT_PATH + 'performance_report.json', 'w') as fd:
+    with open(OUT_PATH + lang + '/' + 'performance_report.json', 'w') as fd:
         json.dump(report, fd, indent=2)
 
-    investigate_miscalssifications(pipeline, val_sets[lang + '_researcher_1'], lang + '_researcher_1')
+    investigate_miscalssifications(pipeline, val_sets[lang + '_researcher_1'], lang + '_researcher_1', lang)
 
-    store_model(pipeline)
+    # store_model(pipeline)
     return report, pipeline
 
 
-def investigate_miscalssifications(pipeline, val_set_df, val_set_name):
+def investigate_miscalssifications(pipeline, val_set_df, val_set_name, lang):
     data = val_set_df.copy().pop('doc').values
     target = val_set_df.copy().pop('target').values
     name = val_set_name
@@ -77,15 +74,15 @@ def investigate_miscalssifications(pipeline, val_set_df, val_set_name):
         else:
             wrongly_identified_as_artifact.append(data[index])
 
-    with open(OUT_PATH + name + '_wrongly_identified_as_artifact.txt', 'w') as fd:
+    with open(OUT_PATH + lang + '/' + name + '_wrongly_identified_as_artifact.txt', 'w') as fd:
         fd.write('\n\n'.join(wrongly_identified_as_artifact))
-    with open(OUT_PATH + name + '_wrongly_identified_as_text.txt', 'w') as fd:
+    with open(OUT_PATH + lang + '/' + name + '_wrongly_identified_as_text.txt', 'w') as fd:
         fd.write('\n\n'.join(wrongly_identified_as_text))
 
 
-def store_model(pipeline):
-    joblib.dump(pipeline, OUT_PATH + 'artifact_detection.joblib')
-    with open(OUT_PATH + 'artifact_detection.pickle', 'wb') as fd:
+def store_model(pipeline, lang):
+    joblib.dump(pipeline, OUT_PATH + lang + '/' + 'artifact_detection.joblib')
+    with open(OUT_PATH + lang + '/' + 'artifact_detection.pickle', 'wb') as fd:
         pickle.dump(pipeline, fd)
 
 

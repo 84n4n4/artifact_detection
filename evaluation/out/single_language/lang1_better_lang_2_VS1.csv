@@ -1,0 +1,21 @@
+,test,stat,p,h0,model
+0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp vs java
+1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp vs java
+0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,cpp vs java
+1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,cpp vs java
+0,t_test_one_sided,12.97502062573065,2.188334989871624e-28,cpp is not greater than java,cpp vs java
+0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java vs javascript
+1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java vs javascript
+0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,java vs javascript
+1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,java vs javascript
+0,t_test_one_sided,10.386777365505496,1.96500353513719e-20,java is not greater than javascript,java vs javascript
+0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript vs php
+1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript vs php
+0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,javascript vs php
+1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,javascript vs php
+0,t_test_one_sided,47.82223575495569,5.269566855090078e-111,javascript is not greater than php,javascript vs php
+0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php vs python
+1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php vs python
+0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,php vs python
+1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,php vs python
+0,t_test_one_sided,35.13857902713652,4.493074433426923e-74,php is not greater than python,php vs python

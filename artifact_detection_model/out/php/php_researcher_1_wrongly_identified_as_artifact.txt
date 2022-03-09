@@ -1,0 +1,93 @@
+Keywords: i18n, l10n
+
+    - [ ] Introduce proper sorting in table view
+
+Syntax error or access violation: 1071 Specified key was too long;
+
+The update was unsuccessful. Please report this issue to the Nextcloud community.
+
+You may use your browser or the occ upgrade command to do the upgrade
+
+4. Read warning concerning HSTS: The "Strict-Transport-Security" HTTP header is not set to at least "15552000" seconds. For enhanced security, it is recommended to enable HSTS as described in the security tips."
+
+</details>
+
+No errors have been found.
+
+Enabled:
+
+- Increase code coverage
+
+CHANGELOG.md contains a broken link
+
+2) flexibility: when only 1 vertical menu 'echelon line' is required (for whatever reason)
+
+if you [migrate](https://github.com/yiisoft/yii2-app-advanced/blob/master/console/migrations/m130524_201442_init.php#L17) to yii2-app-advanced field 'id' in table 'user' integer (11)
+
+Password::min() on failure attribute is not translated
+
+Reproducible using the following test app: [testapp.tar.gz](https://github.com/nextcloud/server/files/2951835/testapp.tar.gz)
+
+    Install raspberry with buster
+
+    Install nextcloudpi
+
+    Use app external-storage for connectivities the NAS
+
+    See no files or share
+
+Error: Key "location" for array with keys "idSite, idVisit, visitIp, visitorId, actionDetails, goalConversions, siteCurrency, siteCurrencySymbol, serverDate, visitServerHour, lastActionTimestamp, lastActionDateTime, userId, visitorType, visitorTypeIcon, visitConverted, visitConvertedIcon, visitCount, firstActionTimestamp, visitEcommerceStatus, visitEcommerceStatusIcon, daysSinceFirstVisit, daysSinceLastEcommerceOrder, visitDuration, visitDurationPretty, searches, actions, referrerType, referrerTypeName, referrerName, referrerKeyword, referrerKeywordPosition, referrerUrl, referrerSearchEngineUrl, referrerSearchEngineIcon, languageCode, language, deviceType, deviceTypeIcon, deviceBrand, deviceModel, operatingSystem, operatingSystemName, operatingSystemIcon, operatingSystemCode, operatingSystemVersion, browserFamily, browserFamilyDescription, browser, browserName, browserIcon, browserCode, browserVersion, events, visitLocalTime, visitLocalHour, daysSinceLastVisit, customVariables, resolution, plugins, pluginsIcons, dimension1, dimension2, dimension3, testisUnus, serverTimestamp, serverTimePretty, serverDatePretty, serverDatePrettyFirstAction, serverTimePrettyFirstAction" does not exist in "@Live/getSingleVisitSummary.twig" at line 8
+
+     create a "bug reproducer" as explained in:
+
+composer update error
+
+Loading composer repositories with package information
+
+Updating dependencies (including require-dev)
+
+# Draft
+
+Thus I cannot build phalcon. The build directory doesn't matter (cphalcon/build or cphalcon/ext)
+
+The "Referrer-Policy" HTTP header is not set to "no-referrer", "no-referrer-when-downgrade", "strict-origin", "strict-origin-when-cross-origin" or "same-origin". 
+
+composer create-project symfony/website-skeleton still tells to use php bin/phpunit for testing
+
+Activity	2.9.1
+
+Password policy	1.6.0
+
+PDF viewer	1.5.0
+
+Update notification	1.6.0
+
+Versions	1.9.0
+
+`If you get a 500 error when visiting your status page, you may need to run chmod -R 777 storage for it to work or rm -rf bootstrap/cache/*`
+
+```
+
+http://piwik.org;jsessionid=A3294FBE42?foo=bar`.[[BR]]Then piwik logs the url including the`
+
+12) Connect to Nextcloud
+
+**'Content-Type: %s; name="%s"%s'** and 
+
+> TBD: namespace
+
+- [x] [Null Coalescing Assignment Operator](https://wiki.php.net/rfc/null_coalesce_equal_operator) (#4603)
+
+- [x] [Typed Properties 2.0](https://wiki.php.net/rfc/typed_properties_v2) (#4593)
+
+- [x] [Spread Operator in Array Expression](https://wiki.php.net/rfc/spread_operator_for_array) (#4602)
+
+- [x] [Arrow Functions 2.0](https://wiki.php.net/rfc/arrow_functions_v2) (#4600)
+
+- [x] [Numeric Literal Separator](https://wiki.php.net/rfc/numeric_literal_separator) (#4596)
+
+- [x] [New custom object serialization mechanism](https://wiki.php.net/rfc/custom_object_serialization) (#4381)
+
+    b. Note that the `phpunit.xml` file has an `APP_ENV` value of `testing`
+
+Importing large size sheets
