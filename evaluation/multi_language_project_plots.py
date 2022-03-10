@@ -36,13 +36,14 @@ language_labels = {
 
 def main():
     # cross_project_roc_auc_matrix('1')
-    bare_stats()
+    # bare_stats()
     for validation_set_no in ['1', '2']:
         # cross_project_roc_auc_matrix(validation_set_no)
         # p_test_single_lang_model_performs_better_than_multi_lang_model(validation_set_no)
         # p_test_single_lang_model_different_than_multi_lang_model(validation_set_no)
         # p_test_single_lang_model_different_than_multi_lang_model(validation_set_no)
         roc_auc_boxplots(validation_set_no)
+        # multi_model_transferability_table(validation_set_no)
 
 def bare_stats():
     multi_df = pandas.read_csv(OUT_PATH + 'artifact_detection_multi_language_model_resample_summary.csv')
@@ -113,7 +114,7 @@ def cross_project_roc_auc_matrix(validation_set_no):
     ax.set(ylabel="Model language", xlabel='Validation set ' + validation_set_no + ' language', title='ROC-AUC')
 
     plt.tight_layout()
-    plt.savefig(OUT_PATH + 'multi_language_project_roc_auc_matrix_VS' + validation_set_no + '.png')
+    plt.savefig(OUT_PATH + 'multi_language_project_roc_auc_matrix_VS' + validation_set_no + '.pdf')
 
 
 def roc_auc_boxplots(validation_set_no):
@@ -143,8 +144,8 @@ def roc_auc_boxplots(validation_set_no):
     ax2_lim = ax2.get_ylim()
 
     # ax1.set_ylim(min(ax1_lim[0], ax2_lim[0]), max(ax1_lim[1], ax2_lim[1]))
-    ax1.set_ylim(0.88, 0.97)
-    ax2.set_ylim(0.88, 0.97)
+    ax1.set_ylim(0.90, 0.97)
+    ax2.set_ylim(0.90, 0.97)
     ax2.set_yticks([])
 
     ax1.set_xticks(np.arange(5))
@@ -153,7 +154,7 @@ def roc_auc_boxplots(validation_set_no):
     ax1.set_ylabel('ROC-AUC')
     ax1.set_title('')
     plt.sca(ax1)
-    plt.xticks(rotation=45)
+    # plt.xticks(rotation=45)
 
 
     plt.legend(handles=[mpatches.Patch(color='lightcyan', label='Multi language model'),
@@ -163,9 +164,40 @@ def roc_auc_boxplots(validation_set_no):
 
     plt.tight_layout()
     # plt.show()
-    plt.savefig(OUT_PATH + 'multi_language_roc_auc_boxplots_VS' + validation_set_no + '.png')
+    plt.savefig(OUT_PATH + 'multi_language_roc_auc_boxplots_VS' + validation_set_no + '.pdf')
 
 
+def multi_model_transferability_table(validation_set_no):
+    comb_roc_auc = pandas.DataFrame(columns=[language_labels[l] for l in LANGUAGES] + ['Multi language'])
+
+    for lang in LANGUAGES:
+        df = pandas.read_csv(CROSS_LANGUAGE_EVALUATION + lang + '_artifact_detection_cross_language_resample_summary.csv')
+        roc_auc = []
+        for l in LANGUAGES:
+            roc_auc.extend(df['roc-auc_' + l + '_researcher_' + validation_set_no].to_list())
+        comb_roc_auc[language_labels[lang]] = roc_auc
+
+    df = pandas.read_csv(OUT_PATH + 'artifact_detection_multi_language_model_resample_summary.csv')
+    roc_auc = []
+    for l in LANGUAGES:
+        roc_auc.extend(df['roc-auc_' + l + '_researcher_' + validation_set_no].to_list())
+    comb_roc_auc['Multi language'] = roc_auc
+
+    rep_df = pandas.DataFrame()
+    for column in comb_roc_auc.columns:
+        if column == 'Multi language':
+            continue
+        rep = t_test_x_greater_y(comb_roc_auc['Multi language'],
+                                 comb_roc_auc[column],
+                                 'Multi language', column)
+
+        rep_df = rep_df.append(rep)
+    rep_df.to_csv(OUT_PATH + 'multilang_model_better_transfer_than_single_lang_model_transfer_VS' + validation_set_no + '.csv')
+    rep_df = rep_df[rep_df['test'] == 'wilcoxon']
+
+    comb_roc_auc = comb_roc_auc.mean()
+    comb_roc_auc.to_csv(OUT_PATH + 'transferability_mean_over_all_language_performance_VS'+ validation_set_no + '.csv')
+    comb_roc_auc.T.to_latex(OUT_PATH + 'transferability_mean_over_all_language_performance_VS' + validation_set_no + '.tex', float_format="%.2f")
 
 
 # def plot_numpy_confusion_matrix(cm, target_names):

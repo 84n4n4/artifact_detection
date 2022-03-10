@@ -1,101 +1,121 @@
-,test,stat,p,h0,model
-0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp
-1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp
-0,shapiro_stat,0.9897971153259277,0.648202657699585,java - that the data was drawn from normal distribution,cpp
-1,dagostino_stat,0.16802602689017454,0.9194192912048144,java - that the data was drawn from normal distribution,cpp
-0,t_test_one_sided,54.35132860234325,1.3378498507618126e-92,cpp is not greater than java,cpp
-0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp
-1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp
-0,shapiro_stat,0.9790306091308594,0.11168291419744492,javascript - that the data was drawn from normal distribution,cpp
-1,dagostino_stat,2.650891757076544,0.26568446967196674,javascript - that the data was drawn from normal distribution,cpp
-0,t_test_one_sided,53.611800960171735,3.885194535249208e-102,cpp is not greater than javascript,cpp
-0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp
-1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp
-0,shapiro_stat,0.9639424681663513,0.007758161053061485,php - that the data was drawn from normal distribution,cpp
-1,dagostino_stat,8.057476004999762,0.017796775273617154,php - that the data was drawn from normal distribution,cpp
-0,t_test_one_sided,61.95668539747109,6.3952760692504565e-86,cpp is not greater than php,cpp
-0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp
-1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp
-0,shapiro_stat,0.9683364033699036,0.01651057042181492,python - that the data was drawn from normal distribution,cpp
-1,dagostino_stat,16.604692900258737,0.0002479343783775223,python - that the data was drawn from normal distribution,cpp
-0,t_test_one_sided,66.72874073166639,1.0088912713391693e-98,cpp is not greater than python,cpp
-0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java
-1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java
-0,shapiro_stat,0.986803412437439,0.42454129457473755,cpp - that the data was drawn from normal distribution,java
-1,dagostino_stat,1.2172805551084294,0.5440901779606553,cpp - that the data was drawn from normal distribution,java
-0,t_test_one_sided,66.99525053259319,1.4291896432588106e-107,java is not greater than cpp,java
-0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java
-1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java
-0,shapiro_stat,0.95416659116745,0.001577172544784844,javascript - that the data was drawn from normal distribution,java
-1,dagostino_stat,11.578807084506877,0.003059806677646135,javascript - that the data was drawn from normal distribution,java
-0,t_test_one_sided,51.84026347251635,2.4840629585344574e-93,java is not greater than javascript,java
-0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java
-1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java
-0,shapiro_stat,0.9674906730651855,0.014251208864152431,php - that the data was drawn from normal distribution,java
-1,dagostino_stat,8.919871008816585,0.011563109032978686,php - that the data was drawn from normal distribution,java
-0,t_test_one_sided,81.01237508686688,2.8790207519460442e-102,java is not greater than php,java
-0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java
-1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java
-0,shapiro_stat,0.9864047765731812,0.3988574743270874,python - that the data was drawn from normal distribution,java
-1,dagostino_stat,1.892489237072836,0.38819611402518606,python - that the data was drawn from normal distribution,java
-0,t_test_one_sided,84.87160141443186,2.813050193060054e-107,java is not greater than python,java
-0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript
-1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript
-0,shapiro_stat,0.9902957677841187,0.6885101199150085,cpp - that the data was drawn from normal distribution,javascript
-1,dagostino_stat,0.06523213661497938,0.9679100996242175,cpp - that the data was drawn from normal distribution,javascript
-0,t_test_one_sided,30.05826053777791,1.633477187734847e-67,javascript is not greater than cpp,javascript
-0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript
-1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript
-0,shapiro_stat,0.9723131656646729,0.03331974148750305,java - that the data was drawn from normal distribution,javascript
-1,dagostino_stat,4.302634371806553,0.11633082748733714,java - that the data was drawn from normal distribution,javascript
-0,t_test_one_sided,26.435343885129313,2.2107713447260387e-63,javascript is not greater than java,javascript
-0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript
-1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript
-0,shapiro_stat,0.9625031352043152,0.006089227274060249,php - that the data was drawn from normal distribution,javascript
-1,dagostino_stat,14.297084579886132,0.000786009019867067,php - that the data was drawn from normal distribution,javascript
-0,t_test_one_sided,53.84924809594473,1.763193447741648e-83,javascript is not greater than php,javascript
-0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript
-1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript
-0,shapiro_stat,0.990241527557373,0.6841241717338562,python - that the data was drawn from normal distribution,javascript
-1,dagostino_stat,1.8400083116028891,0.39851738492194877,python - that the data was drawn from normal distribution,javascript
-0,t_test_one_sided,77.57871739726941,8.133797650198356e-128,javascript is not greater than python,javascript
-0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php
-1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php
-0,shapiro_stat,0.9737217426300049,0.042874421924352646,cpp - that the data was drawn from normal distribution,php
-1,dagostino_stat,5.687614534218861,0.058203646759521846,cpp - that the data was drawn from normal distribution,php
-0,t_test_one_sided,35.365028796606964,6.047738040530574e-71,php is not greater than cpp,php
-0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php
-1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php
-0,shapiro_stat,0.967313826084137,0.013820788823068142,java - that the data was drawn from normal distribution,php
-1,dagostino_stat,13.733723534048979,0.0010417411666612765,java - that the data was drawn from normal distribution,php
-0,t_test_one_sided,21.406075086219637,8.046453664310292e-47,php is not greater than java,php
-0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php
-1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php
-0,shapiro_stat,0.9839752912521362,0.2672880291938782,javascript - that the data was drawn from normal distribution,php
-1,dagostino_stat,2.2628226889007497,0.3225776668010802,javascript - that the data was drawn from normal distribution,php
-0,t_test_one_sided,25.56350174242546,2.141501251068561e-52,php is not greater than javascript,php
-0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php
-1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php
-0,shapiro_stat,0.9849758744239807,0.31632331013679504,python - that the data was drawn from normal distribution,php
-1,dagostino_stat,4.5652302646623415,0.1020170694315058,python - that the data was drawn from normal distribution,php
-0,t_test_one_sided,84.63217883759984,1.2534269546436494e-127,php is not greater than python,php
-0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,python
-1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,python
-0,shapiro_stat,0.9936021566390991,0.9215858578681946,cpp - that the data was drawn from normal distribution,python
-1,dagostino_stat,0.2875435072778269,0.8660854063433429,cpp - that the data was drawn from normal distribution,python
-0,t_test_one_sided,10.805305101493657,3.9264883896476327e-19,python is not greater than cpp,python
-0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,python
-1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,python
-0,shapiro_stat,0.9911139011383057,0.753963053226471,java - that the data was drawn from normal distribution,python
-1,dagostino_stat,1.2409758964997537,0.53768201257794,java - that the data was drawn from normal distribution,python
-0,t_test_one_sided,-35.22700324145823,1.0,python is not greater than java,python
-0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,python
-1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,python
-0,shapiro_stat,0.9719403386116028,0.031177029013633728,javascript - that the data was drawn from normal distribution,python
-1,dagostino_stat,3.642139308650243,0.16185253204729472,javascript - that the data was drawn from normal distribution,python
-0,t_test_one_sided,-18.017729941564202,1.0,python is not greater than javascript,python
-0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,python
-1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,python
-0,shapiro_stat,0.9609639644622803,0.004713481292128563,php - that the data was drawn from normal distribution,python
-1,dagostino_stat,5.543542614407702,0.06255110932566547,php - that the data was drawn from normal distribution,python
-0,t_test_one_sided,11.395153037087235,2.6643427584488498e-20,python is not greater than php,python
+,test,stat,p,h0,x_label,y_label,model
+0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp,java,cpp
+1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp,java,cpp
+0,shapiro_stat,0.9897971153259277,0.648202657699585,java - that the data was drawn from normal distribution,cpp,java,cpp
+1,dagostino_stat,0.16802602689017454,0.9194192912048144,java - that the data was drawn from normal distribution,cpp,java,cpp
+0,t_test_one_sided,54.35132860234325,1.3378498507618126e-92,cpp is not greater than java,cpp,java,cpp
+0,wilcoxon,5050.0,1.9477304626949193e-18,cpp is not greater than java,cpp,java,cpp
+0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp,javascript,cpp
+1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp,javascript,cpp
+0,shapiro_stat,0.9790306091308594,0.11168291419744492,javascript - that the data was drawn from normal distribution,cpp,javascript,cpp
+1,dagostino_stat,2.650891757076544,0.26568446967196674,javascript - that the data was drawn from normal distribution,cpp,javascript,cpp
+0,t_test_one_sided,53.611800960171735,3.885194535249208e-102,cpp is not greater than javascript,cpp,javascript,cpp
+0,wilcoxon,5050.0,1.9477304626949193e-18,cpp is not greater than javascript,cpp,javascript,cpp
+0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp,php,cpp
+1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp,php,cpp
+0,shapiro_stat,0.9639424681663513,0.007758161053061485,php - that the data was drawn from normal distribution,cpp,php,cpp
+1,dagostino_stat,8.057476004999762,0.017796775273617154,php - that the data was drawn from normal distribution,cpp,php,cpp
+0,t_test_one_sided,61.95668539747109,6.3952760692504565e-86,cpp is not greater than php,cpp,php,cpp
+0,wilcoxon,5050.0,1.9477304626949193e-18,cpp is not greater than php,cpp,php,cpp
+0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp,python,cpp
+1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp,python,cpp
+0,shapiro_stat,0.9683364033699036,0.01651057042181492,python - that the data was drawn from normal distribution,cpp,python,cpp
+1,dagostino_stat,16.604692900258737,0.0002479343783775223,python - that the data was drawn from normal distribution,cpp,python,cpp
+0,t_test_one_sided,66.72874073166639,1.0088912713391693e-98,cpp is not greater than python,cpp,python,cpp
+0,wilcoxon,5050.0,1.9477304626949193e-18,cpp is not greater than python,cpp,python,cpp
+0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java,cpp,java
+1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java,cpp,java
+0,shapiro_stat,0.986803412437439,0.42454129457473755,cpp - that the data was drawn from normal distribution,java,cpp,java
+1,dagostino_stat,1.2172805551084294,0.5440901779606553,cpp - that the data was drawn from normal distribution,java,cpp,java
+0,t_test_one_sided,66.99525053259319,1.4291896432588106e-107,java is not greater than cpp,java,cpp,java
+0,wilcoxon,5050.0,1.9477304626949193e-18,java is not greater than cpp,java,cpp,java
+0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java,javascript,java
+1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java,javascript,java
+0,shapiro_stat,0.95416659116745,0.001577172544784844,javascript - that the data was drawn from normal distribution,java,javascript,java
+1,dagostino_stat,11.578807084506877,0.003059806677646135,javascript - that the data was drawn from normal distribution,java,javascript,java
+0,t_test_one_sided,51.84026347251635,2.4840629585344574e-93,java is not greater than javascript,java,javascript,java
+0,wilcoxon,5050.0,1.9477304626949193e-18,java is not greater than javascript,java,javascript,java
+0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java,php,java
+1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java,php,java
+0,shapiro_stat,0.9674906730651855,0.014251208864152431,php - that the data was drawn from normal distribution,java,php,java
+1,dagostino_stat,8.919871008816585,0.011563109032978686,php - that the data was drawn from normal distribution,java,php,java
+0,t_test_one_sided,81.01237508686688,2.8790207519460442e-102,java is not greater than php,java,php,java
+0,wilcoxon,5050.0,1.9477304626949193e-18,java is not greater than php,java,php,java
+0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java,python,java
+1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java,python,java
+0,shapiro_stat,0.9864047765731812,0.3988574743270874,python - that the data was drawn from normal distribution,java,python,java
+1,dagostino_stat,1.892489237072836,0.38819611402518606,python - that the data was drawn from normal distribution,java,python,java
+0,t_test_one_sided,84.87160141443186,2.813050193060054e-107,java is not greater than python,java,python,java
+0,wilcoxon,5050.0,1.9477304626949193e-18,java is not greater than python,java,python,java
+0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript,cpp,javascript
+1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript,cpp,javascript
+0,shapiro_stat,0.9902957677841187,0.6885101199150085,cpp - that the data was drawn from normal distribution,javascript,cpp,javascript
+1,dagostino_stat,0.06523213661497938,0.9679100996242175,cpp - that the data was drawn from normal distribution,javascript,cpp,javascript
+0,t_test_one_sided,30.05826053777791,1.633477187734847e-67,javascript is not greater than cpp,javascript,cpp,javascript
+0,wilcoxon,5050.0,1.9477304626949193e-18,javascript is not greater than cpp,javascript,cpp,javascript
+0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript,java,javascript
+1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript,java,javascript
+0,shapiro_stat,0.9723131656646729,0.03331974148750305,java - that the data was drawn from normal distribution,javascript,java,javascript
+1,dagostino_stat,4.302634371806553,0.11633082748733714,java - that the data was drawn from normal distribution,javascript,java,javascript
+0,t_test_one_sided,26.435343885129313,2.2107713447260387e-63,javascript is not greater than java,javascript,java,javascript
+0,wilcoxon,5045.0,2.2652939824098105e-18,javascript is not greater than java,javascript,java,javascript
+0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript,php,javascript
+1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript,php,javascript
+0,shapiro_stat,0.9625031352043152,0.006089227274060249,php - that the data was drawn from normal distribution,javascript,php,javascript
+1,dagostino_stat,14.297084579886132,0.000786009019867067,php - that the data was drawn from normal distribution,javascript,php,javascript
+0,t_test_one_sided,53.84924809594473,1.763193447741648e-83,javascript is not greater than php,javascript,php,javascript
+0,wilcoxon,5050.0,1.9477304626949193e-18,javascript is not greater than php,javascript,php,javascript
+0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript,python,javascript
+1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript,python,javascript
+0,shapiro_stat,0.990241527557373,0.6841241717338562,python - that the data was drawn from normal distribution,javascript,python,javascript
+1,dagostino_stat,1.8400083116028891,0.39851738492194877,python - that the data was drawn from normal distribution,javascript,python,javascript
+0,t_test_one_sided,77.57871739726941,8.133797650198356e-128,javascript is not greater than python,javascript,python,javascript
+0,wilcoxon,5050.0,1.9477304626949193e-18,javascript is not greater than python,javascript,python,javascript
+0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php,cpp,php
+1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php,cpp,php
+0,shapiro_stat,0.9737217426300049,0.042874421924352646,cpp - that the data was drawn from normal distribution,php,cpp,php
+1,dagostino_stat,5.687614534218861,0.058203646759521846,cpp - that the data was drawn from normal distribution,php,cpp,php
+0,t_test_one_sided,35.365028796606964,6.047738040530574e-71,php is not greater than cpp,php,cpp,php
+0,wilcoxon,5050.0,1.9476205883528185e-18,php is not greater than cpp,php,cpp,php
+0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php,java,php
+1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php,java,php
+0,shapiro_stat,0.967313826084137,0.013820788823068142,java - that the data was drawn from normal distribution,php,java,php
+1,dagostino_stat,13.733723534048979,0.0010417411666612765,java - that the data was drawn from normal distribution,php,java,php
+0,t_test_one_sided,21.406075086219637,8.046453664310292e-47,php is not greater than java,php,java,php
+0,wilcoxon,5046.0,2.197815070263847e-18,php is not greater than java,php,java,php
+0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php,javascript,php
+1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php,javascript,php
+0,shapiro_stat,0.9839752912521362,0.2672880291938782,javascript - that the data was drawn from normal distribution,php,javascript,php
+1,dagostino_stat,2.2628226889007497,0.3225776668010802,javascript - that the data was drawn from normal distribution,php,javascript,php
+0,t_test_one_sided,25.56350174242546,2.141501251068561e-52,php is not greater than javascript,php,javascript,php
+0,wilcoxon,5050.0,1.9476205883528185e-18,php is not greater than javascript,php,javascript,php
+0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php,python,php
+1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php,python,php
+0,shapiro_stat,0.9849758744239807,0.31632331013679504,python - that the data was drawn from normal distribution,php,python,php
+1,dagostino_stat,4.5652302646623415,0.1020170694315058,python - that the data was drawn from normal distribution,php,python,php
+0,t_test_one_sided,84.63217883759984,1.2534269546436494e-127,php is not greater than python,php,python,php
+0,wilcoxon,5050.0,1.9476205883528185e-18,php is not greater than python,php,python,php
+0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,python,cpp,python
+1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,python,cpp,python
+0,shapiro_stat,0.9936021566390991,0.9215858578681946,cpp - that the data was drawn from normal distribution,python,cpp,python
+1,dagostino_stat,0.2875435072778269,0.8660854063433429,cpp - that the data was drawn from normal distribution,python,cpp,python
+0,t_test_one_sided,10.805305101493657,3.9264883896476327e-19,python is not greater than cpp,python,cpp,python
+0,wilcoxon,4754.0,9.004498550847198e-15,python is not greater than cpp,python,cpp,python
+0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,python,java,python
+1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,python,java,python
+0,shapiro_stat,0.9911139011383057,0.753963053226471,java - that the data was drawn from normal distribution,python,java,python
+1,dagostino_stat,1.2409758964997537,0.53768201257794,java - that the data was drawn from normal distribution,python,java,python
+0,t_test_one_sided,-35.22700324145823,1.0,python is not greater than java,python,java,python
+0,wilcoxon,0.0,1.0,python is not greater than java,python,java,python
+0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,python,javascript,python
+1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,python,javascript,python
+0,shapiro_stat,0.9719403386116028,0.031177029013633728,javascript - that the data was drawn from normal distribution,python,javascript,python
+1,dagostino_stat,3.642139308650243,0.16185253204729472,javascript - that the data was drawn from normal distribution,python,javascript,python
+0,t_test_one_sided,-18.017729941564202,1.0,python is not greater than javascript,python,javascript,python
+0,wilcoxon,65.0,1.0,python is not greater than javascript,python,javascript,python
+0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,python,php,python
+1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,python,php,python
+0,shapiro_stat,0.9609639644622803,0.004713481292128563,php - that the data was drawn from normal distribution,python,php,python
+1,dagostino_stat,5.543542614407702,0.06255110932566547,php - that the data was drawn from normal distribution,python,php,python
+0,t_test_one_sided,11.395153037087235,2.6643427584488498e-20,python is not greater than php,python,php,python
+0,wilcoxon,4894.0,1.8890607284337006e-16,python is not greater than php,python,php,python

@@ -69,7 +69,7 @@ def main():
 
     # plt.show()
 
-    plt.savefig(OUT_PATH + 'roc-auc_validation_set_learning_curve.png')
+    plt.savefig(OUT_PATH + 'roc-auc_validation_set_learning_curve.pdf')
 
 
 def plot_mean_and_fill_std(axes, gb, metric, color, label, style='o-'):

@@ -39,9 +39,9 @@ language_labels = {
 
 
 def main():
-    performance_table()
+    # performance_table()
     # roc_auc_boxplots_both_VS_sets()
-    # plot_bootstrap_boxdiagram()
+    plot_bootstrap_boxdiagram()
     # p_test_language_scores('1')
 
 
@@ -83,7 +83,7 @@ def roc_auc_boxplots_both_VS_sets():
     ax1.set_ylabel('ROC-AUC')
     ax1.set_title('')
     plt.sca(ax1)
-    plt.xticks(rotation=45)
+    # plt.xticks(rotation=45)
 
 
     plt.legend(handles=[mpatches.Patch(color='lightcyan', label='Validation set 1'),
@@ -93,7 +93,7 @@ def roc_auc_boxplots_both_VS_sets():
 
     plt.tight_layout()
     # plt.show()
-    plt.savefig(OUT_PATH + 'single_language_roc_auc_boxplot_both_validation_sets.png')
+    plt.savefig(OUT_PATH + 'single_language_roc_auc_boxplot_both_validation_sets.pdf')
 
 
 def plot_bootstrap_boxdiagram():
@@ -104,18 +104,18 @@ def plot_bootstrap_boxdiagram():
         lang_res = evaluate_bootstrap(lang_df['roc-auc_' + lang + '_researcher_1'], language_labels[lang])
         boxes.append(get_box(lang_res))
 
-    fig, ax = plt.subplots(figsize=(5, 4))
+    fig, ax = plt.subplots(figsize=(8, 4))
 
     boxplot = ax.bxp(boxes, showfliers=False, widths=None) #  patch_artist=True, medianprops=dict(color="black", linewidth=1.5),
 
     ax.set_ylabel('ROC-AUC')
     ax.set_title('')
     plt.sca(ax)
-    plt.xticks(rotation=45)
+    # plt.xticks(rotation=45)
 
     plt.tight_layout()
     # plt.show()
-    plt.savefig(OUT_PATH + 'single_language_roc_auc_boxplot.png')
+    plt.savefig(OUT_PATH + 'single_language_roc_auc_boxplot.pdf')
 
 
 def performance_table():

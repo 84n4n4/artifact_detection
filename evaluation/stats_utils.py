@@ -25,6 +25,12 @@ def t_test_x_greater_y(x, y, x_label, y_label, output_path=None, df_file=None): 
     stat, p = stats.ttest_ind(x, y, equal_var=False, alternative='greater')
     h0 = x_label + ' is not greater than ' + y_label
     df = df.append(pandas.DataFrame({'h0': [h0], 'test': ['t_test_one_sided'], 'stat': [stat], 'p': [p]}))
+
+    stat, p = stats.wilcoxon(x, y, alternative='greater')
+    h0 = x_label + ' is not greater than ' + y_label
+    df = df.append(pandas.DataFrame({'h0': [h0], 'test': ['wilcoxon'], 'stat': [stat], 'p': [p]}))
+    df['x_label'] = x_label
+    df['y_label'] = y_label
     if output_path and df_file:
         df.to_csv(output_path + df_file)
     return df

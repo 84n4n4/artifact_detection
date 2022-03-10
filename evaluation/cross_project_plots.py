@@ -89,7 +89,7 @@ def cross_project_roc_auc_matrix(validation_set_no):
     ax.set(ylabel="Model language", xlabel='Validation set ' + validation_set_no + ' language', title='ROC-AUC')
 
     plt.tight_layout()
-    plt.savefig(OUT_PATH + 'cross_project_roc_auc_matrix_VS' + validation_set_no + '.png')
+    plt.savefig(OUT_PATH + 'cross_project_roc_auc_matrix_VS' + validation_set_no + '.pdf')
 
 
 
