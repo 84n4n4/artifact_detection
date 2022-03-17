@@ -1,17 +1,9 @@
-import random
-import traceback
-
 import pandas
 from matplotlib import pyplot as plt
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import LinearSVC
 
-from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
-from datasets.dataset_utils import get_trainingset, get_all_validation_sets, get_validation_sets_for_language
-from evaluation.utils import validation_performance_on_dataset
+
 from file_anchor import root_dir
 
 log = Logger()
@@ -25,6 +17,7 @@ language_labels = {
     'php': 'PHP',
     'python': 'Python',
 }
+
 
 def main():
     fig = plt.figure(figsize=(8, 10))
@@ -41,19 +34,16 @@ def main():
         df = pandas.read_csv(OUT_PATH + lang + '_artifact_detection_summary.csv')
         df = df[df['train_samples'] <= 800000]
         df['train_samples'] = df['train_samples']/ 10**3
-        # ax = axes[int(i/2)][i % 2]
         ax = axes[i]
         gb = df.groupby(by='train_samples')
 
         plot_mean_and_fill_std(ax, gb, 'roc-auc_' + lang + '_researcher_1', 'g', 'Validation set 1', style='o-')
         plot_mean_and_fill_std(ax, gb, 'roc-auc_' + lang + '_researcher_2', 'b', 'Validation set 2', style='v-')
-        # plt.axvline(x=288038, color='gray', label='40% Training set')
         ax.title.set_text(language_labels[lang])
 
         colors = ['red', 'purple', 'violet', 'k', 'c']
         styles = ['p-', '*-', 'v-', 'D-', 'X-']
         plot_mean_and_fill_std(axes[5], gb, 'model_size', colors[i], language_labels[lang], style=styles[i])
-
 
     axes[0].set_ylabel('ROC-AUC')
     axes[2].set_ylabel('ROC-AUC')
@@ -66,9 +56,6 @@ def main():
     axes[5].legend(loc='lower right')
 
     plt.tight_layout()
-
-    # plt.show()
-
     plt.savefig(OUT_PATH + 'roc-auc_validation_set_learning_curve.pdf')
 
 

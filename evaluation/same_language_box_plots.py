@@ -1,27 +1,15 @@
 import json
-import random
-import traceback
-
 import numpy as np
 import pandas
 from matplotlib import pyplot as plt
 import matplotlib.patches as mpatches
 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import ConfusionMatrixDisplay
-from sklearn.svm import LinearSVC
-
-from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
-from datasets.dataset_utils import get_trainingset, get_all_validation_sets, get_validation_sets_for_language
 from evaluation.multi_language_project_plots import get_box
 from evaluation.stats_utils import evaluate_bootstrap, t_test_x_greater_y
-from evaluation.utils import validation_performance_on_dataset
 from file_anchor import root_dir
 
-import seaborn as sns
 
 log = Logger()
 
@@ -39,10 +27,10 @@ language_labels = {
 
 
 def main():
-    # performance_table()
-    # roc_auc_boxplots_both_VS_sets()
+    performance_table()
+    roc_auc_boxplots_both_VS_sets()
     plot_bootstrap_boxdiagram()
-    # p_test_language_scores('1')
+    p_test_language_scores('1')
 
 
 def roc_auc_boxplots_both_VS_sets():
@@ -72,7 +60,6 @@ def roc_auc_boxplots_both_VS_sets():
     ax1_lim = ax1.get_ylim()
     ax2_lim = ax2.get_ylim()
 
-    # ax1.set_ylim(min(ax1_lim[0], ax2_lim[0]), max(ax1_lim[1], ax2_lim[1]))
     ax1.set_ylim(0.90, 0.97)
     ax2.set_ylim(0.90, 0.97)
     ax2.set_yticks([])
@@ -83,16 +70,11 @@ def roc_auc_boxplots_both_VS_sets():
     ax1.set_ylabel('ROC-AUC')
     ax1.set_title('')
     plt.sca(ax1)
-    # plt.xticks(rotation=45)
-
-
     plt.legend(handles=[mpatches.Patch(color='lightcyan', label='Validation set 1'),
                         mpatches.Patch(color='lightgreen', label='Validation set 2')],
                loc='lower left')
 
-
     plt.tight_layout()
-    # plt.show()
     plt.savefig(OUT_PATH + 'single_language_roc_auc_boxplot_both_validation_sets.pdf')
 
 
@@ -111,10 +93,7 @@ def plot_bootstrap_boxdiagram():
     ax.set_ylabel('ROC-AUC')
     ax.set_title('')
     plt.sca(ax)
-    # plt.xticks(rotation=45)
-
     plt.tight_layout()
-    # plt.show()
     plt.savefig(OUT_PATH + 'single_language_roc_auc_boxplot.pdf')
 
 
@@ -135,7 +114,6 @@ def performance_table():
         columns = {'roc-auc_' + lang + '_researcher_' + x: 'ROC-AUC Reseacher ' + x for x in ['1', '2']}
         columns.update({'art_precision_' + lang + '_researcher_' + x: 'Artifact precision Researcher ' + x for x in ['1', '2']})
         columns.update({'art_recall_' + lang + '_researcher_' + x: 'Artifact recall Researcher ' + x for x in ['1', '2']})
-        # columns += ['perf_predict_runtime_' + lang + '_researcher_' + x for x in ['1', '2']]
         columns.update({'timeit_runtime_' + lang + '_researcher_1': 'Prediction time per 5000 lines (s)'})
         columns.update({'perf_train_runtime': 'Training time', 'model_size': 'Model size (MiB)'})
 

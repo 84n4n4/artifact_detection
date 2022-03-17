@@ -1,20 +1,11 @@
-import random
-import traceback
-
 import numpy as np
 import pandas
 from matplotlib import pyplot as plt
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import ConfusionMatrixDisplay
-from sklearn.svm import LinearSVC
 
-from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
-from datasets.dataset_utils import get_trainingset, get_all_validation_sets, get_validation_sets_for_language
-from evaluation.stats_utils import evaluate_bootstrap, t_test_x_greater_y
-from evaluation.utils import validation_performance_on_dataset
+from evaluation.stats_utils import t_test_x_greater_y
 from file_anchor import root_dir
 
 import seaborn as sns
@@ -34,7 +25,6 @@ language_labels = {
 
 def main():
     bare_stats()
-    # cross_project_roc_auc_matrix('1')
     for validation_set_no in ['1', '2']:
         cross_project_roc_auc_matrix(validation_set_no)
         p_test_model_trained_performs_better_on_its_own_language_than_other_languages(validation_set_no)
@@ -71,9 +61,6 @@ def cross_project_roc_auc_matrix(validation_set_no):
         df = pandas.read_csv(OUT_PATH + lang + '_artifact_detection_cross_language_resample_summary.csv')
         df = df[columns].mean()
         cm.append(df.to_list())
-    # disp = plot_numpy_confusion_matrix(cm, [language_labels[x] for x in LANGUAGES])
-    # disp.ax_.set(ylabel="Model language", xlabel="Validation set 1 language", title='ROC-AUC')
-    # plt.savefig(OUT_PATH + 'cross_project_roc_auc_matrix_VS' + validation_set_no + '.png')
 
     fig, ax = plt.subplots() #figsize=(3, 3)
     sns.heatmap(cm,

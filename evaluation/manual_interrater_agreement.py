@@ -25,6 +25,7 @@ language_labels = {
     'python': 'Python',
 }
 
+
 def combine_data_sets(reviewer1_df, reviewer2_df):
     reviewer1_df.rename(columns={'doc': 'doc1', 'target': 'target1'}, inplace=True)
     reviewer2_df.rename(columns={'doc': 'doc2', 'target': 'target2'}, inplace=True)
@@ -41,17 +42,17 @@ def combine_data_sets(reviewer1_df, reviewer2_df):
 def main():
     val_sets = get_all_validation_sets()
     latex_table_interrrater_agreement(val_sets)
-    # for lang in LANGUAGES:
-    #     r_1_df = val_sets[lang + '_researcher_1']
-    #     r_2_df = val_sets[lang + '_researcher_2']
-    #     interrater_agreement_per_language(lang, r_1_df, r_2_df)
+    for lang in LANGUAGES:
+        r_1_df = val_sets[lang + '_researcher_1']
+        r_2_df = val_sets[lang + '_researcher_2']
+        interrater_agreement_per_language(lang, r_1_df, r_2_df)
+
 
 def latex_table_interrrater_agreement(val_sets):
     aa = {'Researcher 1': 'artifact', 'Researcher 2': 'artifact'}
     an = {'Researcher 1': 'artifact', 'Researcher 2': 'natural language'}
     na = {'Researcher 1': 'natural language', 'Researcher 2': 'artifact'}
     nn = {'Researcher 1': 'natural language', 'Researcher 2': 'natural language'}
-
 
     for lang in LANGUAGES:
         r_1_df = val_sets[lang + '_researcher_1']
@@ -73,8 +74,6 @@ def interrater_agreement_per_language(language, r_1_df, r_2df):
     all_df = combine_data_sets(r_1_df, r_2df)
     all_df[all_df['target1'] != all_df['target2']].to_csv(out_path + language + '_reviewer1_vs_reviewer2_mismatched.csv')
 
-    # print(all_df['target1'].value_counts())
-    # print(all_df['target2'].value_counts())
     r1_target = all_df['target1'].to_list()
     r2_target = all_df['target2'].to_list()
 
@@ -94,14 +93,6 @@ def interrater_agreement_per_language(language, r_1_df, r_2df):
                    'roc_auc': roc_auc_score(r1_target, r2_target)}]
     pandas.DataFrame(ir_metrics).to_csv(out_path + language + '_reviewer1_vs_reviewer2_manual_agreement.csv')
 
-
-    # print('cohen ' + str(cohen_kappa_score(r1_target, r2_target)))
-    # print('f1 researcher 1 base ' + str(f1_score(r1_target, r2_target, average='weighted')))
-    # print('f1 researcher 2 base ' + str(f1_score(r2_target, r1_target, average='weighted')))
-    # print('accuracy ' + str(accuracy_score(r1_target, r2_target)))
-    # print('krippendorff alpha ' + str(krippendorff.alpha([r1_target, r2_target])))
-    # print('roc auc Reviewer1 base ' + str(roc_auc_score(r1_target, r2_target)))
-    # print('roc auc Reviewer2 base ' + str(roc_auc_score(r2_target, r1_target)))
 
 if __name__ == "__main__":
     main()

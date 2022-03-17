@@ -48,42 +48,6 @@ def is_normal(series, add_label, output_path=None):
     df['h0'] = add_label + ' - that the data was drawn from normal distribution'
     return df
 
-#
-# def bootstrap_survey_submissions(survey_df, rater_1_df):
-#     r1_df = rater_1_df.copy()
-#     s_df = survey_df.copy()
-#     r1_df['RootCause'] = r1_df['RootCause'].replace(target_names)
-#     s_df['RootCause'] = s_df['RootCause'].replace(target_names)
-#     s_df.describe().to_csv(OUTPUT_DIR + 'survey_describe.csv')
-#
-#     submission_scores_df = pandas.DataFrame()
-#     for submission_id in s_df['submission_id'].value_counts().index.to_list():
-#         submission_df = s_df[s_df['submission_id'] == submission_id].copy()
-#         r1_target, r2_target = map_raters(r1_df, submission_df, remove_nan=True)
-#
-#         report = pandas.DataFrame(report_classifier_performance(r1_target, r2_target, list(target_names.keys()), 0, {}, submission_id))
-#         submission_scores_df = submission_scores_df.append(pandas.DataFrame(report))
-#
-#     boxes = pandas.DataFrame()
-#     boxes = boxes.append(do_boostrap(submission_scores_df['F1 weighted average'], ' weighted\naverage'))
-#     boxes = boxes.append(do_boostrap(submission_scores_df['F1_concurrency'], 'con.'))
-#     boxes = boxes.append(do_boostrap(submission_scores_df['F1_memory'], 'mem.'))
-#     boxes = boxes.append(do_boostrap(submission_scores_df['F1_other'], 'oth.'))
-#     boxes = boxes.append(do_boostrap(submission_scores_df['F1_semantic'], 'sem.'))
-#
-#     fig, ax = plt.subplots(figsize=(5, 4))
-#     plot_bootstrap_boxdiagram(fig, ax, "", "F1", boxes) #, widths=(0.6, 0.6, 0.6, 0.6)
-#     # plt.xticks(rotation=45)
-#     plt.tight_layout()
-#     # plt.ylim([0.4, 0.87])
-#     plt.savefig(OUTPUT_DIR + 'survey_class_specific_f1_bootsrap_boxplot_dense.pdf')
-#     boxes.to_csv(OUTPUT_DIR + 'survey_class_specific_f1_bootsrap_boxplot_dense.csv')
-#     plt.close()
-
-
-# def do_boostrap(series, label):
-#     repl = [np.mean(np.random.choice(series.dropna(), size=len(series))) for x in range(0, 1000)]
-#     return evaluate_bootstrap(np.array(repl), label)
 
 def evaluate_bootstrap(series, label):
     mean = series.mean()

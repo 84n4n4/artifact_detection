@@ -16,7 +16,6 @@ OUT_PATH = root_dir() + "evaluation/out/multi_language/"
 
 def main():
     val_sets = get_all_validation_sets()
-
     df = evaluate_multi_language_model(val_sets)
 
 

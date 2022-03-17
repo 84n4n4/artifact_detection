@@ -8,9 +8,7 @@ def split_by_md_code_block(documents):
         splits = document.split("```")
         for i, split in enumerate(splits):
             if i % 2:
-                # artifacts.append("```") # todo reinclude a possible keyword after the ``` , eg. ```java
                 artifacts.extend(("```" + split + "```").splitlines())
-                # artifacts.append("```")
             else:
                 for line in split.splitlines():
                     if is_markdown_artifact(line):
@@ -51,7 +49,6 @@ def is_markdown_artifact(line):
 
     rex = [md_enumerate + r"`[^`]*`$", # single line quote
            md_enumerate + r"http(s)?://[A-Za-z0-9\-\._~]+(:\d+)?(?:/[A-Za-z0-9\-\._~\?&%$#!=]+)*/?$", # urls
-           # r"^\|(.*\|){2,}$", # tables "| factory123      | null | user123 |"
            r"^(\|.*){2,}$", # tables "| factory123      | null | user123 |"
            r"^\s*!{0,1}[\*\-#]*\s*(?:`.+`)?\[.*\]\(.+\)\s*$", # md links "[logcat.txt](https://github.com/google/ExoPlayer/files/3783649/logcat.txt)"
            r"^[0-9\.\s\{\}\(\);\.,:\-\+#@!\$%\^\\&=\[\]\|<>\?_\*`]*$"] # line contains only special chars and numbers
@@ -67,8 +64,6 @@ def is_log_output_artifact(line):
 
 
 def is_filelisting_or_prompt_artifact(line):
-    # r"^\s*@\s+\./..*$", #  @ ./node_modules/@theia/monaco/lib/browser/textmate/monaco-textmate-service.js
-    # r"^\d+\s[A-Za-z]{3}\s\d{1,2}\s.*", #    23122 Jan 23 11:30 LaunchImage-700-Portrait~ipad.png
     rex = [ r"^\$\s+.*$", # bash prompt
             r"^[A-Za-z]:\\(.*?\\)+.*"] # windows paths "c:\eXist-db\tools\yajsw\classes\org\xmlunit\Input.class"
     return match_any(rex, line)
@@ -94,7 +89,6 @@ def is_xml_artifact(line):
 
 
 def is_commentary(line):
-    # r"^<!--.*$", # xml comment <!-- A clear and concise description of what you expected to happen or to show. -->
     rex = [
            r"^(/\*.*)|(.*\*/)$", # java block comment start and end
            r"^//.*$"] # java line comment

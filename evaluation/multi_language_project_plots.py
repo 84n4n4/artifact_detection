@@ -1,21 +1,11 @@
-import random
-import traceback
-
 import numpy as np
 import pandas
 from matplotlib import pyplot as plt
 import matplotlib.patches as mpatches
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import ConfusionMatrixDisplay
-from sklearn.svm import LinearSVC
 
-from artifact_detection_model.model_training import run_ml_artifact_training
 from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
-from datasets.dataset_utils import get_trainingset, get_all_validation_sets, get_validation_sets_for_language
 from evaluation.stats_utils import evaluate_bootstrap, t_test_x_greater_y, t_test_x_differnt_y, get_box
-from evaluation.utils import validation_performance_on_dataset
 from file_anchor import root_dir
 
 import seaborn as sns
@@ -35,15 +25,15 @@ language_labels = {
 
 
 def main():
-    # cross_project_roc_auc_matrix('1')
-    # bare_stats()
+    bare_stats()
     for validation_set_no in ['1', '2']:
-        # cross_project_roc_auc_matrix(validation_set_no)
-        # p_test_single_lang_model_performs_better_than_multi_lang_model(validation_set_no)
-        # p_test_single_lang_model_different_than_multi_lang_model(validation_set_no)
-        # p_test_single_lang_model_different_than_multi_lang_model(validation_set_no)
+        cross_project_roc_auc_matrix(validation_set_no)
+        p_test_single_lang_model_performs_better_than_multi_lang_model(validation_set_no)
+        p_test_single_lang_model_different_than_multi_lang_model(validation_set_no)
+        p_test_single_lang_model_different_than_multi_lang_model(validation_set_no)
         roc_auc_boxplots(validation_set_no)
-        # multi_model_transferability_table(validation_set_no)
+        multi_model_transferability_table(validation_set_no)
+
 
 def bare_stats():
     multi_df = pandas.read_csv(OUT_PATH + 'artifact_detection_multi_language_model_resample_summary.csv')
@@ -96,10 +86,6 @@ def cross_project_roc_auc_matrix(validation_set_no):
     df = df[columns].mean()
     cm.append(df.to_list())
 
-    # disp = plot_numpy_confusion_matrix(cm, [language_labels[x] for x in LANGUAGES])
-    # disp.ax_.set(ylabel="Model language", xlabel="Validation set 1 language", title='ROC-AUC')
-    # plt.savefig(OUT_PATH + 'cross_project_roc_auc_matrix_VS' + validation_set_no + '.png')
-
     fig, ax = plt.subplots() #figsize=(3, 3)
     sns.heatmap(cm,
                 ax=ax,
@@ -143,7 +129,6 @@ def roc_auc_boxplots(validation_set_no):
     ax1_lim = ax1.get_ylim()
     ax2_lim = ax2.get_ylim()
 
-    # ax1.set_ylim(min(ax1_lim[0], ax2_lim[0]), max(ax1_lim[1], ax2_lim[1]))
     ax1.set_ylim(0.90, 0.97)
     ax2.set_ylim(0.90, 0.97)
     ax2.set_yticks([])
@@ -154,16 +139,12 @@ def roc_auc_boxplots(validation_set_no):
     ax1.set_ylabel('ROC-AUC')
     ax1.set_title('')
     plt.sca(ax1)
-    # plt.xticks(rotation=45)
-
 
     plt.legend(handles=[mpatches.Patch(color='lightcyan', label='Multi language model'),
                         mpatches.Patch(color='lightgreen', label='Language specific model')],
                loc='lower left')
 
-
     plt.tight_layout()
-    # plt.show()
     plt.savefig(OUT_PATH + 'multi_language_roc_auc_boxplots_VS' + validation_set_no + '.pdf')
 
 
@@ -198,12 +179,6 @@ def multi_model_transferability_table(validation_set_no):
     comb_roc_auc = comb_roc_auc.mean()
     comb_roc_auc.to_csv(OUT_PATH + 'transferability_mean_over_all_language_performance_VS'+ validation_set_no + '.csv')
     comb_roc_auc.T.to_latex(OUT_PATH + 'transferability_mean_over_all_language_performance_VS' + validation_set_no + '.tex', float_format="%.2f")
-
-
-# def plot_numpy_confusion_matrix(cm, target_names):
-#     disp = ConfusionMatrixDisplay(confusion_matrix=np.array(cm), display_labels=target_names)
-#     disp.plot(include_values=True, cmap='viridis', ax=None, xticks_rotation='horizontal', values_format=None)
-#     return disp
 
 
 if __name__ == "__main__":
