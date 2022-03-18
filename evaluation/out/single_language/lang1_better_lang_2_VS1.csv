@@ -1,25 +1,25 @@
 ,test,stat,p,h0,x_label,y_label,model
-0,shapiro_stat,0.9810485243797302,0.16031363606452942,cpp - that the data was drawn from normal distribution,cpp,java,cpp vs java
-1,dagostino_stat,2.187213871063814,0.33500596694757023,cpp - that the data was drawn from normal distribution,cpp,java,cpp vs java
-0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,cpp,java,cpp vs java
-1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,cpp,java,cpp vs java
-0,t_test_one_sided,12.97502062573065,2.188334989871624e-28,cpp is not greater than java,cpp,java,cpp vs java
-0,wilcoxon,4881.0,2.7323422495744256e-16,cpp is not greater than java,cpp,java,cpp vs java
-0,shapiro_stat,0.987808108329773,0.4941694140434265,java - that the data was drawn from normal distribution,java,javascript,java vs javascript
-1,dagostino_stat,1.6074194491254556,0.4476651654477939,java - that the data was drawn from normal distribution,java,javascript,java vs javascript
-0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,java,javascript,java vs javascript
-1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,java,javascript,java vs javascript
-0,t_test_one_sided,10.386777365505496,1.96500353513719e-20,java is not greater than javascript,java,javascript,java vs javascript
-0,wilcoxon,4824.0,1.3428031528819273e-15,java is not greater than javascript,java,javascript,java vs javascript
-0,shapiro_stat,0.9811366200447083,0.16284500062465668,javascript - that the data was drawn from normal distribution,javascript,php,javascript vs php
-1,dagostino_stat,1.429583792281548,0.4892939251562085,javascript - that the data was drawn from normal distribution,javascript,php,javascript vs php
-0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,javascript,php,javascript vs php
-1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,javascript,php,javascript vs php
-0,t_test_one_sided,47.82223575495569,5.269566855090078e-111,javascript is not greater than php,javascript,php,javascript vs php
+0,shapiro_stat,0.9843229651451111,0.2835347652435303,cpp - that the data was drawn from normal distribution,cpp,java,cpp vs java
+1,dagostino_stat,0.21396373927144607,0.8985419637357472,cpp - that the data was drawn from normal distribution,cpp,java,cpp vs java
+0,shapiro_stat,0.975649356842041,0.06065985560417175,java - that the data was drawn from normal distribution,cpp,java,cpp vs java
+1,dagostino_stat,5.697525359986992,0.05791593710728132,java - that the data was drawn from normal distribution,cpp,java,cpp vs java
+0,t_test_one_sided,10.93171008985535,2.296182960242632e-22,cpp is not greater than java,cpp,java,cpp vs java
+0,wilcoxon,4812.0,1.8684939085520097e-15,cpp is not greater than java,cpp,java,cpp vs java
+0,shapiro_stat,0.975649356842041,0.06065985560417175,java - that the data was drawn from normal distribution,java,javascript,java vs javascript
+1,dagostino_stat,5.697525359986992,0.05791593710728132,java - that the data was drawn from normal distribution,java,javascript,java vs javascript
+0,shapiro_stat,0.9842829704284668,0.2816219925880432,javascript - that the data was drawn from normal distribution,java,javascript,java vs javascript
+1,dagostino_stat,2.2825900767966436,0.31940511197495525,javascript - that the data was drawn from normal distribution,java,javascript,java vs javascript
+0,t_test_one_sided,7.19362495982458,6.35836331300804e-12,java is not greater than javascript,java,javascript,java vs javascript
+0,wilcoxon,4271.0,9.666440621334229e-10,java is not greater than javascript,java,javascript,java vs javascript
+0,shapiro_stat,0.9842829704284668,0.2816219925880432,javascript - that the data was drawn from normal distribution,javascript,php,javascript vs php
+1,dagostino_stat,2.2825900767966436,0.31940511197495525,javascript - that the data was drawn from normal distribution,javascript,php,javascript vs php
+0,shapiro_stat,0.9836680293083191,0.25361180305480957,php - that the data was drawn from normal distribution,javascript,php,javascript vs php
+1,dagostino_stat,4.525992582188083,0.10403828827596866,php - that the data was drawn from normal distribution,javascript,php,javascript vs php
+0,t_test_one_sided,54.63043911854385,4.2077851532870115e-117,javascript is not greater than php,javascript,php,javascript vs php
 0,wilcoxon,5050.0,1.9482799225479546e-18,javascript is not greater than php,javascript,php,javascript vs php
-0,shapiro_stat,0.9781460165977478,0.0952182188630104,php - that the data was drawn from normal distribution,php,python,php vs python
-1,dagostino_stat,8.905116545348417,0.011648728195776009,php - that the data was drawn from normal distribution,php,python,php vs python
-0,shapiro_stat,0.9843223094940186,0.28350287675857544,python - that the data was drawn from normal distribution,php,python,php vs python
-1,dagostino_stat,2.092804068590314,0.3511990808848203,python - that the data was drawn from normal distribution,php,python,php vs python
-0,t_test_one_sided,35.13857902713652,4.493074433426923e-74,php is not greater than python,php,python,php vs python
+0,shapiro_stat,0.9836680293083191,0.25361180305480957,php - that the data was drawn from normal distribution,php,python,php vs python
+1,dagostino_stat,4.525992582188083,0.10403828827596866,php - that the data was drawn from normal distribution,php,python,php vs python
+0,shapiro_stat,0.9942899346351624,0.9523522257804871,python - that the data was drawn from normal distribution,php,python,php vs python
+1,dagostino_stat,0.09738834966107428,0.9524723751866846,python - that the data was drawn from normal distribution,php,python,php vs python
+0,t_test_one_sided,36.353512597959366,1.7416043382822826e-79,php is not greater than python,php,python,php vs python
 0,wilcoxon,5050.0,1.9482799225479546e-18,php is not greater than python,php,python,php vs python
