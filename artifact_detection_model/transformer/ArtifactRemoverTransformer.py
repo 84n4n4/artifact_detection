@@ -7,8 +7,6 @@ from artifact_detection_model.transformer.SimpleReplace import SimpleReplace
 
 from file_anchor import root_dir
 
-classifier = joblib.load(root_dir() + 'artifact_detection_model/out/artifact_detection.joblib')
-
 SIMPLE = 'simple'
 KEEP_EXCEPTION_NAMES = 'keep_exception_names'
 DO_NOT_REPLACE = 'no_replacements'
@@ -19,8 +17,9 @@ replacement_strategies = {SIMPLE: SimpleReplace(),
 
 
 class ArtifactRemoverTransformer(BaseEstimator, TransformerMixin):
-    def __init__(self, replacement_strategy=SIMPLE):
+    def __init__(self, classiefier, replacement_strategy=SIMPLE):
         self.replacement_strategy = replacement_strategy
+        self.classifier = classiefier
 
     def fit(self, X, y=None):
         return self
@@ -33,7 +32,7 @@ class ArtifactRemoverTransformer(BaseEstimator, TransformerMixin):
     def predict_and_remove(self, issue):
         replacement_strategy = replacement_strategies[self.replacement_strategy]
 
-        prediction = classifier.predict(issue.splitlines())
+        prediction = self.classifier.predict(issue.splitlines())
         text_indices = [i for i, e in enumerate(prediction) if e == 1]
         cleaned_issue = []
         for i in range(0, len(issue.splitlines())):

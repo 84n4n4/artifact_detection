@@ -4,8 +4,8 @@ from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
 from datasets.dataset_utils import get_validation_sets_for_language, \
     get_data_from_issues, get_data_from_documentation
+from evaluation import RQ0_interrater_agreement
 from file_anchor import root_dir
-from evaluation import manual_interrater_agreement
 
 log = Logger()
 
@@ -21,7 +21,7 @@ language_labels = {
 
 
 def main():
-    manual_interrater_agreement.main()
+    RQ0_interrater_agreement.main()
     reports = []
     for lang in LANGUAGES:
         report = get_dataset_stats(lang)

@@ -61,9 +61,6 @@ def train_language(lang):
     df_sel = df_train[df_train['target'] == 1].sample(int(train_size / 2), random_state=seed, replace=True)
     df_sel = df_sel.append(df_train[df_train['target'] == 0].sample(int(train_size / 2), random_state=seed, replace=True))
 
-    # df_sel[df_sel['target'] == 0]['doc'].to_csv(OUT_PATH + lang + '/' + 'train_artifact.csv')
-    # df_sel[df_sel['target'] == 1]['doc'].to_csv(OUT_PATH + lang + '/' +  'train_natural_lang.csv')
-
     report, pipeline = run_ml_artifact_training(df_sel, LinearSVC(random_state=42))
 
     report.update({'seed': seed})

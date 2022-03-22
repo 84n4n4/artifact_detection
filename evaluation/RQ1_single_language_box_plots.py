@@ -6,8 +6,7 @@ import matplotlib.patches as mpatches
 
 from artifact_detection_model.utils.Logger import Logger
 from datasets.constants import LANGUAGES
-from evaluation.multi_language_project_plots import get_box
-from evaluation.stats_utils import evaluate_bootstrap, t_test_x_greater_y
+from evaluation.stats_utils import evaluate_bootstrap, t_test_x_greater_y, get_box
 from file_anchor import root_dir
 
 
