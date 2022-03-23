@@ -22,23 +22,23 @@ Inside the callback would be the call to FP.setScrollingSpeed (originals.scrolli
 
 # Bug report
 
-  4. use browser (http://localhost:8080)
-
---dist-dir should override package.json main field
-
 # 🙋 feature request
+
+@joyeecheung @hashseed @jasnell @mcollina @addaleax
 
 No 'Access-Control-Allow-Origin'
 
-* [Meeting notes of initial diagnostics discussion](https://docs.google.com/document/d/1ksAjU0ypopwZ70kzMOq7XSHrIh20wsOlcFicGbkNly8/edit#heading=h.1gq3yj9rs3ma)
+express
 
 * [Discussion in CTC meeting](https://docs.google.com/document/d/1s1yJ1lhPuRhis12l6h21wvoPCuorgciFrPKEKG4olvE/edit#heading=h.42en2gnc3w38)
 
 1. `strapi start`
 
-TypeError: CancelToken returns undefined
+3) Scrolling inside sections: http://alvarotrigo.com/fullPage/examples/scrolling.html.
 
-NameError: variable @dl-horizontal-offset is undefined
+(gotten from https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill)
+
+<vue> root element in Single file components
 
 墙内为啥不能访问 name.github.io
 
@@ -50,9 +50,9 @@ socket.connect() succeeding for reserved IPv6 address (2001:20:0:0:0:0:0:0)
 
 # Code snippet:
 
-[v4] Enabling Custom Themes (Documentation)
+[vr + 1 mirror](http://davidscottlyons.com/threejs/vr-mirror/1-mirror.html) - ground mirror breaks
 
-> **Beautiful example pages**
+[v4] Enabling Custom Themes (Documentation)
 
 > Several brand new, custom components
 
@@ -70,15 +70,13 @@ socket.connect() succeeding for reserved IPv6 address (2001:20:0:0:0:0:0:0)
 
     - Need to wrap each data type
 
-.collapse.width ...?
-
   Didn't find any
 
-  No.
+  Arch Linux
+
+- ❌ **ci/circleci** CircleCI is running your tests [Details](https://circleci.com/gh/callemall/material-ui/1584?utm_campaign=vcs-integration-link&utm_medium=referral&utm_source=github-build-link)
 
 Assertion failed: ((start) <= (end)), function SliceOnto, file ../src/smalloc.cc
-
-this time i do not use a respones interceptors,so i got the data value right as a string;
 
     * Reproduced the problem in Safe Mode: http://flight-manual.atom.io/hacking-atom/sections/debugging/#using-safe-mode
 
@@ -96,8 +94,6 @@ Path:
 
 found in
 
-[Ajax with "year" condition ](https://prnt.sc/12iol10)
-
 # 🐛 bug report
 
     * Reproduced the problem in Safe Mode: https://flight-manual.atom.io/hacking-atom/sections/debugging/#using-safe-mode
@@ -112,15 +108,21 @@ found in
 
 # 🐛 bug report
 
-**Trying to install globally parcel-bundler** (npm install -g parcel-bundler)
+  Anything else? Use our mailing list for questions:
 
 `THREE.Triangle: .normal() has been renamed to .getNormal().`
 
-<!-- Please make sure you have fullfilled the following items before submitting -->
+`node inspect my-script` will listen a port and start debugger cli
+
+`node --inspect my-script` will only listen a port
+
+> I did not found any document about how to enter debugger cli with custom port
 
 note: It's be cool that timers.promises is require('timers/promises') in node's REPL
 
-Looking through last commits in the tracker package I've seen exactly what I was guessing :|
+hey knowledgeable folks,
+
+VelvetValve
 
 # Bug report
 
@@ -134,6 +136,8 @@ UI has: ['Url', {target: 'Dashboard', host: 'http://localhost:3000'}],
 
 Unknown package error, while package clearly exists....
 
-E.g.:
+Line Chart - Uncaught TypeError: Cannot read property 'min' of undefined
+
+--optimize-image [quality] (If quality is not specified, does it losslessly)
 
 `This is the case now`

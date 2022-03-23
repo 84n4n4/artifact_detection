@@ -1,14 +1,12 @@
 imagecolorallocatealpha(): Alpha component is out of range
 
-PHP Fatal error:  Uncaught TypeError: Argument 2 passed to PhpOffice\PhpSpreadsheet\Reader\Ods\Properties::setCoreProperties() must be an instance of SimpleXMLElement, array given, called in /my/path/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Ods/Properties.php on line 27 and defined in /my/path/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Ods/Properties.php:39
-
 Invalid date 1980-04-20 when use 'date' form type and set widget options 'simple_text'
 
 Invalid date 1980-04-20 when use 'date' form type and set widget options 'simple_text'.
 
-Preparing update
+Doctrine\DBAL\Exception\DriverException: An exception occurred while executing 'ALTER TABLE `oc_addressbooks` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;': SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes
 
-Set log level to debug
+Preparing update
 
 Repair step: Repair MySQL collation
 
@@ -298,11 +296,9 @@ Repair info: Change collation for oc_federated_reshares ...
 
 Repair step: Repair SQLite autoincrement
 
-Repair step: Copy data from accounts table when migrating from ownCloud
-
-Repair step: Drop account terms table when migrating from ownCloud
-
 Updating database schema
+
+Updated database
 
 Repair step: Fix component of birthday calendars
 
@@ -316,8 +312,6 @@ Repair step: Registering building of calendar search index as background job
 
 Repair info: Repair step already executed
 
-Repair step: Registering background jobs to update cache for webcal calendars
-
 Repair info: Added 0 background jobs to update webcal calendars
 
 Repair step: Clean up orphan event and contact data
@@ -330,41 +324,35 @@ Repair info: 0 changes without a calendar have been cleaned up
 
 Repair info: 0 contacts without an addressbook have been cleaned up
 
-Repair info: 0 changes without an addressbook have been cleaned up
+Repair info: 0 properties without a contact have been cleaned up
 
-Repair step: Remove activity entries of private events
+Repair info: 0 changes without an addressbook have been cleaned up
 
 Repair info: Removed 0 activity entries
 
 Checking for update of app "accessibility" in appstore
 
-Checking for update of app "activity" in appstore
+Checked for update of app "accessibility" in appstore
 
-Checked for update of app "activity" in appstore
-
-Update app "bookmarks" from appstore
+Checking for update of app "bookmarks" in appstore
 
 Checking for update of app "bookmarks_fulltextsearch" in appstore
 
 Checking for update of app "bruteforcesettings" in appstore
 
-Update app "bruteforcesettings" from appstore
+Checking for update of app "calendar" in appstore
 
 Update app "calendar" from appstore
 
+Checked for update of app "calendar" in appstore
+
 Checking for update of app "cloud_federation_api" in appstore
 
-Checking for update of app "comments" in appstore
+Checking for update of app "contacts" in appstore
 
 Checking for update of app "dav" in appstore
 
 Checking for update of app "federatedfilesharing" in appstore
-
-Checking for update of app "federation" in appstore
-
-Checked for update of app "federation" in appstore
-
-Checking for update of app "files" in appstore
 
 Checking for update of app "files_external" in appstore
 
@@ -380,13 +368,13 @@ Checking for update of app "files_versions" in appstore
 
 Checking for update of app "files_videoplayer" in appstore
 
-Checking for update of app "firstrunwizard" in appstore
-
 Checking for update of app "gallery" in appstore
 
-Checked for update of app "gallery" in appstore
-
 Checking for update of app "groupfolders" in appstore
+
+Checking for update of app "logreader" in appstore
+
+Checked for update of app "logreader" in appstore
 
 Checking for update of app "lookup_server_connector" in appstore
 
@@ -394,11 +382,7 @@ Checking for update of app "nextcloud_announcements" in appstore
 
 Checking for update of app "notes" in appstore
 
-Update app "notes" from appstore
-
 Checking for update of app "notifications" in appstore
-
-Checking for update of app "oauth2" in appstore
 
 Checking for update of app "password_policy" in appstore
 
@@ -406,13 +390,21 @@ Checking for update of app "provisioning_api" in appstore
 
 Checking for update of app "qownnotesapi" in appstore
 
+Checking for update of app "sharebymail" in appstore
+
+Checked for update of app "sharebymail" in appstore
+
 Checking for update of app "support" in appstore
+
+Checked for update of app "support" in appstore
 
 Checking for update of app "survey_client" in appstore
 
 Checking for update of app "systemtags" in appstore
 
-Checked for update of app "systemtags" in appstore
+Checking for update of app "theming" in appstore
+
+Checked for update of app "theming" in appstore
 
 Checking for update of app "twofactor_backupcodes" in appstore
 
@@ -428,6 +420,8 @@ Repair info: Change row format for oc_addressbooks ...
 
 Repair info: Change collation for oc_addressbooks ...
 
+Doctrine\DBAL\Exception\DriverException: An exception occurred while executing 'ALTER TABLE `oc_addressbooks` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;': SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes
+
 Debian9 Stretch
 
 Apache2 2.4.25-3+deb9u7
@@ -436,33 +430,37 @@ Mariadb 10.1.38-0+deb9u1
 
 php7.0 7.0.33-0+deb9u3
 
-????
+  - accessibility: 1.1.0
 
-  - comments: 1.5.0
+  - activity: 2.8.2
 
-  - files: 1.10.0
+  - federation: 1.5.0
 
   - firstrunwizard: 2.4.0
 
+  - gallery: 18.2.0
+
+  - notes: 3.0.2
+
   - oauth2: 1.3.0
 
-  - theming: 1.6.0
+  - qownnotesapi: 19.4.0
 
-  - updatenotification: 1.5.0
+  - systemtags: 1.5.0
+
+  - workflowengine: 1.5.0
+
+  - admin_audit
 
   - rainloop
 
-  - spreed
+  - user_ldap
 
 ate key www.tenchiki.net:443:0 configured from /etc/letsencrypt/live/www.tenchiki.net
 
- resuming normal operations
-
-8F10B:SSL routines:SSL3_GET_RECORD:wrong version number
+-0001/fullchain.pem and /etc/letsencrypt/live/www.tenchiki.net-0001/privkey.pem
 
 ] AH01998: Connection closed to child 4 with abortive shutdown (server www.tenchiki.n
-
-8F10B:SSL routines:SSL3_GET_RECORD:wrong version number
 
 ] AH01998: Connection closed to child 1 with abortive shutdown (server www.tenchiki.n
 
@@ -472,79 +470,67 @@ no root server, sorry
 
 no root server, sorry
 
-fopen(https://s3-gm-storage.powerhrg.com/nextcloud-default/urn%3Aoid%3A2971593): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
-
 PHP 7.0.17-2+deb.sury.org~trusty+1 (cli) (built: Mar 15 2017 09:38:47) ( NTS )
-
-Copyright (c) 1997-2017 The PHP Group
 
 Zend Engine v3.0.0, Copyright (c) 1998-2017 Zend Technologies
 
-  - files: 1.7.2
+  - activity: 2.5.2
+
+  - federation: 1.2.0
 
   - firstrunwizard: 2.1
 
-  - nextcloud_announcements: 1.1
+  - gallery: 17.0.0
 
   - oauth2: 1.0.5
 
-  - theming: 1.3.0
+  - systemtags: 1.2.0
 
-  - updatenotification: 1.2.0
+  - workflowengine: 1.2.0
 
-  - user_external: 0.4
+  - admin_audit
+
+  - files_pdfviewer
+
+  - files_videoplayer
+
+  - notifications
 
   - sharebymail
 
-php composer.phar self-update
+  - survey_client
 
-The http:/getcomposer.org/version" file could not be downloaded. Failed to open stream. HTTP request failed!
+Line 1079:
 
-http://developer.piwik.org/api-reference/Piwik/Auth
+Line 1143:
 
 pear config-set auto_discover 1
 
 pear install pear.phpunit.de/PHPUnit
 
-PHP 5.6.15 (cli) (built: Dec  4 2015 22:27:28)
-
-Copyright (c) 1997-2015 The PHP Group
+opcache.save_comments=0
 
 Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies
 
-SSL Version => OpenSSL/1.0.1q
-
-OpenSSL support => enabled
-
-OpenSSL Header Version => OpenSSL 1.0.1q 3 Dec 2015
-
 Openssl default config => /opt/lampp/share/openssl/openssl.cnf
 
-OpenSSL support => enabled
+Checking CA file /opt/lampp/share/curl/curl-ca-bundle.crt
 
-The xdebug extension is loaded, this can slow down Composer a little.
+ Disabling it when using Composer is recommended.
 
-Checking HTTP proxy: FAIL
+[Composer\Downloader\TransportException] The 'http://packagist.org/packages.json' URL could not be accessed: HTTP/1.0 400 Bad Request
 
-Checking HTTP proxy support for request_fulluri: FAIL
+Unable to assess the situation, maybe packagist.org is down (The 'http://packagist.org/packages.json' URL could not be accessed: HTTP/1.0 400 Bad Request
 
-Checking github.com rate limit: FAIL
-
-  The 'http://packagist.org/p/symfony/console%24656d251db4cca62263804955ea1c05cfe80a31f8bd71750cdf6b6958130477c9.json' URL could not be
+[Composer\Downloader\TransportException] The "https://api.github.com/rate_limit" file could not be downloaded: SSL operation failed with code 1. OpenSSL Error messages:
 
 zend_mm_heap corrupted
 
-<!-- AcmeBundle:Option:theme_option_text.html.twig -->
+The command "$(phpenv which php) ./unit-tests/ci/phpunit.php --debug -c unit-tests/phpunit.xml" exited with 1.
 
 OptionText Choice Theme
 
-<!-- AcmeBundle:Option:theme_option_number.html.twig -->
-
 OptionNumber Choice Theme
-
-<!-- AcmeBundle:Option:option_text.html.twig -->
-
-<!-- AcmeBundle:Option:option_number.html.twig -->
 
 OptionText Choice Theme
 
@@ -554,19 +540,9 @@ PHP version: 7.1.12-3+ubuntu16.04.1+deb.sury.org+1
 
 swiftmailer/swiftmailer is not required in your composer.json and has not been removed
 
-  13  App\Jobs\ScanLibrary::scanDir("1.8.7. Deathstep/Cleansed")
-
-  14  App\Jobs\ScanLibrary::scanDir("1.8.7. Deathstep/Cleansed")
+  3   array_map(Object(Closure), ["dce4be5f-9dbf-41d3-9081-8884a40078ee", "1.8.7. Deathstep/Cleansed/1.8.7. Deathstep - Suffering.mp3", "2019-03-07 22:17:53", "2019-03-07 22:17:53"])
 
   15  App\Jobs\ScanLibrary::scanDir("1.8.7. Deathstep")
-
-  23  Illuminate\Pipeline\Pipeline::Illuminate\Pipeline\{closure}(Object(App\Jobs\ScanLibrary))
-
-  28  Illuminate\Queue\SyncQueue::push(Object(App\Jobs\ScanLibrary))
-
-  29  Illuminate\Bus\Dispatcher::pushCommandToQueue(Object(Illuminate\Queue\SyncQueue), Object(App\Jobs\ScanLibrary))
-
-  46  Illuminate\Console\Application::run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 
 Will throw a `SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed` exception, because the second `firstOrCreate` somehow can't find the model and tries to create another one.
 
@@ -581,6 +557,8 @@ USB devices | none
 datadir | /var/www/nextcloud/data
 
 data in SD | yes
+
+0data filesystem | ext2/ext3
 
 data disk usage | 8.3G/15G
 
@@ -602,19 +580,29 @@ MariaDB service | up
 
 Redis service | up
 
-Postfix service | up
-
 internet check | ok
 
 NAT loopback | no
+
+{"reqId":"YGy5kkFmamwecIgKASJfRwAATwA","level":3,"time":"2021-04-06T19:42:13+00:00","remoteAddr":"192.168.1.114","user":"phbinggeli","app":"PHP","method":"PUT","url":"/index.php/apps/files_external/globalstorages/31","message":{"Exception":"Error","Message":"stat(): stat failed for ftp://xxx:xxx@192.168.1.43/dat/ at /var/www/nextcloud/apps/files_external/lib/Lib/Storage/StreamWrapper.php#127","Code":0,"Trace":[{"function":"onError","class":"OC\\Log\\ErrorHandler","type":"::","args":[2,"stat(): stat failed for ftp://mount:####@192.168.1.43/dat/","/var/www/nextcloud/apps/files_external/lib/Lib/Storage/StreamWrapper.php",127,{"path":""}]},{"file":"/var/www/nextcloud/apps/files_external/lib/Lib/Storage/StreamWrapper.php","line":127,"function":"stat","args":["ftp://mount:####@192.168.1.43/dat/"]},{"file":"/var/www/nextcloud/lib/private/Files/Storage/Common.php","line":458,"function":"stat","class":"OCA\\Files_External\\Lib\\Storage\\StreamWrapper","type":"->","args":[""]},{"file":"/var/www/nextcloud/apps/files_external/lib/MountConfig.php","line":264,"function":"test","class":"OC\\Files\\Storage\\Common","type":"->","args":["*** sensitive parameter replaced ***","*** sensitive parameter replaced ***"]},{"file":"/var/www/nextcloud/apps/files_external/lib/Controller/StoragesController.php","line":271,"function":"getBackendStatus","class":"OCA\\Files_External\\MountConfig","type":"::","args":["*** sensitive parameters replaced ***"]},{"file":"/var/www/nextcloud/apps/files_external/lib/Controller/GlobalStoragesController.php","line":188,"function":"updateStorageStatus","class":"OCA\\Files_External\\Controller\\StoragesController","type":"->","args":["*** sensitive parameters replaced ***"]},{"file":"/var/www/nextcloud/lib/private/AppFramework/Http/Dispatcher.php","line":169,"function":"update","class":"OCA\\Files_External\\Controller\\GlobalStoragesController","type":"->","args":["*** sensitive parameters replaced ***"]},{"file":"/var/www/nextcloud/lib/private/AppFramework/Http/Dispatcher.php","line":100,"function":"executeController","class":"OC\\AppFramework\\Http\\Dispatcher","type":"->","args":[{"__class__":"OCA\\Files_External\\Controller\\GlobalStoragesController"},"update"]},{"file":"/var/www/nextcloud/lib/private/AppFramework/App.php","line":152,"function":"dispatch","class":"OC\\AppFramework\\Http\\Dispatcher","type":"->","args":[{"__class__":"OCA\\Files_External\\Controller\\GlobalStoragesController"},"update"]},{"file":"/var/www/nextcloud/lib/private/Route/Router.php","line":309,"function":"main","class":"OC\\AppFramework\\App","type":"::","args":["OCA\\Files_External\\Controller\\GlobalStoragesController","update",{"__class__":"OC\\AppFramework\\DependencyInjection\\DIContainer"},{"id":"31","_route":"files_external.global_storages.update"}]},{"file":"/var/www/nextcloud/lib/base.php","line":1008,"function":"match","class":"OC\\Route\\Router","type":"->","args":["/apps/files_external/globalstorages/31"]},{"file":"/var/www/nextcloud/index.php","line":37,"function":"handleRequest","class":"OC","type":"::","args":[]}],"File":"/var/www/nextcloud/lib/private/Log/ErrorHandler.php","Line":91,"CustomMessage":"--"},"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0","version":"20.0.8.1","id":"606cbd10a44b1"}
 
 Failes by files:scan
 
 #4 /var/www/nextcloud/lib/private/Files/Utils/Scanner.php(260): OC\Files\Cache\Scanner->scan('', true, 3)
 
+#5 /var/www/nextcloud/apps/files/lib/Command/Scan.php(152): OC\Files\Utils\Scanner->scan('/phbinggeli', true, NULL)
+
+#7 /var/www/nextcloud/3rdparty/symfony/console/Command/Command.php(255): OCA\Files\Command\Scan->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+#8 /var/www/nextcloud/core/Command/Base.php(169): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
 #9 /var/www/nextcloud/3rdparty/symfony/console/Application.php(1000): OC\Core\Command\Base->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 
+#11 /var/www/nextcloud/3rdparty/symfony/console/Application.php(147): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
 #12 /var/www/nextcloud/lib/private/Console/Application.php(215): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+#13 /var/www/nextcloud/console.php(100): OC\Console\Application->run()
 
 [https://github.com/owncloud/core/blob/master/core/Command/System/Cron.php](https://github.com/owncloud/core/blob/master/core/Command/System/Cron.php)
 
@@ -622,69 +610,71 @@ name = "form[DocsPerm][0][Users]"
 
 name = "form[DocsPerm][1][Users]"
 
+"form" => array:2 [▼
+
 ## Code
 
 routes.yml
 
- - gmp
+ - pcre
 
- - iconv
-
- - session
+ - bz2
 
  - SimpleXML
 
- - xml
-
  - cgi-fcgi
 
- - imagick
+ - bcmath
 
  - tidy
 
- - soap
+ - dom
 
- - xmlreader
-
- - xmlwriter
-
- - mcrypt
-
- - memcached
+ - PDO
 
 Empty log file
 
 note[20200407 list ideas].md
 
-- src/Symfony/Component/HttpKernel/README.md
+In Date.php line 10:
 
-- src/Symfony/Component/HttpFoundation/Session/Storage/MockFileSessionStorage.php
+In Date.php line 10:
 
 key;german;english;french
+
+An unhandled exception has been thrown:
 
 Error: Call to undefined method OC\DB\QueryBuilder\QueryBuilder::executeQuery() in
 
 Nextcloud or one of the apps require upgrade - only a limited number of commands are available
 
+You may use your browser or the occ upgrade command to do the upgrade
+
 Nextcloud or one of the apps require upgrade - only a limited number of commands are available
+
+You may use your browser or the occ upgrade command to do the upgrade
+
+  - accessibility: 1.7.0
+
+  - activity: 2.14.3
 
   - checksum: 1.1.3
 
-  - comments: 1.11.0
+  - dashboard: 7.1.0
 
-  - files: 1.16.0
+  - federation: 1.11.0
 
   - firstrunwizard: 2.10.0
 
+  - notes: 4.2.0
+
   - oauth2: 1.9.0
 
-  - photos: 1.3.0
-
-  - theming: 1.12.0
-
-  - updatenotification: 1.11.0
+  - systemtags: 1.11.0
 
   - viewer: 1.5.0
+
+  - workflowengine: 2.3.1
 
 Update of code successful.
 
@@ -692,27 +682,37 @@ Should the "occ upgrade" command be executed? [Y/n] Y
 
 Nextcloud or one of the apps require upgrade - only a limited number of commands are available
 
-#1 /var/www/nextcloud/lib/private/DB/MigrationService.php(528): OCA\User_LDAP\Migration\Version1130Date20220110154717->preSchemaChange()
+You may use your browser or the occ upgrade command to do the upgrade
 
-#2 /var/www/nextcloud/lib/private/DB/MigrationService.php(426): OC\DB\MigrationService->executeStep()
+An unhandled exception has been thrown:
+
+Error: Call to undefined method OC\DB\QueryBuilder\QueryBuilder::executeQuery()  in /var/www/nextcloud/apps/user_ldap/lib/Migration/GroupMappingMigration.php:56
 
 #3 /var/www/nextcloud/lib/private/legacy/OC_App.php(1012): OC\DB\MigrationService->migrate()
 
-#12 /var/www/nextcloud/lib/private/Console/Application.php(215): Symfony\Component\Console\Application->run()
+#7 /var/www/nextcloud/core/Command/Upgrade.php(249): OC\Updater->upgrade()
+
+#13 /var/www/nextcloud/console.php(100): OC\Console\Application->run()
 
 #14 /var/www/nextcloud/occ(11): require_once('/var/www/nextcl...')
 
 > Uncaught Whoops\Exception\ErrorException: Undefined index: _SERVER in /var/.../vendor/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php:666 Stack trace: #0 /var/.../vendor/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php(666): Whoops\Run->handleError(8, 'Undefined index...', '/var/www/enstar...', 666, Array) #1 /var/.../vendor/filp/whoops/src/Whoops/Handler/PrettyPageHandler.php(242): Whoops\Handler\PrettyPageHandler->masked('_SERVER') #2 
-
-`https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/api/2.1/yii-bootstrap-activefield`
-
-`https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap/doc/api/2.0/yii-bootstrap-activefield`
 
 Array
 
 Array
 
 Message: Illegal offset type in isset or empty
+
+Line Number: 184
+
+  zlib_decode(): data error
+
+ Symfony\Component\Console\Command\Command->run() at phar:///usr/local/bin/composer/vendor/symfony/console/Symfony/Component/Console/Application.php:874
+
+ Symfony\Component\Console\Application->doRunCommand() at phar:///usr/local/bin/composer/vendor/symfony/console/Symfony/Component/Console/Application.php:195
+
+ Composer\Console\Application->doRun() at phar:///usr/local/bin/composer/vendor/symfony/console/Symfony/Component/Console/Application.php:126
 
 cpuid:
 
@@ -736,11 +736,15 @@ http://o7vsd12rl.bkt.clouddn.com/example2016.xls
 
 'twig.controller.preview_error' => 'getTwig_Controller_PreviewErrorService',
 
+Fatal error: Uncaught Phalcon\Mvc\Model\Exception: Cache didn't return a valid resultset in phalcon/Mvc/Model/Query.zep on line 3672
+
 Version => 4.0.0-rc.1
 
 Powered by Zephir => Version 0.12.4-b386980
 
-Directive => Local Value => Master Value
+phalcon.db.escape_identifiers => On => On
+
+phalcon.db.force_casting => Off => Off
 
 phalcon.orm.case_insensitive_column_map => Off => Off
 
@@ -756,8 +760,6 @@ phalcon.orm.enable_implicit_joins => On => On
 
 phalcon.orm.enable_literals => On => On
 
-phalcon.orm.events => On => On
-
 phalcon.orm.exception_on_failed_save => Off => Off
 
 phalcon.orm.exception_on_failed_metadata_save => On => On
@@ -772,25 +774,19 @@ phalcon.orm.update_snapshot_on_save => On => On
 
 phalcon.orm.virtual_foreign_keys => On => On
 
-http://stackoverflow.com/questions/5802309/code-igniter-form-validation-with-all-fields-posted-as-an-array
-
-[37;41m      - remove zendframework/zend-code 2.2.x-dev|keep zendframework/zend-code  [0m
-
-cd /path/to/rootdir/mod/forum && phpunit
+The command "composer update --prefer-source --dev" failed and exited with 2 during before_script.
 
 cphalcon-3.1.0-alpha2/build/php7/64bits/phalcon.zep.c:24810:13: error: static declaration of ‘zephir_init_static_properties_Phalcon_Tag’ follows non-static declaration
 
 In file included from cphalcon-3.1.0-alpha2/build/php7/64bits/phalcon.zep.c:175:0:
 
-Symfony/Component/Process/Exception/InvalidArgumentException with message 'Command line is missing a value for key "$SOMECOUNT": SOMECOUNT=0
+cphalcon-3.1.0-alpha2/build/php7/64bits/phalcon.zep.h:18084:6: note: previous declaration of ‘zephir_init_static_properties_Phalcon_Tag’ was here
 
-Copyright (c) 1997-2016 The PHP Group
+Symfony/Component/Process/Exception/InvalidArgumentException with message 'Command line is missing a value for key "$SOMECOUNT": SOMECOUNT=0
 
 Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
 
 ## <bountysource-plugin>
-
-Version => 2.1.0r
 
 Build Date => Jun  3 2016 14:01:39
 
@@ -810,25 +806,39 @@ You're now flying with Phalcon."
 
   * Use MakerBundle's make:test command as a shortcut!
 
+  * Run the tests with php bin/phpunit
+
 > After the library is installed, try running PHPUnit: 
+
+1054 Unknown column 'bar' in 'field list'
 
 <!-- laravel new bug-report --github="--public" -->
 
-Mar 20 14:09:23 [info] SSL Library Error: 336105671 error:140890C7:SSL routines:SSL3_GET_CLIENT_CERTIFICATE:peer did not return a certificate No CAs known to server for verification?
+composer.phar install -v
+
+Mar 20 14:09:19 [debug] ssl_engine_kernel.c(1902): OpenSSL: Loop: SSLv3 read client hello A
+
+Mar 20 14:09:19 [debug] ssl_engine_kernel.c(1902): OpenSSL: Loop: SSLv3 write server hello A
+
+Mar 20 14:09:19 [debug] ssl_engine_kernel.c(1902): OpenSSL: Loop: SSLv3 flush data
+
+Mar 20 14:09:23 [debug] ssl_engine_kernel.c(1931): OpenSSL: Exit: error in SSLv3 read client certificate B
+
+Mar 20 14:09:23 [debug] ssl_engine_kernel.c(1931): OpenSSL: Exit: error in SSLv3 read client certificate B
+
+Resolving myrepo.example.org (myrepo.example.org)... x.x.x.x
+
+Connecting to myrepo.example.org (myrepo.example.org)|x.x.x.x|:443... connected.
+
+HTTP request sent, awaiting response... 200 OK
 
 Saving to: ‘myrepo-panopoly_core-1.0.5.7-831467.zip’
 
-Composer version 70a20ebcc19f1ea8ab0954a4fbdce208b30085e7 2014-03-12 16:07:58
-
 #3 [internal function]: Illuminate\Database\Eloquent\Builder->__call('notScheduled', Array)
 
-#4 /home/forge/eyecons.works/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(3505): call_user_func_array(Array, Array)
+#5 [internal function]: Illuminate\Database\Eloquent\Model->__call('notScheduled', Array)
 
-#6 /home/forge/eyecons.works/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(3519): call_user_func_array(Array, Array)
-
-#12 [internal function]: Illuminate\Routing\ControllerDispatcher->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
-
-#18 /home/forge/eyecons.works/vendor/laravel/framework/src/Illuminate/Routing/Route.php(174): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'CachetHQ\\Cachet...', 'showIndex')
+#7 /home/forge/eyecons.works/app/Http/Controllers/StatusPageController.php(85): Illuminate\Database\Eloquent\Model::__callStatic('notScheduled', Array)
 
 `getExtensions` method in `SomeFormTypeTest` you need to rewrite to:
 
@@ -836,41 +846,39 @@ Composer version 70a20ebcc19f1ea8ab0954a4fbdce208b30085e7 2014-03-12 16:07:58
 
  * Properties, which are attributes from source table:
 
-The SQL being executed was: SELECT * FROM "schemaname"."tablename" WHERE NOT (ABS(quantity) < :eps)
+ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000001" requires 1
 
 Reported on Windows 7 x64, Nginx 1.7.3, Phalcon 1.3.2 x64 NTS
 
-2.0.35 result
+ * Reset the given user's password.
 
 app/config/bootstrap.php
 
 app/config/routes.php
 
+  'action' => 'route404'
+
+  'action' => 'index'
+
 app/controllers/BaseController.php
 
 app/controllers/test/TestMeNowController.php
-
-$table
-
-Message could not be sent. Mailer Error: SMTP Error: Could not authenticate.
 
 File : https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Validator/Constraints/EmailValidator.php
 
   DateTime::__construct(): It is not safe to rely on the system's timezone settings. You are _required_ to
 
-  methods and you are still getting this warning, you most likely misspelled the timezone identifier. We se  
-
   lected 'Europe/Helsinki' for 'EEST/3.0/DST' instead
 
-mcrypt support => enabled
+config/
 
-mcrypt_filter support => enabled
+Config::get('my_file.value')
 
-Version => 2.5.8
+Config::get('subfolder/my_file.value')
+
+Config::get('subfolder.my_file.value')
 
 Supported modes => cbc cfb ctr ecb ncfb nofb ofb stream
-
-Directive => Local Value => Master Value
 
 mcrypt.algorithms_dir => no value => no value
 
@@ -880,13 +888,19 @@ Phalcon: 1.3.1 (master)
 
 Phalcon: 1.3.1 (1.3.1 branch)
 
+Phalcon: 1.3.2 (82960cb177a02d7ddeb7b84f1ce96baa41b21cb7)
+
 ## <bountysource-plugin>
 
 Class created_at does not exist`
 
-`Invalid Configuration – yii\base\InvalidConfigException
+Unsupported configuration type: object`
+
+Other deprecation notices (1)
 
 `return $files`.
+
+(#1)
 
 config/zumba.php
 
@@ -896,21 +910,25 @@ config/zumba/instructors.php
 
 ## $files array in getConfigurationFiles()
 
+(#2)
+
 ## problematic invocation of Config\Repository::set
+
+(#3)
 
 Internal Server Error 500 #2615
 
-Copied Directory [\vendor\roumen\feed\src\views] To [\resources\views\vendor\fee
-
 Clearing cache...
+
+- [x] VisibilityRequiredFixer (#4641)
+
+composer install -n
 
  You must be using the interactive console to authenticate
 
+500 Internal Server Error - ErrorException
+
 The problem is related to the way OCI8 retrieves LOBs data types.
-
-http://wezfurlong.org/blog/2005/oct/lob-support-added-to-pdo-oci-in-php-5-1-cvs-finally/
-
-182             // we anyway expect either no rows, or one row with one column. fetchColumn, seems to be buggy #4777
 
 - Authentication：**Log-in credentials, save in session**
 
@@ -927,6 +945,10 @@ TypeError: "this.languages[0].languages is undefined"
 on `LINE:598:  asyncTracker[f].apply(asyncTracker, parameterArray);`
 
 Uncaught TypeError: Illuminate\Exception\WhoopsDisplayer when hosted on Heroku
+
+"Uncaught TypeError: Argument 1 passed to Illuminate\Exception\WhoopsDisplayer::display()
+
+must be an instance of Exception, instance of Error given, called in
 
 Usage:
 

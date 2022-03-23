@@ -106,6 +106,8 @@ apt
 
 plugins/connection/ssh.py
 
+ansible 2.4.0 (devel 698fa37a44) last updated 2017/04/18 11:06:11 (GMT -500)
+
 transfer_method = smart
 
 test.yml
@@ -116,7 +118,11 @@ wolverine
 
 After upgrade to version 0.21.0, initially Home Assistant seems to function, but when requesting the History, this will result a call to `/api/history/period/2016-6-11`, returning a 500 error with content:
 
+  File "/usr/local/lib/python3.4/dist-packages/homeassistant/components/http.py", line 345, in **call**
+
   File "/home/pi/.homeassistant/deps/werkzeug/wsgi.py", line 659, in **call**
+
+sqlite3.DatabaseError: database disk image is malformed
 
 Yaml does not seem relevant
 
@@ -126,13 +132,21 @@ Yaml does not seem relevant
 
 3. LIFX
 
-configured module search path = [u'/home/ryan/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+
+executable location = /usr/bin/ansible
 
 "ERROR! need more than 2 values to unpack"
 
-[test group]
+ERROR! need more than 2 values to unpack
+
+> http://arxiv.org/pdf/1512.03385v1.pdf
+
+(venv) airflow version          ### Just to make sure
 
 (venv) airflow dags test docker_sample now
+
+{taskinstance.py:1396} ERROR - API versions below 1.21 are no longer supported by this library.
 
 INSTALLED VERSIONS
 
@@ -224,11 +238,7 @@ boto: 2.32.1
 
 pandas_datareader: None
 
-history:
-
 ssdp:
-
-sensor: !include sensors.yaml
 
 Invalid type for parameter AuthParameters.REFRESH_TOKEN, value: None, type: <class 'NoneType'>, valid types: <class 'str'>
 
@@ -236,33 +246,33 @@ Invalid type for parameter AuthParameters.REFRESH_TOKEN, value: None, type: <cla
 
 aws_ec2
 
-plugin: aws_ec2
+regions:
 
-hostnames:
+groups:
 
-  - instance-id
+ansible-inventory -i aws_ec2.yml --list --export|grep ansible_user
+
+ansible-inventory -i aws_ec2.yml --list --export|grep ansible_host
+
+ansible-inventory -i aws_ec2.yml --list --export|grep ansible_user
 
 nothing output
 
-Logger: homeassistant.components.switch
-
-  - service: modbus.write_register
-
 when I use this, it not working and in cmd show
-
-  File "mnistTest.py", line 7, in <module>
 
 fetch_mldata
 
+urllib2.URLError: <urlopen error [Errno 10060] A connection attempt failed becau
+
 se the connected party did not properly respond after a period of time, or estab
 
-Source: /usr/local/lib/python3.9/site-packages/homeconnect/sseclient.py:89
+Logger: homeconnect.sseclient
 
 Exception while reading event:
 
 StopIteration
 
-Source: /usr/local/lib/python3.9/site-packages/homeconnect/sseclient.py:89
+Logger: homeconnect.sseclient
 
 Exception while reading event:
 
@@ -288,23 +298,21 @@ volumes:
 
 Dockerfile:
 
+COPY requirements.txt .
+
 requirements.txt:
 
 python-dotenv
 
 psycopg2-binary
 
-~/airflow $ docker-compose up -d --force
-
-~/airflow $ docker exec -it airflow_airflow-webserver_1 airflow db upgrade
-
-DB: mysql://airflow:***@airflow-celery/airflow
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
 
 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
 
 INFO  [alembic.runtime.migration] Running upgrade 142555e44c17 -> 7b2661a43ba3, TaskInstance keyed to DagRun
 
-  File "/usr/local/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+MySQLdb._exceptions.OperationalError: (1091, "Can't DROP 'dag_id'; check that column/key exists")
 
 ansible-liferay-nginx/vars/main.yml
 
@@ -312,17 +320,19 @@ proxmox (https://github.com/mrdrogdrog/ansible/blob/6430205d396b7c1733de22a898c5
 
 dconf
 
-  when: ansible_os_family == 'RedHat'
+  python version = 2.7.14 | packaged by conda-forge | (default, Dec 25 2017, 01:18:54) [GCC 4.2.1 Compatible Apple LLVM 6.1.0 (clang-602.0.53)]
+
+DEFAULT_HOST_LIST(/Users/benjaminbertrand/.ansible.cfg) = [u'/Users/benjaminbertrand/.ansible/hosts']
+
+  pip:
 
 ec2_vpc_endpoint
 
 X-Forwarded-For: client, proxy1, proxy2
 
-(5 additional frame(s) were not displayed)
-
 Using Enhanced Data Generation
 
-Error setting up platform legacy
+JSON Mapping for the model classes saved to  ../../Desktop/challenge/cars/json/model_class.json
 
 letsencrypt.py
 
@@ -514,17 +524,9 @@ thefuck_contrib_foo
 
 https://github.com/numpy/numpy/blob/master/doc/source/dev/development_environment.rst#debugging -->
 
-SELINUX= disabled
+ansible -i app_domain_hosts -m selinux -a "state=disabled" 10.188.130.x
 
 Python 3.3.5
-
-Logger: homeassistant.components.mqtt
-
-Integration: MQTT (documentation, issues)
-
-  File "<ipython-input-6-db63d61cf602>", line 1, in <module>
-
-  AttributeError: 'HTTPAdapter' object has no attribute 'proxy_manager'
 
 Using list:  0.6015908718109131
 
@@ -557,8 +559,6 @@ version | 0.116.2
 virtualenv | false
 
 ***** Running training *****
-
-  File "/home/ines/NN_pruning/venv_nn_prun/lib/python3.7/site-packages/transformers/trainer.py", line 1542, in training_step
 
 INSTALLED VERSIONS
 
@@ -654,35 +654,29 @@ pandas_gbq: None
 
 pandas_datareader: None
 
-[9:45am] erikcw: Is it possible to override settings.URL_FIELD_NAME on a per view/serializer basis?
-
 [3:14pm] erikcw: Any idea if a pull request would be accepted for this?
-
-[3:16pm] linovia: erikcw: dunno. It looks like it would make the hyperlinked serializers inconsistent
 
 [3:18pm] erikcw: My use case is that I have 2 APIs in a django project.  A legacy tastypie API that has been migrated to DRF (and hence uses the setting to turn “url” into “resource_uri”).  I also have an “admin” API that sticks to the standard DRF style
 
 [3:20pm] linovia: erikcw: then I think the way to go would be to bring that to an issue so we can discuss it further before putting work in it
 
-Error setting up entry ShellyPlus1PM-A8032ABE140C for shelly
-
-  File "/usr/local/lib/python3.9/site-packages/aioshelly/rpc_device.py", line 93, in initialize
-
 gcp_compute_instance_facts
 
 None
 
-  platform: tuya
+descr = [('f0', '<i4'), ('f1', 'S3'), ('f2', '<f8')]
 
-File "/usr/src/homeassistant/homeassistant/components/tuya/light.py", line 43, in brightness
+AttributeError: 'NoneType' object has no attribute 'get'
 
-  File "/usr/local/lib/python3.7/site-packages/tuyaha/devices/light.py", line 16, in brightness
+   1290             data, keys, values, not_indexed_same=mutated or self.mutated
 
-  File "/usr/local/lib/python2.7/dist-packages/netlib-0.13.1-py2.7.egg/netlib/version_check.py", line 32, in version_check
+~/.conda/envs/PyDev/lib/python3.9/site-packages/pandas/core/indexes/base.py in maybe_extract_name(name, obj, cls)
 
-TypeError: Series.name must be a hashable type
+   1287         keys, values, mutated = self.grouper.apply(f, data, self.axis)
 
-TypeError: Series.name must be a hashable type
+   1290             data, keys, values, not_indexed_same=mutated or self.mutated
+
+~/.conda/envs/PyDev/lib/python3.9/site-packages/pandas/core/indexes/base.py in maybe_extract_name(name, obj, cls)
 
 [#18930](https://github.com/pandas-dev/pandas/issues/18930)
 
@@ -906,23 +900,23 @@ pandas_gbq: None
 
 pandas_datareader: 0.5.0
 
-``tokenizer.decode(response_ids, skip_special_tokens=True)``
+---> 44             data = [self.dataset[idx] for idx in possibly_batched_index]
+
+---> 44             data = [self.dataset[idx] for idx in possibly_batched_index]
 
 ``TypeError: decode() got an unexpected keyword argument 'skip_special_tokens'``
 
 icinga2_feature
 
-CACHE_PLUGIN_CONNECTION(/home/ansible/ansible/ansible.cfg) = ~/.cache/
-
-DEFAULT_MANAGED_STR(/home/ansible/ansible/ansible.cfg) = Ansible managed file, do not edit directly
-
-DEFAULT_REMOTE_USER(/home/ansible/ansible/ansible.cfg) = ansible
+DEFAULT_ROLES_PATH(/home/ansible/ansible/ansible.cfg) = [u'/home/ansible/ansible/roles']
 
   File "/usr/lib/python2.7/re.py", line 146, in search
 
   File "/usr/lib/python2.7/re.py", line 146, in search
 
   File "/usr/lib/python2.7/re.py", line 146, in search
+
+Integration: HomematicIP Cloud (documentation, issues)
 
 Error connecting to HomematicIP with HAP XYZ. Retrying in 16 seconds
 
@@ -936,25 +930,39 @@ Error connecting to HomematicIP with HAP XYZ. Retrying in 256 seconds
 
 daikin
 
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 250, in assert_frame_equal
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests$ sudo nosetests *
+
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests/test_frame.py", line 9092, in test_cast_internals
 
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 250, in assert_frame_equal
 
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests/test_frame.py", line 2765, in test_constructor_from_items
+
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 250, in assert_frame_equal
+
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests/test_frame.py", line 2565, in test_constructor_more
+
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 250, in assert_frame_equal
+
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests/test_frame.py", line 2713, in test_constructor_orient
 
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 249, in assert_frame_equal
 
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests/test_frame.py", line 2267, in test_constructor_subclass_dict
+
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 249, in assert_frame_equal
 
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 250, in assert_frame_equal
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests/test_frame.py", line 620, in test_getitem_fancy_2d
 
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 250, in assert_frame_equal
+
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests/test_frame.py", line 1106, in test_getitem_fancy_boolean
+
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/util/testing.py", line 250, in assert_frame_equal
+
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests/test_graphics.py", line 752, in test_time_series_plot_color_with_empty_kwargs
 
 /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.11.0-py2.7-macosx-10.6-intel.egg/pandas/tests$
-
-0x00007ffff6252acf in ?? () from /usr/lib/pymodules/python2.6/numpy/core/umath.so
-
-ValueError: ['b' 'a' 'r'] not contained in the index
 
 INSTALLED VERSIONS
 
@@ -1046,10 +1054,6 @@ boto: None
 
 touch file
 
-cat buggy.yml
-
-core-ssh:~# hassio ha info
-
 arch: amd64
 
 boot: true
@@ -1062,21 +1066,13 @@ last_version: 0.94.1
 
 machine: qemux86-64
 
+port: 8123
+
+version: 0.94.1
+
 foobot:
 
 core-2021.4.3
-
-cat temp.csv
-
-a,c
-
-b,d
-
-,
-
-a,c
-
-b,d
 
 INSTALLED VERSIONS
 
@@ -1166,7 +1162,11 @@ jinja2: 2.8
 
 boto: None
 
-error: cannot format demo.py: INTERNAL ERROR: Black produced code that is not equivalent to the source.  Please report a bug on https://github.com/psf/black/issues.  This diff might be helpful: /tmp/blk__7di9438.log
+def model(Tx,Ty,n_a,n_s,in_size,out_size):
+
+black, version 20.8b1
+
+ERROR (MainThread) [homeassistant.components.broadlink.config_flow] Unsupported device: 0x653c. If it worked before, please open an issue at https://github.com/home-assistant/core/issues
 
 Operating System
 
@@ -1174,29 +1174,21 @@ HassOS 4.15
 
 Supervisor
 
-Newest Version
+Version
 
-arch	x86_64
+Newest Version
 
 chassis	embedded
 
-docker	true
-
-docker_version	19.03.11
+dev	false
 
 hassio	true
 
-host_os	HassOS 4.15
-
 installation_type	Home Assistant OS
 
-os_name	Linux
-
-os_version	5.4.72
-
-python_version	3.8.6
-
 supervisor	2020.10.0
+
+timezone	Europe/Amsterdam
 
 version	0.117.0b6
 
@@ -1205,8 +1197,6 @@ virtualenv	false
 Lovelace
 
 mode	storage
-
-resources	1
 
 docs.ansible.com
 
@@ -1300,11 +1290,7 @@ pandas_datareader: 0.2.1
 
 `repr(request)` raises
 
-udp        0      0 0.0.0.0:5353            0.0.0.0:*                           970/avahi-daemon: r
-
-udp        0      0 127.0.0.1:8125          0.0.0.0:*                           27001/netdata
-
-udp        0      0 0.0.0.0:631             0.0.0.0:*                           12702/cups-browsed
+ps aux | grep 30962
 
 iosxr_command
 
@@ -1314,11 +1300,11 @@ Connection
 
 Ubuntu 18.04.1 LTS
 
-- name: "PLAY 1"
-
 topics/contributing/
 
 PATH invaild
+
+Error: Invalid value for "src": Path "E:\Programming" does not exist.
 
 module `dynamodb_table`
 
@@ -1358,23 +1344,25 @@ PEP 508 Information:
 
   - `VIRTUAL_ENV`: `/home/kubuntu/.local/share/virtualenvs/simple-v0MobB9A`
 
-(simple-v0MobB9A) machine42 ➜  simple git:(master) ✗
-
-(simple)machine42 ➜  simple git:(master) ✗
-
 keras_version: 2.0.4
 
 x: Series | DataFrame
 
-[0K
+aws --region us-west-2 --no-sign-request --endpoint-url=http://192.168.99.100:4572 s3 mb s3://mytestbucket
 
-Your build has been stopped.
+ansible_connection: winrm
 
-[windows]
+ansible_winrm_server_cert_validation: ignore
+
+baz
+
+`test_dir/playbook.yml`
 
 ansible -i inventory windows -m win_ping
 
 ansible -i inventories/inventory windows -m win_ping
+
+ansible-playbook -i inventories/inventory playbook.yml
 
 <!--- Paste verbatim command output between quotes below -->
 
@@ -1382,13 +1370,17 @@ ansible -i inventories/inventory windows -m win_ping
 
 **GET**
 
-@tornado.web.asynchronous
+![27nt5evwk9qelev2pq4ojckul9ijad0wozirfugrbua](https://f.cloud.github.com/assets/259316/790498/200a32be-eb29-11e2-8876-7cd3cd7ea667.png)
+
+@tornado.gen.engine
 
 virtualenv
 
-http.client.RemoteDisconnected: Remote end closed connection without response
+matrix:
 
 requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+flask / docs / patterns / fileuploads.rst
 
 Updating state for switch.juha_ipad_pro (<class 'homeassistant.components.unifi.switch.UniFiBlockClientSwitch'>) took 3.050 seconds. Please create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+unifi%22
 
@@ -1510,27 +1502,39 @@ Ansible 2.7.7 (Module was imported using import folder in AWX)
 
 climate/generic_thermostat
 
+[[1, x_0, x_0 ** 2, x_0 ** 3, ..., x_0 ** degree],
+
+ [1, x_1, x_1 ** 2, x_1 ** 3, ..., x_1 ** degree],
+
+  File "/usr/local/lib/python3.5/dist-packages/OpenSSL/SSL.py", line 525, in load_verify_locations
+
 This is what I get in the logs:
 
 pip
 
-Package            Version
+  pip:
 
 charset-normalizer 2.0.7
 
+pip                21.3.1
+
 requests           2.26.0
 
-urllib3            1.26.7
+setuptools         58.3.0
 
-Package            Version
+urllib3            1.26.7
 
 charset-normalizer 2.0.7
 
+pip                21.3.1
+
 requests           2.26.0
+
+setuptools         58.3.0
 
 urllib3            1.26.7
 
-Package    Version
+pip        21.3.1
 
 setuptools 58.3.0
 
@@ -1554,17 +1558,21 @@ curl -v -m 20  http://127.0.0.1:8888
 
 ios_user
 
-content-language: en-US
+accept-ranges: bytes
 
 content-encoding: identity
 
-content-language: en-US
+server: hypercorn-h11
+
+accept-ranges: bytes
 
 content-encoding: identity
+
+server: hypercorn-h11
+
+  File "/usr/local/lib/python3.8/dist-packages/localstack/services/awslambda/lambda_utils.
 
 - LocalStack:
-
-localstack-client        1.26
 
 ecs_taskdefinition
 
@@ -1582,35 +1590,11 @@ CASSANDRA_ENTRY_TTL
 
 win_iis_virtualdirectory
 
-Resolving dependencies...
+Courtesy Notice: Pipenv found itself running within a virtual environment, so it will automatically use that environment, instead of creating its own for any project. You can set PIPENV_IGNORE_VIRTUALENVS=1 to force pipenv to ignore that environment and create its own instead. You can set PIPENV_VERBOSITY=-1 to suppress this warning.
 
-Complete output (57 lines):
-
-  Getting requirements to build wheel: started
-
-Building wheels for collected packages: maturin
+  Building wheel for maturin (PEP 517): finished with status 'error'
 
 ERROR: Could not build wheels for maturin which use PEP 517 and cannot be installed directly
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/resolver.py", line 764, in <module>
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/resolver.py", line 758, in main
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/resolver.py", line 702, in resolve_packages
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/resolver.py", line 684, in resolve
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/patched/notpip/_internal/legacy_resolve.py", line 339, in _resolve_one
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/patched/notpip/_internal/legacy_resolve.py", line 287, in _get_abstract_dist_for
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/patched/notpip/_internal/distributions/sdist.py", line 38, in prepare_distribution_metadata
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/patched/notpip/_internal/distributions/sdist.py", line 66, in _setup_isolation
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/patched/notpip/_internal/build_env.py", line 202, in install_requirements
-
-  File "/private/tmp/platform-venv/lib/python3.9/site-packages/pipenv/patched/notpip/_internal/utils/subprocess.py", line 242, in call_subprocess
 
   File "main.py", line 225, in <module>
 
@@ -1628,12 +1612,6 @@ in Holding Register 0000000000000010 is swith1 off and switch2 on
 
   platform: modbus
 
-byte_values = numpy.packbits(data)
-
-data = numpy.random.sample(1024)
-
-pi@hassbian:~ $ sudo hassbian-config install homeassistant
-
 Home Assistant install script for Hassbian.
 
 Copyright(c) 2017 Fredrik Lindqvist <https://github.com/Landrash>.
@@ -1646,13 +1624,17 @@ Changing to Home Assistant venv
 
 Installing latest version of Home Assistant
 
-  Downloading https://www.piwheels.org/simple/cryptography/cryptography-2.3.1-cp35-cp35m-linux_armv6l.whl (820kB)
+Collecting wheel
 
-  File "/usr/lib/python3.5/http/client.py", line 1198, in getresponse
+  File "/srv/homeassistant/lib/python3.5/site-packages/pip/index.py", line 465, in find_requirement
 
-http.client.RemoteDisconnected: Remote end closed connection without response
+  File "/srv/homeassistant/lib/python3.5/site-packages/pip/index.py", line 423, in find_all_candidates
 
-TypeError: unsupported operand type(s) for -=: 'Retry' and 'int'
+  File "/srv/homeassistant/lib/python3.5/site-packages/pip/index.py", line 568, in _get_pages
+
+  File "/srv/homeassistant/lib/python3.5/site-packages/pip/index.py", line 683, in _get_page
+
+  File "/srv/homeassistant/lib/python3.5/site-packages/pip/index.py", line 792, in get_page
 
 Deactivating virtualenv
 
@@ -1662,13 +1644,7 @@ Disabling the Home Assistant install script
 
 Starting Home Assistant
 
-Checking the installation...
-
-Installation failed...
-
 If you have issues with this script, please say something in the #devs_hassbian channel on Discord.
-
-pi@hassbian:~ $
 
 INSTALLED VERSIONS
 
@@ -1764,13 +1740,13 @@ pandas_gbq: None
 
 pandas_datareader: None
 
-function1
-
-function2
-
 win_unzip
 
 `ansible-config dump --only-changed` returns nothing.
+
+dts1 = pd.date_range('20150101', '20150105', tz='America/New_York')                  
+
+dts2 = pd.date_range('20150103', '20150107', tz='America/New_York')                  
 
 df_result
 
@@ -1872,11 +1848,17 @@ august:
 
 ozw log:
 
- 10   <!-- If you are using any Security Devices, you MUST set a network Key -->
+options.xml:
 
  13   <!-- Some Devices have a big UserCode Table, that can mean startup times
 
+ 15   Devices) This option will make the UserCode CC stop on the first
+
 debug log:
+
+Logger: homeassistant.util.async_
+
+Source: util/async_.py:120
 
 arch | x86_64
 
@@ -1908,33 +1890,41 @@ version | 0.112.0
 
 virtualenv | false
 
-  File "/Users/xxxx/Dropbox (Seatgeek)/ansible/lib/ansible/playbook/__init__.py", line 53, in load
+Logger: homeassistant.util.async_
 
-  File "/Users/xxxx/Dropbox (Seatgeek)/ansible/lib/ansible/playbook/__init__.py", line 91, in _load_playbook_data
-
-  File "/Users/xxxx/Dropbox (Seatgeek)/ansible/lib/ansible/playbook/block.py", line 72, in load
-
-http://stackoverflow.com/questions/21318865/read-multi-index-on-the-columns-from-csv-file
+Source: util/async_.py:120
 
 1. ansible-vault existing_vault.yml
 
 Step 44/3000 - 0.31283405731719177 steps/s
 
-  warnings.warn(self.msg_depr % (key, alt_key))
-
-  warnings.warn(self.msg_depr % (key, alt_key))
-
-  "is being cleared", UserWarning)
+/home/jreback/miniconda/envs/pandas/lib/python2.7/site-packages/matplotlib/__init__.py:892: UserWarning: axes.color_cycle is deprecated and replaced with axes.prop_cycle; please use the latter.
 
 axes property.  A removal date has not been set.
 
-  warnings.warn(_get_axes_msg, mplDeprecation, stacklevel=1)
+  File "/home/jreback/miniconda/envs/pandas/lib/python2.7/site-packages/matplotlib/axes/_axes.py", line 2964, in errorbar
+
+  File "/home/jreback/miniconda/envs/pandas/lib/python2.7/site-packages/matplotlib/axes/_axes.py", line 2964, in errorbar
+
+[left]:  (4,)
+
+[left]:  (6,)
 
 - (0.0, 0.0, 1.0, 1.0)
 
+[left]:  (6,)
+
+predict(x, batch_size=None, verbose=0, steps=None, callbacks=None) 
+
 Error:
 
-df_grp.count()
+df_grp.mean()
+
+col1
+
+Name: col2, dtype: float64
+
+col1
 
 Pipenv version: `'2018.11.26'`
 
@@ -1980,29 +1970,33 @@ Debug–specific environment variables:
 
 Contents of `Pipfile` ('/Users/tianyizhuang/Projects/dapeng/Pipfile'):
 
-mypy = "*"
-
 Contents of `Pipfile.lock` ('/Users/tianyizhuang/Projects/dapeng/Pipfile.lock'):
-
-# TODO: Update this line to work with batch > 1. Right now it assumes all
-
-**input shape: (nb_samples, 32)**
 
 nxos_l3_interface
 
 <!--- Paste example playbooks or commands between quotes below -->
 
-TemplateSyntaxError: Encountered unknown tag 'do'. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+   Ordered by: standard name
+
+(self._tokenize(token, **kwargs) if token not \
+
+   Ordered by: standard name
+
+   Ordered by: standard name
 
 venv
 
-2. Run `python run_glue.py --model_name_or_path roberta-large --do_train --do_eval --per_gpu_train_batch_size 8 --output_dir hypersearch-0 --task_name sst2 --evaluation_strategy steps --eval_steps 20 --logging_steps 10`
-
-  File "/home/howard/anaconda3/envs/transformers/lib/python3.8/site-packages/ray/tune/registry.py", line 71, in register_trainable
+TypeError: argument of type 'NoneType' is not iterable
 
   File "/home/howard/anaconda3/envs/transformers/lib/python3.8/site-packages/ray/tune/registry.py", line 124, in register
 
-  File "/home/howard/anaconda3/envs/transformers/lib/python3.8/site-packages/ray/tune/registry.py", line 146, in flush_values
+https://github.com/numpy/numpy/blob/f1d81d84a2c8e3f44c434d580ab988912f9a4c83/numpy/distutils/misc_util.py#L2307
+
+  File "/usr/local/lib/python3.6/site-packages/django/utils/autoreload.py", line 251, in raise_last_exception
+
+  File "/usr/local/lib/python3.6/site-packages/django/apps/config.py", line 202, in import_models
+
+  File "/usr/local/lib/python3.6/site-packages/pandas/__init__.py", line 13, in <module>
 
   File "/usr/local/lib/python3.6/site-packages/numpy/__init__.py", line 126, in <module>
 
@@ -2010,6 +2004,14 @@ venv
 
 Value Error: Can't fit matrix with Nans or Infinities
 
-removing 'ansible-2.0.0.1' (and everything under it)
+**Error running query: <type 'exceptions.ImportError'> No module named pyspark.sql**
 
-error: line 10: Illegal sequence ".." in: Release: 0.git201601130000...el7.centos
+hard linking packaging/rpm/ansible.spec -> ansible-2.0.0.1/packaging/rpm
+
+Writing ansible-2.0.0.1/setup.cfg
+
+creating dist
+
+Creating tar archive
+
+removing 'ansible-2.0.0.1' (and everything under it)

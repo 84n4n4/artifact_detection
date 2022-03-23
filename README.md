@@ -8,7 +8,7 @@ Further, a scikit-learn transformer implementation wrapping pretrained models re
 Datasets consisting of issue tickets and documentation files mined from C++, Java, JavaScript, PHP, and Python projects hosted on GitHub can be downloaded from Zenodo here:[TODO](TODO)
 
 ## Publications
-- The latest journal publication and corresponding datasets and implementations:
+- The latest, most extensive paper (in review) and corresponding datasets and implementations:
 > Thomas Hirsch and Birgit Hofer: ["Detecting non-natural language artifacts for de-noising bug reports"](TODO)
 > 
 > [Zenodo](TODO)
@@ -20,7 +20,7 @@ Datasets consisting of issue tickets and documentation files mined from C++, Jav
 > 
 > [Zenodo](https://zenodo.org/record/5519503)
 > 
-> [GitHub](https://github.com/AmadeusBugProject/artifact_detection/releases/tag/v1.1)
+> [GitHub Release](https://github.com/AmadeusBugProject/artifact_detection/releases/tag/v1.1)
 
 # Preliminary steps
 ## Data
@@ -46,7 +46,7 @@ from sklearn.svm import LinearSVC
 from artifact_detection_model.transformer.ArtifactRemoverTransformer import ArtifactRemoverTransformer, SIMPLE
 from file_anchor import root_dir
 
-train_x, train_y, test_x, test_y = [...] # some issue tickets
+train_x, train_y, test_x, test_y = [...] # array of issue tickets
 artifact_classifier = joblib.load(root_dir() + 'artifact_detection_model/out/' + 'some_model.joblib')
 pipeline = Pipeline([('artifactspred', ArtifactRemoverTransformer(artifact_classifier)),
                      ('vect', CountVectorizer()),
@@ -78,9 +78,19 @@ Please have a look at our journal paper (see [Publications](#publications)) for 
 - `[language]_reseracher_[1|2]_manually_labeled_validation_set.csv.zip` contains the manually annotated validation sets from both researchers from the above 250 issue tickets.
 - `[language]_training_issues.csv.zip` contains the data used in training, that is issue tickets containing "```" markdown code blocks (excluding those in validation sets), and all documentation files.
 
-## Dataset creation
-TODO
+The projects from which the corresponding datasets originate from are listed here:
+- [C++](githubMiner/json_dump/cpp.txt)
+- [Java](githubMiner/json_dump/java.txt)
+- [JavaScript](githubMiner/json_dump/javascript.txt)
+- [PHP](githubMiner/json_dump/php.txt)
+- [Python](githubMiner/json_dump/python.txt)
 
+
+## Dataset creation
+Data was mined from GitHub repositories of above linked projects.
+[RUN_github_issue_ticke_mining.py](githubMiner/RUN_github_issue_ticke_mining.py) reads the projects list and stores the json replies from GitHub API.
+[RUN_create_training_and_validation_sets.py](githubMiner/RUN_create_training_and_validation_sets.py) then consolidates the json API responses into Pandas DataFrames stored in [datasets](datasets), and performs the training / validation split of issue tickets.
+The original json dumps are not included due to size restraints, and duplication, as the required data is included as zipped csv's in [datasets](datasets).
 
 
 # Acknowledgment

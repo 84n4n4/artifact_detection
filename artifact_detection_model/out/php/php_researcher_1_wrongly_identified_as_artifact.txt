@@ -1,14 +1,10 @@
-Keywords: i18n, l10n
+ 2. Route
 
     - [ ] Introduce proper sorting in table view
 
-Syntax error or access violation: 1071 Specified key was too long;
+Finding a PSR-2 PrettyPrinter
 
-The update was unsuccessful. Please report this issue to the Nextcloud community.
-
-You may use your browser or the occ upgrade command to do the upgrade
-
-4. Read warning concerning HSTS: The "Strict-Transport-Security" HTTP header is not set to at least "15552000" seconds. For enhanced security, it is recommended to enable HSTS as described in the security tips."
+unknown data type in doctrine: mapping_types needed
 
 </details>
 
@@ -16,17 +12,11 @@ No errors have been found.
 
 Enabled:
 
-- Increase code coverage
-
-CHANGELOG.md contains a broken link
-
-2) flexibility: when only 1 vertical menu 'echelon line' is required (for whatever reason)
-
-if you [migrate](https://github.com/yiisoft/yii2-app-advanced/blob/master/console/migrations/m130524_201442_init.php#L17) to yii2-app-advanced field 'id' in table 'user' integer (11)
-
-Password::min() on failure attribute is not translated
+a) 'normal' plain-text email that is being sent
 
 Reproducible using the following test app: [testapp.tar.gz](https://github.com/nextcloud/server/files/2951835/testapp.tar.gz)
+
+- `/apps/testapp/api/greet/le%2Fon` incorrectly redirects to the default app
 
     Install raspberry with buster
 
@@ -40,39 +30,35 @@ Error: Key "location" for array with keys "idSite, idVisit, visitIp, visitorId, 
 
      create a "bug reproducer" as explained in:
 
-composer update error
-
 Loading composer repositories with package information
 
 Updating dependencies (including require-dev)
 
 # Draft
 
-Thus I cannot build phalcon. The build directory doesn't matter (cphalcon/build or cphalcon/ext)
-
 The "Referrer-Policy" HTTP header is not set to "no-referrer", "no-referrer-when-downgrade", "strict-origin", "strict-origin-when-cross-origin" or "same-origin". 
 
-composer create-project symfony/website-skeleton still tells to use php bin/phpunit for testing
+`array('name,note','filter','filter'=>array($obj=new HtmlPurifier(),'process')),` is too arcane, and what if i want not only filter but reject, forwarding error message ?
 
-Activity	2.9.1
+  - Message invites dev to upgrade to Piwik 2
+
+Gallery	18.3.0
 
 Password policy	1.6.0
 
-PDF viewer	1.5.0
-
-Update notification	1.6.0
-
-Versions	1.9.0
+Two-Factor TOTP Provider	2.1.2
 
 `If you get a 500 error when visiting your status page, you may need to run chmod -R 777 storage for it to work or rm -rf bootstrap/cache/*`
 
 ```
 
-http://piwik.org;jsessionid=A3294FBE42?foo=bar`.[[BR]]Then piwik logs the url including the`
-
-12) Connect to Nextcloud
+7) Refrech the page CTRL+F5 (No cache)
 
 **'Content-Type: %s; name="%s"%s'** and 
+
+'whereHas' and 'has' seem to ignore $morphClass and morphMap
+
+2.0.36-dev result
 
 > TBD: namespace
 
@@ -87,6 +73,8 @@ http://piwik.org;jsessionid=A3294FBE42?foo=bar`.[[BR]]Then piwik logs the url in
 - [x] [Numeric Literal Separator](https://wiki.php.net/rfc/numeric_literal_separator) (#4596)
 
 - [x] [New custom object serialization mechanism](https://wiki.php.net/rfc/custom_object_serialization) (#4381)
+
+- Operating system: **Centos 7.2**
 
     b. Note that the `phpunit.xml` file has an `APP_ENV` value of `testing`
 

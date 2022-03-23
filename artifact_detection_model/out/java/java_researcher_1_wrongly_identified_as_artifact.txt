@@ -1,7 +1,5 @@
 Also, see this line: <b>long unused11 = AgentCreateListing.d2 = this.date2.getTime();
 
-</b> Why there is long unused11?
-
 # Authorization Support
 
 	- Constructor signature:
@@ -10,15 +8,17 @@ Also, see this line: <b>long unused11 = AgentCreateListing.d2 = this.date2.getTi
 
 https://dbeaver.com/features/enterprise/ - Gives 404 on https://dbeaver.com/
 
-performance problem caused by Sets.newSetFromMap()
-
 (e.g., in ForwardingSet.standardRemoveAll(Collection<?> collection)), 
+
+Classes that need to be instrumented: ExpressionCompiler, JoinCompiler, JoinFilterFunctionCompiler, JoinProbeCompiler, OrderingCompiler
 
 highlight_query return 500 error and array_index_out_of_bounds_exception
 
  [ik-6.3.2,ik-7.11.1]
 
 1.8.0_211
+
+ Linux localhost 3.10.0-1160.25.1.el7.x86_64
 
 POST test/_doc/C86A73509CA91D71C447DCE426AAF703
 
@@ -50,19 +50,17 @@ spring-cloud-gateway 2.3.0 Caused by: java.lang.ClassNotFoundException: javax.va
 
 Generating configuration for jar with agentlib  ```-agentlib:native-image-agent=config-output-dir=./config/```
 
-ProtocolException: Unexpected end of stream
-
-A `java.lang.IllegalArgumentException: Cannot find method` error is raised (see details above).
-
-1. cursor  jump to result viewer like alt+2, jump to sql editor alt+1;
+3. in sql editor, emacs key: ctrl+space to text without high light blue backgroud;
 
 4. quick switch schema or database using hotkeys;
 
- Unauthorized for registry-1.docker.io/library/java-hello-world: 401 Unauthorized
+  1. download source code git clone https://github.com/GoogleCloudPlatform/cloud-code-samples.git
 
   3.
 
-each time ACodec::handleSetSurface called, it will attach all buffers to the new surface.
+Using library io.reactivex.rxjava3:rxjava:3.0.3
+
+I create 2 Controller. In the first, I inject a Service. In the second, I inject a JpaRepository.
 
 # Environment
 
@@ -72,17 +70,27 @@ each time ACodec::handleSetSurface called, it will attach all buffers to the new
 
 # Expected behaviour
 
-fun getRefinements(@QueryMap refinements: Map<String, String>): LiveData<ApiResponse<SearchRefinementResponse>>`
-
   - node: all physical server (NOT VM)
+
+  - HDD: 100GB (RAID1)
+
+  - index: 11GB
+
+  - number of replicas: 1
+
+  - shards: 9
 
 HINCRBYFLOAT  java.lang.NumberFormatException: For input string: "PONG"
 
-parent.relativePath'  points at com.google.guava:guava-parent instead of org.sonatype.oss:oss-parent
-
 - `transform`
 
+> To make the deletion in realm-listview work properly
+
 > Could't find any solution to it.
+
+Unsatisfied dependency for type javax.persistence.EntityManager and qualifiers
+
+According to: http://central.maven.org/maven2/org/springframework/boot/spring-boot/2.0.0.RELEASE/spring-boot-2.0.0.RELEASE.pom:
 
     ask a general question is at the Elastic [forums](https://discuss.elastic.co).
 
@@ -92,8 +100,8 @@ parent.relativePath'  points at com.google.guava:guava-parent instead of org.son
 
     below, and delete the other block.
 
-[SHARE]Do not use 3.3.0
-
 e.g.
+
+hub (a Macbook laptop):
 
 Tests with failures:

@@ -1,4 +1,8 @@
+The packages will be removed.
+
 AssertionError: Keyword argument not understood: dropout?
+
+S3 get-bucket-notification returns empty result and return code 1
 
 0.21.0 (previously 0.20.3)
 
@@ -7,8 +11,6 @@ AssertionError: Keyword argument not understood: dropout?
 - [x] This cannot be dealt with as a third party library. (We prefer new functionality to be [in the form of third party libraries](http://www.django-rest-framework.org/topics/third-party-resources/#about-third-party-packages) where possible.)
 
 <=1.9.4 is not affected
-
-Default (no ansible.cfg)
 
 > When the dimensions increase (dotted line shortcuts
 
@@ -20,11 +22,7 @@ Default (no ansible.cfg)
 
 -->
 
-'Outstream' object has no attribute closed
-
 - [X] I agree to follow this project's [Code of Conduct](https://github.com/apache/airflow/blob/main/CODE_OF_CONDUCT.md)
-
-Proxmox 6
 
 It requires the dbus-run-session binary that comes with dbus >= 1.8
 
@@ -32,25 +30,25 @@ It requires the dbus-run-session binary that comes with dbus >= 1.8
 
 np.set_printoptions(sign='legacy') edge case for 0d array
 
-- OS: Ubuntu 18.04
-
 Launch Ray with: `ray stop && ray start --head --system-config='{"automatic_object_spilling_enabled":true,"max_io_workers":4,"min_spilling_size":104857600,"object_spilling_config":"{\"type\":\"smart_open\",\"params\":{\"uri\":\"s3://raysort-debug/spill\"}}"}' --resources='{"worker":1}' --object-store-memory 6400000000`
+
+Error setting up platform legacy.
+
+'challenge_data' was not created because the module returns "cert_days = 56"
 
 Segmentation fault on `df.loc[k] = pd.Series({...})`
 
-selinux module set arg state=disabled
-
-python 3: test_to_string_truncate_indices  UnicodeEncodeError: 'ascii' codec can't encode characters in position 177-178: ordinal not in range(128)
-
 AttributeError: 'HTTPAdapter' object has no attribute 'proxy_manager'
+
+not required
 
 # Enviornment
 
 # Issues
 
-Below is Role-01:
-
 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+`y` would be a list of array containing only selected columns (as specified).
 
      Don't forget to fill out the missing fields in that output! -->
 
@@ -64,41 +62,43 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 
      Do not use screenshots, as they are hard to read and (more importantly) don't allow others to copy-and-paste your code.-->
 
-journal sends this to syslog:
-
-Ordering with ordering_fields: Every single letter of a field-name is offered as sort criterion
+Space token cannot be add when is_split_into_words = True
 
 - [ ] This is not a usage question. (Those should be directed to the [discussion group](https://groups.google.com/forum/#!forum/django-rest-framework) instead.)
 
 - [ ] This cannot be dealt with as a third party library. (We prefer new functionality to be [in the form of third party libraries](https://www.django-rest-framework.org/topics/third-party-resources/#about-third-party-packages) where possible.)
 
-Two options: "effective_datetime - ascending", "effective_datetime - descending"
+RuntimeError: Overflow when unpacking long during training the model
 
 L10n of Parameters / Shortcuts
 
 Schedule from queries table: `{"interval": 300, "until": null, "day_of_week": null, "time": null}`
 
-Installing black[d] from github misses aiohttp-cors dependency
+Outputs:
+
+use get_store to open/close files
 
 from http://keras.io/
 
+rm4 pro cannot be added to broadlink integration (Unsupported device: 0x653c.)
+
+System Health
+
 RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility.
 
-a small bug in keras.preprocessing.text of keras1.2.0
-
-in the function 'sequences_to_matrix':
-
-I just saw this in https://s3.amazonaws.com/archive.travis-ci.org/jobs/270295916/log.txt?X-Amz-Expires=29&X-Amz-Date=20170831T075450Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJRYRXRSVGNKPKO5A/20170831/us-east-1/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=1405cb0133660201ea72897a3c47f28b6ed75ed91dc9c2ea0be5fbf57dd6ae32
+Since using PEP604 rewrites, this would be written as
 
 `, I got
 
 Seems like initializing self.is_group = False, like so:
 
-KeyError: 'away_mode' in generic_thermostat
+influxdb
 
-Support of "Transfer-Encoding: gzip"
+from
 
-Mitmproxy version: 0.19
+Platform: Linux-3.4.0+-x86_64-with-Ubuntu-14.04-trusty
+
+SSL version: OpenSSL 1.0.2g-fips  1 Mar 2016
 
 # This is a ...
 
@@ -106,15 +106,7 @@ Mitmproxy version: 0.19
 
 # Steps to reproduce
 
- 0.26.2 but maybe since 0.26
-
 3. potentially multiple servers are involved (mass configure: puppet, chef, ansible, salt)
-
-OVH IP load balancers hijacking /.well-known/acme-challenge/ not reaching backend servers
-
-OVH IP load balancers hijacking /.well-known/acme-challenge/ not reaching backend servers
-
-any certbot instalation using HTTP-01 Challenge
 
 - [X] I agree to follow this project's [Code of Conduct](https://github.com/apache/airflow/blob/main/CODE_OF_CONDUCT.md)
 
@@ -122,13 +114,15 @@ StreamClosedError
 
 # Type of request: This is a ...
 
-[-] bug report
-
 # Detailed description
 
 # Steps to reproduce
 
+1. Run `python3 -m pip install localstack localstack-client localstack-ext --upgrade`
+
 --staging places certs in /etc/letsencrypt/live/ directory
+
+numpy.unique inconsistent behavior on array of tuples
 
 'already consumed' accessing response.text with Content-Length: 0
 
@@ -136,15 +130,13 @@ AttributeError: 'module' object has no attribute 'TCPServer'
 
 s.
 
-etc
-
 > OS: Hassbian
+
+> when installed Hassbian, homeassistant not auto install, manual enter command "sudo hassbian-config install homeassistant", then get this error.
 
 > Please help me!
 
 # Issue Type:
-
-# Ansible Version:
 
 # Summary:
 
@@ -156,23 +148,19 @@ etc
 
 # Actual Results:
 
-DataFrame.join left_index right_index inverted
-
 DataFrame:
 
 Zwave - https://www.home-assistant.io/integrations/zwave/
 
-3. check /tmp for files
-
-No temp files found, and disk contents overwritten
-
 [REQUEST] progress bar: round up task.speed
 
-cannot import name 'moduleTNC'
+`--pypi-mirror` should be treated as an extension to `project.sources`
 
-MacOSX Yosemite 10.10.5
+**input shape: (nb_samples, 32)**
 
-Please run `$ pipenv --support`, and paste the results here. Don't put backticks (`` ` ``) around it! The output already contains Markdown formatting.
+[core] Raylet kills workers that are not actually idle
+
+not
 
 -->
 
@@ -186,8 +174,6 @@ Please run `$ pipenv --support`, and paste the results here. Don't put backticks
 
      Do not use screenshots, as they are hard to read and (more importantly) don't allow others to copy-and-paste your code.-->
 
+/etc/anisble folder not created
+
 I had a coo matrix(hstacked(std_scaler+dict_vect))
-
-There weren't any in X either X[train]
-
-Error running query: <type 'exceptions.ImportError'> No module named pyspark.sql

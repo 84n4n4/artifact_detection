@@ -24,8 +24,6 @@ IE8 + lodash + browserify: _.merge causes SCRIPT5002: Function expected
 
 <!-- https://gitter.im/webpack/webpack -->
 
-https://github.com/bootstrap-vue/bootstrap-vue/issues/6493
-
   2. npm install
 
   3. npm run serve
@@ -34,9 +32,17 @@ https://github.com/bootstrap-vue/bootstrap-vue/issues/6493
 
   7. npm install -g serve
 
+  8. serve -s dist
+
   11. npm run build
 
+  12. serve -s dist
+
 👉  https://opencollective.com/parcel/donate -->
+
+[StackOverflow or gitter](http://tr.im/77pVj)
+
+[README](http://tr.im/410Fg) (you did read the README, right?).
 
 - Material-UI: 0.15.0-beta.1
 
@@ -54,69 +60,35 @@ Uncaught Error: The specified module could not be found.
 
 - v2.8.0: https://codepen.io/FGRibreau/pen/PowJPzW
 
-"internal/buffer.js"
-
-"internal/process/per_thread.js"
-
-"internal/process/main_thread_only.js"
-
-"internal/process/stdio.js"
-
-"internal/process/warning.js"
-
-"internal/process/next_tick.js"
-
-"internal/process/promises.js"
-
 👉  https://www.patreon.com/evanyou
 
 👉  https://opencollective.com/vuejs/donate
 
 Related: [#5086](https://github.com/prettier/prettier/issues/5086), [#3464](https://github.com/prettier/prettier/issues/3464)
 
+.button,
+
+.button,
+
 Run `$ yarn add bootstrap`
 
-Conflict: Multiple assets emit to the same filename 75002edf.chunk.js
+ERROR in chunk frontend/home
 
-Conflict: Multiple assets emit to the same filename 75002edf.chunk.js
-
-Conflict: Multiple assets emit to the same filename 75002edf.chunk.js
-
-Conflict: Multiple assets emit to the same filename 75002edf.chunk.js
-
-Conflict: Multiple assets emit to the same filename 75002edf.chunk.js
-
-Conflict: Multiple assets emit to the same filename 75002edf.chunk.js
-
-Conflict: Multiple assets emit to the same filename 75002edf.chunk.js
+editor:
 
 [...] Error in render: "TypeError: _vm.obj is undefined"d
 
 3.0.0-alpha.11.1
 
-api_1  | [2018-08-21T20:27:55.438Z] info File changed: /usr/src/api/api/bootstrap/controllers/Bootstrap.js
-
-api_1  | [2018-08-21T20:28:00.442Z] info File changed: /usr/src/api/api/bootstrap/controllers/Bootstrap.js
-
-api_1  | [2018-08-21T20:28:05.456Z] info File changed: /usr/src/api/api/bootstrap/controllers/Bootstrap.js
-
-api_1  | [2018-08-21T20:28:10.461Z] info File changed: /usr/src/api/api/bootstrap/controllers/Bootstrap.js
-
-  var that = this
-
  * Check elem1 is overlapped by elem2 or not.
 
-RewriteCond %{HTTPS} !=on
-
-RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+    return (checkIntersect([pos1.left, pos1.right], [pos2.left, pos2.right]) && 
 
 RewriteCond %{HTTPS} !=on
 
-RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS} !=on
 
-   # Option 1:  for domain names with one level tld (ie. .com, .edu, .info, etc). Adapt {min,[max]} match count accordingly, if needed.
-
-   # Option 2: for domain names with two level tld (ie. .co.uk, .com.ar, etc). Adapt {min,[max]} match count accordingly, if needed.
+# Optional: do NOT apply the rewrite rule on other subdomains (ie. local, dev, stage, forum, static, etc). 
 
 A few comments on the changes:
 
@@ -130,17 +102,21 @@ A few comments on the changes:
 
 - [ ] r87
 
-Assigning editor 274's height explicitly via position: 'absolute' and an assigned top and bottom implicitly assigns the autoHeight property to false on the editor. This behavior is deprecated and will not be supported in the future. Please explicitly assign autoHeight on this editor.
+atom core (1 deprecation)
 
-3. `pane:split-right-and-copy-active-item`.
+Assigning editor 274's height explicitly via position: 'absolute' and an assigned top and bottom implicitly assigns the autoHeight property to false on the editor. This behavior is deprecated and will not be supported in the future. Please explicitly assign autoHeight on this editor.
 
 Uncaught Error: Pane has been destroyed
 
 ---> (Inner Exception #0) System.IO.IOException: Access to the path 'resources' is denied.
 
+---> (Inner Exception #0) System.AggregateException: One or more errors occurred. ---> System.IO.IOException: Access to the path 'resources' is denied.
+
 ---> (Inner Exception #0) System.IO.IOException: Access to the path 'resources' is denied.
 
 ---> (Inner Exception #0) System.IO.IOException: Access to the path 'resources' is denied.
+
+---> (Inner Exception #0) System.AggregateException: One or more errors occurred. ---> System.IO.IOException: Access to the path 'resources' is denied.
 
 ---> (Inner Exception #0) System.IO.IOException: Access to the path 'resources' is denied.
 
@@ -150,17 +126,21 @@ Uncaught Error: Pane has been destroyed
 
 `index.tsx`:
 
+@parcel/transformer-babel: Support for the experimental syntax 'jsx' isn't currently enabled (4:8):
+
 👉  https://opencollective.com/parcel/donate -->
 
 cc/ @zpao
 
 cc: @Slayvin @jbouny
 
-vue-cli-service build  --target wc --name openlayers-vue ./src/components/MapContainer.vue
+[https://codesandbox.io/s/bold-matsumoto-tpxsn?file=/src/App.vue](https://codesandbox.io/s/bold-matsumoto-tpxsn?file=/src/App.vue)
 
-Origin:chrome-extension://mhfmojjfekkpkakpnhchfafkdbloaekl
+src/playground/src/views/main.handlebars[error] No parser could be inferred for file: src/playground/src/views/main.handlebars
 
 Path A (`node_modules` dne, node@X):
+
+- `yarn install` => binaries for node@X
 
 - **Current, non-ideal**: `yarn install` => binaries for node@X
 
@@ -170,21 +150,27 @@ Path A (`node_modules` dne, node@X):
 
 Uncaught Error: socket hang up
 
+<li><a href="https://urls.greenkeeper.io/kentcdodds/cross-env/commit/5e590ec1ca136a59992b098333527dd8a663389d"><code>5e590ec</code></a> <code>docs(README): added how to use cross-env to run npm sub-scripts (#53)</code></li>
+
 <summary>Not sure how things should work exactly?</summary>
 
-Your [Greenkeeper](https://greenkeeper.io) Bot :palm_tree:
+Abort trap: 6
 
 [Playground link](https://prettier.io/playground/#%7B%22content%22%3A%22export%20const%20foo%20%3D%20css%60%5Cn%26.foo%20.%24%7Bbar%7D%3A%3Abefore%2C%26.foo%5Bvalue%3D%5C%22hello%5C%22%5D%20.%24%7Bbar%7D%3A%3Abefore%20%7B%5Cn%5Ctposition%3A%20absolute%3B%5Cn%7D%5Cn%60%3B%5Cn%22%2C%22options%22%3A%7B%22ast%22%3Afalse%2C%22bracketSpacing%22%3Atrue%2C%22doc%22%3Afalse%2C%22jsxBracketSameLine%22%3Afalse%2C%22output2%22%3Afalse%2C%22parser%22%3A%22typescript%22%2C%22printWidth%22%3A80%2C%22semi%22%3Atrue%2C%22singleQuote%22%3Afalse%2C%22tabWidth%22%3A4%2C%22trailingComma%22%3A%22none%22%2C%22useTabs%22%3Afalse%7D%7D)
 
-@sealed
+Error: Error: Couldn't insert all the expressions
+
+@classDecorator
+
+@classDecorator
+
+@classDecorator
+
+@classDecoratorWithName
 
 @sealed
 
-NamedDecorated.prototype.name: "NamedDecorated"
-
-TwiceDecorated.prototype.name: "TwiceDecorated"
-
-NamedDecorated.prototype.name: "NamedDecorated"
+@sealed
 
 title: Hackjutsu Dojo
 
@@ -192,19 +178,13 @@ description: I code therefore I am.
 
 author: Cosmo
 
-i18n_dir: :lang
+archive_dir: archives
+
+## Themes: https://hexo.io/themes/
 
 since: 2015
 
-menu:
-
-  categories: /categories
-
-  #commonweal: /404.html
-
 rss:
-
-mathjax:
 
 # Automatically scroll page to section which is under <!-- more --> mark.
 
@@ -216,13 +196,13 @@ css: css
 
 version: 0.4.5.1
 
-social:
+  Github: https://github.com/hackjutsu
 
-links:
+├── hexo-deployer-git@0.2.0
 
-hexo-site@2.8.3 /Users/username/blog
+├── hexo-renderer-jade@0.3.0
 
-├── hexo-renderer-ejs@0.2.0
+├── hexo-renderer-stylus@0.3.1
 
 gulp
 
@@ -250,6 +230,8 @@ gulp-sequence
 
 Error in render: "TypeError: Cannot read property 'components' of undefined"
 
+vue.esm.js?efeb:1717 TypeError: Cannot read property 'components' of undefined
+
 [Example on Codepen](https://codepen.io/redwarbanner/pen/QWdobXe)
 
 Commits: https://github.com/nodejs/node/commits?author=shisama
@@ -257,6 +239,8 @@ Commits: https://github.com/nodejs/node/commits?author=shisama
 Comments: https://github.com/nodejs/node/search?q=commenter%3Ashisama&type=Issues
 
 Sass compliation failed. Icompatible units
+
+Sass Compilation Failed: resources/assets/vendor/bootstrap/scss/_variables.scss
 
   Feedback successfully sent. We will response you as soon as possible.
 
@@ -272,17 +256,7 @@ Material-UI: `children` must be passed when using the `TextField` component with
 
 ***src/returnMessage.ts***
 
-export function returnMessage(message: number):number { // we've changed the type to 'number', which is not what index.ts is expecting
-
-@parcel/validator-typescript: Argument of type 'number' is not assignable to parameter of type 'string'.
-
-/Users/Andrew/Projects/parcel2-typescript-validator-bug/src/index.ts
-
 Node v10.11.0
-
-├── hexo-generator-json-content@4.1.0
-
-├── hexo-renderer-ejs@0.3.1
 
 Atom    : 1.25.0-beta3
 
@@ -290,13 +264,11 @@ Atom    : 1.25.0-beta3
 
 In [3.0.0-wip/README.md](https://github.com/twitter/bootstrap/blob/3.0.0-wip/README.md):
 
-% atom --version
+[https://codepen.io/AaronGeorge/pen/KYdvaL?editors=1010](https://codepen.io/AaronGeorge/pen/KYdvaL?editors=1010)
 
 - [X] r82
 
 mysite.com/
-
-[http://www.flotcharts.org/flot/examples/tracking/index.html](http://www.flotcharts.org/flot/examples/tracking/index.html)
 
 Add any other context about the problem here. If applicable, add screenshots to help explain.
 
@@ -304,17 +276,17 @@ This test also seems to be incorrect for IE7. IE7 definitely does not support wi
 
 ======== TEMPLATE BUG FORM ========
 
-->
+- http://jsfiddle.net/y1z7gc1t/4/
 
 - [x] r92
 
 2. ??
 
+- http://www.gpbl.org/react-day-picker/#examples/range
+
 [1.6.2 beta 12] Cannot read property 'Dependency' of undefined
 
 ## <bountysource-plugin>
-
-   horizontal: 'left',
 
 <!-- https://stackoverflow.com/questions/ask?tags=webpack -->
 
@@ -322,16 +294,20 @@ This test also seems to be incorrect for IE7. IE7 definitely does not support wi
 
 Webpack.config.js
 
+  mode: 'development',
+
 plugin.js
 
-// Repeatedly calling `prettier.format` with the same options
+`Failed to load http://localhost:3000/url/meta: Response to preflight request doesn't pass access control check: The value of the 'Access-Control-Allow-Origin' header in the response must not be the wildcard '*' when the request's credentials mode is 'include'. Origin 'http://localhost:4200' is therefore not allowed access.`
 
 See: https://github.com/mui-org/material-ui/blob/master/packages/material-ui-system/src/sizing.js
 
+Error: Depending on unknown package pbastowski:angular-babel
+
 [Example in CodeSandbox](https://codesandbox.io/s/5zq4qxnn3n)
 
-error An unexpected error occurred: "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.1.3.tgz: connect ECONNREFUSED
-
 Jsbin: http://jsbin.com/hemiqaqaku/edit?html,js,console,output
+
+make test
 
 ## <bountysource-plugin>

@@ -22,6 +22,7 @@ def main():
         train_language(lang)
     train_multi_language()
 
+
 def train_multi_language():
     seed = 42
     val_sets = get_all_validation_sets()
