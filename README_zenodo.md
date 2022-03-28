@@ -5,15 +5,14 @@ Automated classification of text into natural language (e.g. English in the cont
 ## About
 This repo contains the Python implementation of a machine learning classifier model, basic scripts for automated trainingset creation from GitHub issue tickets.
 Further, a scikit-learn transformer implementation wrapping pretrained models ready to be used as preprocessing step.
-Datasets consisting of issue tickets and documentation files mined from C++, Java, JavaScript, PHP, and Python projects hosted on GitHub can be downloaded from Zenodo here:[TODO](TODO)
+Datasets consist of issue tickets and documentation files mined from C++, Java, JavaScript, PHP, and Python projects hosted on GitHub.
 
 ## Publications
-- The latest, most extensive paper (in review) and corresponding datasets and implementations:
+- This dataset belongs to the following paper (in review):
 > Thomas Hirsch and Birgit Hofer: ["Detecting non-natural language artifacts for de-noising bug reports"](TODO)
+>
 > 
-> [Zenodo](TODO)
-> 
-> [GitHub Release](https://github.com/AmadeusBugProject/artifact_detection/)
+> [GitHub Release](https://github.com/AmadeusBugProject/artifact_detection/tag/v1.2)
 
 - The original workshop paper and corresponding datasets and implementations:
 > Thomas Hirsch and Birgit Hofer: ["Identifying non-natural language artifacts in bug reports"](https://doi.org/10.1109/ASEW52652.2021.00046), 2nd International Workshop on Software Engineering Automation: A Natural Language Perspective (NLP-SEA) - 36th IEEE/ACM International Conference on Automated Software Engineering Workshops (ASEW), 2021, pp. 191-197, doi: 10.1109/ASEW52652.2021.00046. [arvix](https://arxiv.org/abs/2110.01336)
@@ -23,10 +22,6 @@ Datasets consisting of issue tickets and documentation files mined from C++, Jav
 > [GitHub Release](https://github.com/AmadeusBugProject/artifact_detection/releases/tag/v1.1)
 
 # Preliminary steps
-## Data
-Datasets and pretrained models are not contained in this git repository due to their size, they are hosted on [Zenodo](TODO).
-Download the files and move them to the corersponding locations, language datasets go to [datasets](datasets), and pretrained models go to [artifact_detection_model/out](artifact_detection_model/out).
-
 ## Conda environment
 [Conda environment file](conda.yml).
 
@@ -70,8 +65,7 @@ These folders contain the all of our results and preliminary data used in our ev
 When re-evaluating from scratch, these scripts are supposed to be run in alphabetical order as they use data produced by their preciding evaluation scripts.
 
 # Datasets
-After following the [preliminary steps](#preliminary-steps), all datasets are located in [datasets](datasets).
-The data is stored as zip-compressed csv's.
+The datasets are located in [datasets](datasets) as zip-compressed csv's.
 Please have a look at our journal paper (see [Publications](#publications)) for details on our dataset creation process.
 - `[language]_all_issues.csv.zip` contains all mined issue tickets for this language's projects.
 - `[language]_all_documentation.csv.zip` contains all mined documentation files for this language's projects.
@@ -93,7 +87,7 @@ The projects from which the corresponding datasets originate from are listed her
 Data was mined from GitHub repositories of above linked projects.
 [RUN_github_issue_ticke_mining.py](githubMiner/RUN_github_issue_ticke_mining.py) reads the projects list and stores the json replies from GitHub API.
 [RUN_create_training_and_validation_sets.py](githubMiner/RUN_create_training_and_validation_sets.py) then consolidates the json API responses into Pandas DataFrames stored in [datasets](datasets), and performs the training / validation split of issue tickets.
-The original json dumps are not included due to size restraints, and duplication, as the required data is included as zipped csv's in [datasets](datasets).
+The original json dumps are not included due to their size, and duplication, as the required data is provided as zipped csv's in [datasets](datasets).
 
 
 # Acknowledgment
