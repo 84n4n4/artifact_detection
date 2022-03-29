@@ -11,7 +11,7 @@ Datasets consist of issue tickets and documentation files mined from C++, Java, 
 - The latest, most extensive paper (in review) and corresponding datasets and implementations:
 > Thomas Hirsch and Birgit Hofer: ["Detecting non-natural language artifacts for de-noising bug reports"](TODO)
 > 
-> [Zenodo](TODO)
+> [Zenodo](https://zenodo.org/record/6393129)
 > 
 > [GitHub Release](https://github.com/AmadeusBugProject/artifact_detection/)
 
@@ -24,7 +24,7 @@ Datasets consist of issue tickets and documentation files mined from C++, Java, 
 
 # Preliminary steps
 ## Data
-Datasets and pretrained models are not contained in this git repository due to their size, they are hosted on [Zenodo](TODO).
+Datasets and pretrained models are not contained in this git repository due to their size, they are hosted on [Zenodo](https://zenodo.org/record/6393129).
 Download the files and move them to the corersponding locations, language datasets go to [datasets](datasets), and pretrained models go to [artifact_detection_model/out](artifact_detection_model/out).
 
 ## Conda environment
