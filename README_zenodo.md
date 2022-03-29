@@ -10,7 +10,6 @@ Datasets consist of issue tickets and documentation files mined from C++, Java, 
 ## Publications
 - This dataset belongs to the following paper (in review):
 > Thomas Hirsch and Birgit Hofer: ["Detecting non-natural language artifacts for de-noising bug reports"](TODO)
->
 > 
 > [GitHub Release](https://github.com/AmadeusBugProject/artifact_detection/tag/v1.2)
 
@@ -73,7 +72,7 @@ Please have a look at our journal paper (see [Publications](#publications)) for 
 - `[language]_reseracher_[1|2]_manually_labeled_validation_set.csv.zip` contains the manually annotated validation sets from both researchers from the above 250 issue tickets.
 - `[language]_training_issues.csv.zip` contains the data used in training, that is issue tickets containing "```" markdown code blocks (excluding those in validation sets), and all documentation files.
 
-The validation sets contain the researchers manual annotation, `0` labels lines considered non-natural language artifacts, `1` labels lines considered natural language.
+The validation sets contain the researchers' manual annotation, `0` labels lines considered non-natural language artifacts, `1` labels lines considered natural language.
 
 The projects from which the corresponding datasets originate from are listed here:
 - [C++](githubMiner/json_dump/cpp.txt)

@@ -5,7 +5,7 @@ Automated classification of text into natural language (e.g. English in the cont
 ## About
 This repo contains the Python implementation of a machine learning classifier model, basic scripts for automated trainingset creation from GitHub issue tickets.
 Further, a scikit-learn transformer implementation wrapping pretrained models ready to be used as preprocessing step.
-Datasets consisting of issue tickets and documentation files mined from C++, Java, JavaScript, PHP, and Python projects hosted on GitHub can be downloaded from Zenodo here:[TODO](TODO)
+Datasets consist of issue tickets and documentation files mined from C++, Java, JavaScript, PHP, and Python projects hosted on GitHub.
 
 ## Publications
 - The latest, most extensive paper (in review) and corresponding datasets and implementations:
@@ -79,7 +79,7 @@ Please have a look at our journal paper (see [Publications](#publications)) for 
 - `[language]_reseracher_[1|2]_manually_labeled_validation_set.csv.zip` contains the manually annotated validation sets from both researchers from the above 250 issue tickets.
 - `[language]_training_issues.csv.zip` contains the data used in training, that is issue tickets containing "```" markdown code blocks (excluding those in validation sets), and all documentation files.
 
-The validation sets contain the researchers manual annotation, `0` labels lines considered non-natural language artifacts, `1` labels lines considered natural language.
+The validation sets contain the researchers' manual annotation, `0` labels lines considered non-natural language artifacts, `1` labels lines considered natural language.
 
 The projects from which the corresponding datasets originate from are listed here:
 - [C++](githubMiner/json_dump/cpp.txt)
@@ -93,7 +93,7 @@ The projects from which the corresponding datasets originate from are listed her
 Data was mined from GitHub repositories of above linked projects.
 [RUN_github_issue_ticke_mining.py](githubMiner/RUN_github_issue_ticke_mining.py) reads the projects list and stores the json replies from GitHub API.
 [RUN_create_training_and_validation_sets.py](githubMiner/RUN_create_training_and_validation_sets.py) then consolidates the json API responses into Pandas DataFrames stored in [datasets](datasets), and performs the training / validation split of issue tickets.
-The original json dumps are not included due to size restraints, and duplication, as the required data is included as zipped csv's in [datasets](datasets).
+The original json dumps are not included due to their size, and duplication, as the required data is provided as zipped csv's in [datasets](datasets).
 
 
 # Acknowledgment

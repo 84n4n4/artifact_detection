@@ -1,9 +1,13 @@
 name: artifact_detection
 channels:
+  - conda-forge/label/cf202003
+  - conda-forge
   - defaults
 dependencies:
-  - python=3.9
-  - scikit-learn
   - matplotlib
-  - nltk
   - pandas
+  - scikit-learn
+  - python=3.9
+  - nltk
+  - seaborn
+  - pygithub
