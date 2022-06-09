@@ -37,8 +37,8 @@ def main():
         ax = axes[i]
         gb = df.groupby(by='train_samples')
 
-        plot_mean_and_fill_std(ax, gb, 'roc-auc_' + lang + '_researcher_1', 'g', 'Validation set researcher 1', style='o-')
-        plot_mean_and_fill_std(ax, gb, 'roc-auc_' + lang + '_researcher_2', 'b', 'Validation set researcher 2', style='v-')
+        plot_mean_and_fill_std(ax, gb, 'roc-auc_' + lang + '_researcher_1', 'g', 'Researcher 1 validation set', style='o-')
+        plot_mean_and_fill_std(ax, gb, 'roc-auc_' + lang + '_researcher_2', 'b', 'Researcher 2 validation set', style='v-')
         ax.title.set_text(language_labels[lang])
 
         colors = ['red', 'purple', 'violet', 'k', 'c']
